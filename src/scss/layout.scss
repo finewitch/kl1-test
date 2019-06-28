@@ -1,0 +1,215 @@
+//VARIABLES
+
+$content-width: 1230px;
+
+
+//LAYOUT
+svg#yolo{
+    display: none;
+}
+html,body{
+    height:100%;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-size:18px;
+    font-family: 'Alegreya', serif;
+    margin:0;
+    // background-color: black;
+}
+
+.body-overflow{
+    overflow:hidden;
+}
+
+.root-wrapper{
+       background-color: $bg-landing;
+       transition: background-color 700ms;
+    .active{
+      top:0;
+      opacity:1;
+      transition: top .5s ease      ;
+      -webkit-transition: top .5s ease      ;
+      -moz-transition: top .5s ease      ;
+      -ms-transition: top .5s ease      ;
+      -o-transition: top .5s ease      ;
+    }
+    
+}
+.loading{
+    background-color: black;
+}
+.bg-section-2{
+    background: #213452;
+    // #213452
+}
+.bg-section-3{
+    background: #094047;
+    // #094047
+    // 009688
+}
+.bg-section-4{
+    background: #2b283b;
+    // #2b283b
+    // e89b00
+    // 3a3748
+}
+
+.section__wrapper{
+    padding: 0 50px;
+    height: 100%;
+    max-width: $content-width;
+    margin: 0 auto;
+    h3{
+        font-size:30px;
+        // color: #000;
+        font-family :'Josefin Sans';
+        font-size:5rem;
+        margin:0;
+        margin-bottom: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    h4{
+        margin:10px 0;
+        display: flex;
+        align-items: center;
+    }
+}
+
+//fonts
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+}
+.h2-bold{
+    font-size: 50px;
+    font-weight: 600;
+}
+.centered{
+    text-align: center;
+
+}
+
+.sm-padding-lr{
+    padding:0 10px;
+}
+.margin-top{
+    margin-top: 65px;
+}
+
+//ANIMATIONS && TRANSITIONS
+.btn-svg{
+    animation-timing-function: ease-in;
+   transform: scale(1);
+   animation-iteration-count: 2;
+    -webkit-animation: btn-motion 2.5s infinite; /* Safari 4+ */
+}
+
+@-webkit-keyframes btn-motion{
+    0% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+    50% {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
+a{
+    transition: all .6s ease;
+    span{
+        position: relative;
+        display: block;
+        line-height: 4rem;
+        font-weight: bold;
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            // padding: 10px 0;
+            max-width: 0;
+            // border-bottom: 2px solid #fff;
+            color: $light-blue;
+            content: attr(data-hover);
+            -webkit-transition: max-width 0.6s;
+            -moz-transition: max-width 0.6s;
+            transition: max-width 0.6s;
+        }
+    }
+}
+a:hover{
+    cursor: pointer;
+    transition: all .6s ease;
+    span{
+        transition: max-width 0.6s;
+        &::before{
+            max-width: 100%;
+        }
+    }
+
+}
+
+.loading-root{
+    background-color:black;
+}
+.loading{
+    height: 100vh;
+    overflow: hidden;
+    background: black;
+    z-index:99;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        font-family: 'Josefin Sans';
+        font-size:10rem;
+        font-weight: bold;
+    }
+    .bar {
+        position: relative;
+        height: 2px;
+        width: 500px;
+        margin: 0 auto;
+        background: #fff;
+        margin-top: 150px;
+      }
+      
+      .circle {
+        position: absolute;
+        top: 20%;
+        margin-left: -30px;
+        height: 60px;
+        width: 60px;
+        left: 0;
+        background: #fff;
+        border-radius: 30%;
+        -webkit-animation: move 17s;
+        animation-iteration-count: 1;
+      }
+      
+      p {
+        position: absolute;
+        top: 10%;
+        right: auto;left:auto;
+        text-transform: uppercase;
+        color:black;
+        // border: 1px solid red;
+        // font-family: helvetica, sans-serif;
+        font-weight: bold;
+      }
+      
+      @-webkit-keyframes move {
+        0% {left: 0;}
+        50% {left: 90%; -webkit-transform: rotate(450deg); width: 550px; height: 550px;}
+        75% {left: 90%; -webkit-transform: rotate(450deg); width: 550px; height: 550px;}
+        100% {left: 90%; -webkit-transform: rotate(450deg); width: 550px; height: 550px;border-radius: 50%;}
+      } 
+}

@@ -1,98 +1,98 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
 
-const Navbar = class extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      active: false,
-      navBarActiveClass: '',
+export default class Navbar extends React.Component {
+    constructor(props) {
+      super(props);
+        this.state = {
+         menu_short : false,
+        };
     }
-  }
 
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            })
+    clickHandler = function(param){
+      console.log('click', param)
+      if(param){
+
+        this.setState({ menu_short: false })
+
+      }else{
+
+        this.setState({ menu_short: true })
+
       }
-    )
-  }
+    }
 
-  render() {
-    return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
+    render(){
+      return(
+        <div className={`menu ${this.props.loading ? 'loading-menu' : null }`}>
+
+          <div className="menu__main">
+
+            <ul className="menu__main-wrapper">
+              <li>
+                <a href="#needtofillhere">
+                <span>01</span>
+                  Home</a>
+              </li>
+              <li>
+                <a href="#needtofillhere">
+                <span>02</span>
+                  About</a>
+              </li>
+              <li>
+                <a href="#needtofillhere">
+                <span>03</span>
+                  Publications
+                </a>
+                
+              </li>
+              <li>
+                <a href="#needtofillhere">
+                <span>04</span>
+                  Contact & News
+                  </a>
+              </li>
+            </ul>
+
+            {this.state.menu_short ?    
+            <a href="#needtofillhere" id="menu-open" onClick = {()=>this.clickHandler(true)}>
+
+            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line y1="0.5" x2="25" y2="0.5" stroke="white"/>
+              <line y1="11.2302" x2="25" y2="11.2302" stroke="white"/>
+              <rect y="21.7727" width="1.13636" height="1.70455" fill="white"/>
+              <rect x="11.9316" y="21.7727" width="1.13636" height="1.70455" fill="white"/>
+              <rect x="23.8638" y="21.7727" width="1.13636" height="1.70455" fill="white"/>
+            </svg>
+
+            </a>: null}
           </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/products">
-                Products
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
-            </div>
-          </div>
+          
+          {this.state.menu_short ? null :      <div className="menu__side">
+            <ul className="menu__side-wrapper">
+              <li>
+                <a href="#needtofillhere">
+                <span>02.1</span>
+                  Team
+                  </a>
+              </li>
+              <li>
+                <a href="#needtofillhere">
+                <span>03.1</span>
+                  Resources
+                  </a>
+              </li>
+            </ul>
+
+            <a href="#needtofillhere" id="menu-close" onClick = {()=>this.clickHandler(false)}>
+              <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="1.18629" y1="22.6067" x2="23.1066" y2="0.686342" stroke="white"/>
+                <line x1="1.89339" y1="0.686242" x2="23.8137" y2="22.6066" stroke="white"/>
+              </svg>
+            </a>
+            </div>}
         </div>
-      </nav>
-    )
-  }
-}
 
-export default Navbar
+  
+      )
+    }
+}
