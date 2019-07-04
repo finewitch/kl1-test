@@ -41,7 +41,7 @@ export default class Navbar extends React.Component {
               <li>
                 <a href="#needtofillhere">
                 <span>03</span>
-                  Publications
+                  Publicationsg
                 </a>
                 
               </li>

@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Layout from '../components/Layout'
+import Landing from '../components/Landing'
 
 export const IndexPageTemplate = ({
   image,
@@ -13,9 +14,8 @@ export const IndexPageTemplate = ({
   intro,
 }) => (
   <div>
-   {/* <Wrapper>
+    <Landing/>
 
-   </Wrapper> */}
     {/* <section className="section section--gradient">
       <div className="container">
         <div className="section">
