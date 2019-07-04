@@ -3,18 +3,88 @@ import PropTypes from 'prop-types'
 
 import Layout from '../components/Layout'
 import Landing from '../components/Landing'
+import Goals from '../components/Goals'
+import Publications from '../components/Publications'
+import ContactNews from '../components/ContactNews'
 
-export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
-}) => (
-  <div>
+// export const IndexPageTemplate = ({
+  export class IndexPageTemplate extends React.Component {
+  // image,
+  // title,
+  // heading,
+  // subheading,
+  // mainpitch,
+  // description,
+  // intro,
+// }) => (
+  constructor(props) {
+    super(props);
+    // this.state = {
+
+    //   menuVisible : false,
+    //   loading: true,
+    //   scrolled : false,
+    //   canvasReady : false,
+    //   scrollStoped: false,
+    //   section:0,
+    //   sectionName: null,
+
+    // }
+    this._topGap = 700;
+
+  this.attatchScrollEvent = function (){
+    var bodyTag = document.querySelector('body');
+    console.log(this)
+    this.getDomEls(bodyTag);
+    
+    var rooter = document.querySelector('.root-wrapper');
+    console.log(rooter, '1')
+    window.addEventListener('scroll', function ( e ) {
+      console.log(rooter, '2')
+
+      let Ypos = window.scrollY;
+
+      if(Ypos < this.Top_2){
+
+        rooter.classList.remove('bg-section-1')
+        rooter.classList.remove('bg-section-2')
+        rooter.classList.remove('bg-section-3')
+
+      }else if(Ypos >= this.Top_2 && Ypos < this.Top_3){
+
+        rooter.classList.add('bg-section-2')
+        rooter.classList.remove('bg-section-3')
+
+      }else if(Ypos >= this.Top_3 && Ypos < this.Top_4){
+
+        rooter.classList.add('bg-section-3')
+        rooter.classList.remove('bg-section-4')
+
+      }else if(Ypos >= this.Top_4){
+        rooter.classList.add('bg-section-4')
+      }
+
+    }.bind(this))
+
+  }
+      this.getDomEls = function(body){
+  
+        this.Top_4 = document.querySelector('.section-4').offsetTop - this._topGap; //1300
+        this.Top_3 = document.querySelector('.section-3').offsetTop - this._topGap; //1300
+        this.Top_2 = document.querySelector('.section-2').offsetTop - this._topGap; //670
+        this.Top_1 = document.querySelector('.section-1').offsetTop - this._topGap; //0
+  
+    }
+
+
+  }
+  render(){
+    return(
+  <div className="root-wrapper">
     <Landing/>
+    <Goals/>
+    <Publications/>
+    <ContactNews/>
 
     {/* <section className="section section--gradient">
       <div className="container">
@@ -64,7 +134,26 @@ export const IndexPageTemplate = ({
       </div>
     </section> */}
   </div>
-)
+    
+    )}
+    componentDidMount(){
+
+      var bodyTag = document.querySelector('body');
+      bodyTag.classList.add('body-overflow');
+
+      setTimeout(
+        ()=>{
+          console.log('mount')
+          this.setState({ loading: false })
+          this.attatchScrollEvent();
+          bodyTag.classList.remove('body-overflow');
+
+        },2500)
+
+
+    }
+  }
+
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
