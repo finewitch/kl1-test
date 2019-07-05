@@ -7,6 +7,8 @@ import Goals from '../components/Goals'
 import Publications from '../components/Publications'
 import ContactNews from '../components/ContactNews'
 
+import TableOfContent from '../components/TableOfContent'
+
 // export const IndexPageTemplate = ({
   export class IndexPageTemplate extends React.Component {
   // image,
@@ -19,7 +21,8 @@ import ContactNews from '../components/ContactNews'
 // }) => (
   constructor(props) {
     super(props);
-    // this.state = {
+    this.state = {
+      page: '01',
 
     //   menuVisible : false,
     //   loading: true,
@@ -29,7 +32,7 @@ import ContactNews from '../components/ContactNews'
     //   section:0,
     //   sectionName: null,
 
-    // }
+    }
     this._topGap = 700;
 
   this.attatchScrollEvent = function (){
@@ -39,14 +42,18 @@ import ContactNews from '../components/ContactNews'
     
     var rooter = document.querySelector('.root-wrapper');
     var menu = document.querySelector('.menu');
-    console.log(rooter, '1')
+    // console.log(rooter, '1')
     window.addEventListener('scroll', function ( e ) {
-      console.log(rooter, '2')
+      // console.log(rooter, '2')
 
+      console.log(this.state.page)
       let Ypos = window.scrollY;
 
       if(Ypos < this.Top_2){
 
+        this.setState({
+          page: '01',
+        })
         rooter.classList.remove('bg-section-1')
         rooter.classList.remove('bg-section-2')
         rooter.classList.remove('bg-section-3')
@@ -55,16 +62,26 @@ import ContactNews from '../components/ContactNews'
 
       }else if(Ypos >= this.Top_2 && Ypos < this.Top_3){
 
+        this.setState({
+          page: '02',
+        })
+
         rooter.classList.add('bg-section-2')
         menu.classList.add('second-menu-bg')
         rooter.classList.remove('bg-section-3')
 
       }else if(Ypos >= this.Top_3 && Ypos < this.Top_4){
-
+        this.setState({
+          page: '03',
+        })
         rooter.classList.add('bg-section-3')
         rooter.classList.remove('bg-section-4')
 
       }else if(Ypos >= this.Top_4){
+
+        this.setState({
+          page: '04',
+        })
         rooter.classList.add('bg-section-4')
       }
 
@@ -85,6 +102,7 @@ import ContactNews from '../components/ContactNews'
   render(){
     return(
   <div className="root-wrapper">
+    <TableOfContent page={this.state.page}/>
     <Landing/>
     <Goals/>
     <Publications/>
@@ -152,7 +170,7 @@ import ContactNews from '../components/ContactNews'
           this.attatchScrollEvent();
           bodyTag.classList.remove('body-overflow');
 
-        },2500)
+        },500)
 
 
     }

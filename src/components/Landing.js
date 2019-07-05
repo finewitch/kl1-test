@@ -14,7 +14,7 @@ import PropTypes from 'prop-types'
               
               <h1><span className="landing__wrapper-title-span"></span>What<span className="landing__wrapper-title-span">’</span>s <br/>Clinical <br/>
               Space<span className="landing__wrapper-title-span">?</span></h1>
-              {/* <h2 className="landing__wrapper-title-num">01</h2> */}
+              
         
             </div>
 

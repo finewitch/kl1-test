@@ -15,10 +15,13 @@
             display: flex;
             align-items: center;
             font-weight:lighter;
-        }
-        h2{
             border-bottom:1px solid grey;
             padding-bottom:20px;
+        }
+        h2,h3{
+            z-index: 10;
+            position: relative;
+
         }
         div{
             font-family: 'Josefin Sans';
@@ -42,26 +45,15 @@
         }
     }
     &__bottom{
-    //     .vs{
-    //         // padding: 40px;
-    // // box-shadow: 0px 0px 18px -2px rgb(232, 232, 232);
-    //     width: 500px;
-    //     }
-        // border: 1px solid red;
         display: flex;
         margin-top:100px;
         height:75%;
-        &-column{
-            // border: 1px solid red;
-        }
         div{
             flex-basis: 50%;
         }
         &-column-title{
             font-family: 'Josefin Sans';
-            // margin-bottom:20px;
             font-size:1.3rem;
-            // padding-left: 40px;
         }
         &-column-content{
             max-width:500px;

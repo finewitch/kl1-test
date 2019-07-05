@@ -86,3 +86,22 @@
     50% { top: 70px; }
     100% { top: 50px; }
   }
+
+
+  .landing__wrapper-title-num{
+    border: 1px solid red;
+    width:100%;
+    font-family: 'Josefin Sans';
+    color: rgba(75, 84, 122, 0.226);
+    // -webkit-text-stroke: 1px #D1D1D1;
+    font-size:75rem;
+    // position: fixed;
+    z-index: 0;
+    margin:0;
+    height: 100vh;
+    left: 0;
+    // top:30%;
+    font-weight:400;
+    opacity:.2;
+    
+}

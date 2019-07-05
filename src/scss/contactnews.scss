@@ -2,6 +2,7 @@
     height: 100vh;
     h3{
         color:#F5F5F5;
+        // color: #ff5722;
         font-size: 5rem;
         font-weight: bold;
 }
@@ -23,6 +24,7 @@
         &-contact, &-news{
             margin-top:20px;
             flex-basis: 50%;
+            z-index: 10;
         }
         &-news{
             ul{
