@@ -37,11 +37,20 @@ export default class Navbar extends React.Component {
                 <a href="#needtofillhere">
                 <span>02</span>
                   About</a>
+                  /
+                  <a href="#needtofillhere">
+                <span>02.1</span>
+                  Team</a>
               </li>
               <li>
                 <a href="#needtofillhere">
                 <span>03</span>
-                  Publicationsg
+                  Publications
+                </a>
+                /
+                <a href="#needtofillhere">
+                <span>03.1</span>
+                  Resources
                 </a>
                 
               </li>
@@ -53,7 +62,7 @@ export default class Navbar extends React.Component {
               </li>
             </ul>
 
-            {this.state.menu_short ?    
+            {/* {this.state.menu_short ?    
             <a href="#needtofillhere" id="menu-open" onClick = {()=>this.clickHandler(true)}>
 
             <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -64,10 +73,10 @@ export default class Navbar extends React.Component {
               <rect x="23.8638" y="21.7727" width="1.13636" height="1.70455" fill="white"/>
             </svg>
 
-            </a>: null}
+            </a>: null} */}
           </div>
           
-          {this.state.menu_short ? null :      <div className="menu__side">
+          {/* {this.state.menu_short ? null :      <div className="menu__side">
             <ul className="menu__side-wrapper">
               <li>
                 <a href="#needtofillhere">
@@ -81,15 +90,15 @@ export default class Navbar extends React.Component {
                   Resources
                   </a>
               </li>
-            </ul>
+            </ul> */}
 
-            <a href="#needtofillhere" id="menu-close" onClick = {()=>this.clickHandler(false)}>
+            {/* <a href="#needtofillhere" id="menu-close" onClick = {()=>this.clickHandler(false)}>
               <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <line x1="1.18629" y1="22.6067" x2="23.1066" y2="0.686342" stroke="white"/>
                 <line x1="1.89339" y1="0.686242" x2="23.8137" y2="22.6066" stroke="white"/>
               </svg>
             </a>
-            </div>}
+            </div>} */}
         </div>
 
   

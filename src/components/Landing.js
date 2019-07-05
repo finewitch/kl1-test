@@ -8,12 +8,13 @@ import PropTypes from 'prop-types'
 
       return(
 
-        <div className="section-1 landing margin-top">
+        <div className="section-1 landing">
           <div className="landing__wrapper">
             <div className="landing__wrapper-title">
               
               <h1><span className="landing__wrapper-title-span"></span>What<span className="landing__wrapper-title-span">’</span>s <br/>Clinical <br/>
               Space<span className="landing__wrapper-title-span">?</span></h1>
+              {/* <h2 className="landing__wrapper-title-num">01</h2> */}
         
             </div>
 

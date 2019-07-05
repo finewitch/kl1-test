@@ -14,7 +14,7 @@ export default class Publications extends React.Component {
 				<h3 className="color-white">publications</h3>
 
 				<h4>
-					<a>2019 </a>&nbsp;/&nbsp;<a>2020</a>
+					<a href="/#nowhere">2019 </a>&nbsp;/&nbsp;<a href="/#nowhere">2020</a>
 					<LinkIco/>
 				</h4>
 
@@ -60,13 +60,13 @@ export default class Publications extends React.Component {
 					</div>
 
 					<div className="publications__wrapper-box-read">
-					READ MORE
+					<a href="/yolo">READ MORE</a>
 					</div>
 
 					<div className="publications__wrapper-box-btns">
-					SOURCE
-					SOURCE
-					SOURCE
+					<a href="/yolo">SOURCE</a>
+					<a href="/yolo">SOURCE</a>
+					<a href="/yolo">SOURCE</a>
 					</div>
 
 					</div>
@@ -84,13 +84,13 @@ export default class Publications extends React.Component {
 			</div>
 
 			<div className="publications__wrapper-box-read">
-			READ MORE
+			<a href="/yolo">READ MORE</a>
 			</div>
 
 			<div className="publications__wrapper-box-btns">
-			SOURCE
-			SOURCE
-			SOURCE
+			<a href="/yolo">SOURCE</a>
+			<a href="/yolo">SOURCE</a>
+			<a href="/yolo">SOURCE</a>
 			</div>
 
 			</div>
@@ -108,13 +108,13 @@ export default class Publications extends React.Component {
 					</div>
 
 					<div className="publications__wrapper-box-read">
-					READ MORE
+					<a href="/yolo">READ MORE</a>
 					</div>
 
 					<div className="publications__wrapper-box-btns">
-					SOURCE
-					SOURCE
-					SOURCE
+					<a href="/yolo">SOURCE</a>
+					<a href="/yolo">SOURCE</a>
+					<a href="/yolo">SOURCE</a>
 					</div>
 
 					</div>
@@ -133,13 +133,13 @@ export default class Publications extends React.Component {
 					</div>
 
 					<div className="publications__wrapper-box-read">
-					READ MORE
+					<a href="/yolo">READ MORE</a>
 					</div>
 
 					<div className="publications__wrapper-box-btns">
-					SOURCE
-					SOURCE
-					SOURCE
+					<a href="/yolo">SOURCE</a>
+					<a href="/yolo">SOURCE</a>
+					<a href="/yolo">SOURCE</a>
 					</div>
 
 					</div>
@@ -158,13 +158,13 @@ export default class Publications extends React.Component {
 					</div>
 
 					<div className="publications__wrapper-box-read">
-					READ MORE
+					<a href="/yolo">READ MORE</a>
 					</div>
 
 					<div className="publications__wrapper-box-btns">
-					SOURCE
-					SOURCE
-					SOURCE
+					<a href="/yolo">SOURCE</a>
+					<a href="/yolo">SOURCE</a>
+					<a href="/yolo">SOURCE</a>
 					</div>
 
 					</div>
@@ -183,13 +183,13 @@ export default class Publications extends React.Component {
 					</div>
 
 					<div className="publications__wrapper-box-read">
-					READ MORE
+					<a href="/yolo">READ MORE</a>
 					</div>
 
 					<div className="publications__wrapper-box-btns">
-					SOURCE
-					SOURCE
-					SOURCE
+					<a href="/yolo">SOURCE</a>
+					<a href="/yolo">SOURCE</a>
+					<a href="/yolo">SOURCE</a>
 					</div>
 
 					</div>
@@ -207,13 +207,13 @@ export default class Publications extends React.Component {
 					</div>
 
 					<div className="publications__wrapper-box-read">
-					READ MORE
+					<a href="/yolo">READ MORE</a>
 					</div>
 
 					<div className="publications__wrapper-box-btns">
-					SOURCE
-					SOURCE
-					SOURCE
+					<a href="/yolo">SOURCE</a>
+					<a href="/yolo">SOURCE</a>
+					<a href="/yolo">SOURCE</a>
 					</div>
 
 					</div>
@@ -231,13 +231,13 @@ export default class Publications extends React.Component {
 					</div>
 
 					<div className="publications__wrapper-box-read">
-					READ MORE
+					<a href="/yolo">READ MORE</a>
 					</div>
 
 					<div className="publications__wrapper-box-btns">
-					SOURCE
-					SOURCE
-					SOURCE
+					<a href="/yolo">SOURCE</a>
+					<a href="/yolo">SOURCE</a>
+					<a href="/yolo">SOURCE</a>
 					</div>
 
 					</div>
@@ -255,13 +255,13 @@ export default class Publications extends React.Component {
 					</div>
 
 					<div className="publications__wrapper-box-read">
-					READ MORE
+					<a href="/yolo">READ MORE</a>
 					</div>
 
 					<div className="publications__wrapper-box-btns">
-					SOURCE
-					SOURCE
-					SOURCE
+					<a href="/yolo">SOURCE</a>
+					<a href="/yolo">SOURCE</a>
+					<a href="/yolo">SOURCE</a>
 					</div>
 
 					</div>
@@ -279,14 +279,14 @@ Joshua B. Grubbs, Paul J. Wright, Abby Braden, Joshua A. Wilt
 </div>
 
 <div className="publications__wrapper-box-read">
-READ MORE
-</div>
+					<a href="/yolo">READ MORE</a>
+					</div>
 
-<div className="publications__wrapper-box-btns">
-SOURCE
-SOURCE
-SOURCE
-</div>
+					<div className="publications__wrapper-box-btns">
+					<a href="/yolo">SOURCE</a>
+					<a href="/yolo">SOURCE</a>
+					<a href="/yolo">SOURCE</a>
+					</div>
 
 </div>
 
@@ -294,7 +294,7 @@ SOURCE
 
 				<div className="publications-title title-bottom space-between-removed">
 
-				<h4 className="color-grey"><a>Looking for <span data-hover="RESOURCES">RESOURCES</span>?</a></h4>
+				<h4 className="color-grey"><a href="/#needtofill">Looking for <span data-hover="RESOURCES">RESOURCES</span>?</a></h4>
 
 				<h3>
 				<LinkIco/>

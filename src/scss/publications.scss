@@ -113,6 +113,16 @@
                 flex-basis: 10%;
                 font-weight: 400;
                 line-height: 1.5rem;
+                a{
+                    color:white;
+                    text-decoration: none;
+                    display: block;
+                &:hover{
+                        cursor: pointer;
+                        color: #00d2b5;
+                    }
+                }
+                
             }
         }
     }

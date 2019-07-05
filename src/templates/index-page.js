@@ -38,6 +38,7 @@ import ContactNews from '../components/ContactNews'
     this.getDomEls(bodyTag);
     
     var rooter = document.querySelector('.root-wrapper');
+    var menu = document.querySelector('.menu');
     console.log(rooter, '1')
     window.addEventListener('scroll', function ( e ) {
       console.log(rooter, '2')
@@ -50,9 +51,12 @@ import ContactNews from '../components/ContactNews'
         rooter.classList.remove('bg-section-2')
         rooter.classList.remove('bg-section-3')
 
+        menu.classList.remove('second-menu-bg')
+
       }else if(Ypos >= this.Top_2 && Ypos < this.Top_3){
 
         rooter.classList.add('bg-section-2')
+        menu.classList.add('second-menu-bg')
         rooter.classList.remove('bg-section-3')
 
       }else if(Ypos >= this.Top_3 && Ypos < this.Top_4){
