@@ -17,7 +17,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        // position: relative;
         &-title{
             display: flex;
             align-items: center;
@@ -66,18 +65,19 @@
             top:50px;
             animation-timing-function: ease-out;
             -webkit-animation: scroll-motion 4s infinite; /* Safari 4+ */
+            width:70px;
             // animation-iteration-count: 2;
             // -webkit-animation-iteration-count: 2;
         }
-        // &-num{
-           
-        // }
     }
     h1{
         font-size: 8.9rem;
         text-align: center;
         margin:0;
         font-weight:500;
+        @media (max-width: $largest-desktop) {
+            font-size: 5.9rem;
+           }
     }
 }
 
@@ -89,7 +89,7 @@
 
 
   .landing__wrapper-title-num{
-    border: 1px solid red;
+    // border: 1px solid red;
     width:100%;
     font-family: 'Josefin Sans';
     color: rgba(75, 84, 122, 0.226);
@@ -99,9 +99,13 @@
     z-index: 0;
     margin:0;
     height: 100vh;
-    left: 0;
+    left: -20%;
     // top:30%;
     font-weight:400;
     opacity:.2;
+    @media (max-width: $largest-desktop) {
+        font-size: 45rem;
+        top:5%;
+       }
     
 }

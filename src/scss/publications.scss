@@ -11,7 +11,10 @@
 .publications{
     
     &-title{
-        width: $content-width;
+        width: $largest-desktop;
+        @media (max-width: $largest-desktop) {
+            width:auto;
+           }
         margin: 0 auto;
         display: flex;
         justify-content: space-between ;
@@ -34,6 +37,11 @@
             font-family: 'Josefin Sans';
             font-size:2rem;
             margin: 0;
+            margin-top:30px;
+            font-weight: 100;
+            @media (max-width: $largest-desktop) {
+                font-size:1.3rem;
+               }
         }
         svg{
                 width: 90px;
@@ -79,6 +87,8 @@
         &-box{
             // width: $content-width;
             // border: 1px solid red;
+            position: relative;
+            z-index: 10;
             display: flex;
             align-items: center;
             border-bottom: 1px solid black;
@@ -94,12 +104,18 @@
                 // opacity:.5;
                 color:#00d2b5;
                 font-weight: bold;
+                @media (max-width: $largest-desktop) {
+                    font-size:2.2rem;
+                   }
             }
             &-title{
                 font-family: 'Alegreya';
                 // margin-left: 20px;
                 font-size:1.2rem;
                 flex-basis: 35%;
+                @media (max-width: $largest-desktop) {
+                    font-size: 1rem;
+                   }
                 
             }
             &-author{
@@ -107,6 +123,9 @@
                 max-width:400px;
                 flex-basis: 20%;
                 line-height: 1.5rem;
+                @media (max-width: $largest-desktop) {
+                    font-size:1rem;
+                   }
             }
             &-read,&-btns{
                 font-size: .9rem;

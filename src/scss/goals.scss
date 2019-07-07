@@ -4,6 +4,27 @@
     // border: 10px solid red;
 }
 .goals{
+    &-side-title{
+        display: flex;
+        &-link{
+            span{
+                font-size: 10px!important;
+            }
+
+        }
+        svg{
+            width: 90px;
+        }
+        a{
+            font-size: 40px;
+            span{
+                font-size:5rem;
+                @media (max-width: $largest-desktop) {
+                    font-size:3.7rem;
+                   }
+            }
+        }
+    }
     color:rgb(245, 245, 245);
     &__top{
         // border: 2px dotted green;
@@ -26,7 +47,7 @@
         div{
             font-family: 'Josefin Sans';
             // flex-direction: column;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
             font-size:1.7rem;
             svg{
@@ -37,7 +58,7 @@
         &-side{
             flex-basis: 50%;
             display: flex;
-            align-items: center;
+            // align-items: center;
             font-weight:lighter;
             a{
                 font-size:2.5rem;
@@ -50,14 +71,21 @@
         height:75%;
         div{
             flex-basis: 50%;
+            z-index: 10;
         }
         &-column-title{
             font-family: 'Josefin Sans';
             font-size:1.3rem;
+            @media (max-width: $largest-desktop) {
+                font-size: 1.2rem;
+               }
         }
         &-column-content{
             max-width:500px;
             font-size:1.3rem;
+            @media (max-width: $largest-desktop) {
+                font-size: 1.2rem;
+               }
         }
     }
 }

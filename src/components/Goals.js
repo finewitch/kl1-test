@@ -6,18 +6,23 @@ export default class Goals extends React.Component {
         return(
             <div className="section-2 goals">
                 <div className="section__wrapper">
-
+                    <div className="title-row">
                     <h3 className="color-green-header">about</h3>
+
+                   
+                    </div>
 
                     <div className="goals__top">
 
                         <h2>
                         The CSPACE lab (Science of Personality, Addiction, and Religion, Throughout Adulthood) at Bowling Green State University is comprised of myself, my current graduate students, and a number of undergraduate students.
                         </h2>
-
                         <div className="goals__top-side">
-                            <a >More on <span data-hover="TEAM" className="color-green-header">TEAM?</span></a>
-                            <LinkIco/>
+                            <h3 className="color-green-header goals-side-title">
+                                <a href="#nowhere">
+                                    <span data-hover="TEAM" className="color-green-header">TEAM? →</span>
+                                </a>
+                            </h3>
                         </div>
 
                     </div>

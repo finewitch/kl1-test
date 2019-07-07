@@ -1,6 +1,6 @@
 
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import LinkIco from './atoms/LinkIco'
 
 export default class Publications extends React.Component {
@@ -36,13 +36,13 @@ export default class Publications extends React.Component {
 					</div>
 
 					<div className="publications__wrapper-box-read">
-					READ MORE
+					<a href="/#nowhere">READ MORE</a>
 					</div>
 
 					<div className="publications__wrapper-box-btns">
-					SOURCE
-					SOURCE
-					SOURCE
+					<a href="/#nowhere">SOURCE</a>
+					<a href="/#nowhere">SOURCE</a>
+					<a href="/#nowhere">SOURCE</a>
 					</div>
 
 					</div>
@@ -268,17 +268,17 @@ export default class Publications extends React.Component {
 
 					<div className="publications__wrapper-box">
 
-<div className="publications__wrapper-box-year"> 2019</div>
+					<div className="publications__wrapper-box-year"> 2019</div>
 
-<div className="publications__wrapper-box-title">
-Internet Pornography Use and Sexual Motivation: A Systematic Review and Integration. Annals of the ICA
-</div>
+					<div className="publications__wrapper-box-title">
+					Internet Pornography Use and Sexual Motivation: A Systematic Review and Integration. Annals of the ICA
+					</div>
 
-<div className="publications__wrapper-box-author">
-Joshua B. Grubbs, Paul J. Wright, Abby Braden, Joshua A. Wilt
-</div>
+					<div className="publications__wrapper-box-author">
+					Joshua B. Grubbs, Paul J. Wright, Abby Braden, Joshua A. Wilt
+					</div>
 
-<div className="publications__wrapper-box-read">
+					<div className="publications__wrapper-box-read">
 					<a href="/yolo">READ MORE</a>
 					</div>
 
@@ -293,12 +293,11 @@ Joshua B. Grubbs, Paul J. Wright, Abby Braden, Joshua A. Wilt
 				</div>
 
 				<div className="publications-title title-bottom space-between-removed">
-
-				<h4 className="color-grey"><a href="/#needtofill">Looking for <span data-hover="RESOURCES">RESOURCES</span>?</a></h4>
-
-				<h3>
+				
+				<h4 className="color-grey">
 				<LinkIco/>
-				</h3>
+				<a href="/#needtofill">Looking for <span data-hover="RESOURCES">RESOURCES</span>? →</a></h4>
+
 
 				</div>
 

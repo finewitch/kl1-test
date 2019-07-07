@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import Footer from '../components/Footer'
+// import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 
 import './all.scss'
@@ -14,6 +14,7 @@ const TemplateWrapper = ({ children }) => {
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 
         <link
           rel="apple-touch-icon"

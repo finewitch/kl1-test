@@ -1,6 +1,6 @@
 $menu-width: 100vw;
 $menu-height: 160px;
-$max-content: 1230px;
+// $max-content: 1230px;
 
 
 .menu-gap{
@@ -15,7 +15,7 @@ $max-content: 1230px;
     position: fixed;
     top:0;
     width:$menu-width;
-    background: transparent;
+    background: $bg-landing;
     z-index:99;
     color:$main-menu-color;
     display: flex;
@@ -27,12 +27,19 @@ $max-content: 1230px;
     &__main, &__side{
         // border: 1px solid red;
         width:100%;
-        height:60px;
+        height:50px;
         padding-bottom:15px;
         position: relative;
+        @media (max-width: $largest-desktop) {
+            height: 45px;
+            padding-bottom:10px;
+           }
         &-wrapper{
             // border: 3px solid white;
-            width: $max-content;
+            width: $largest-desktop;
+            @media (max-width: $largest-desktop) {
+                width: $container-width;
+               }
             margin: 0 auto;
         }
         &:hover{
@@ -40,13 +47,16 @@ $max-content: 1230px;
         }
     }
     &__main{
-        border-bottom:1px solid $bg-menu;
+        // border-bottom:1px solid $bg-menu;
     }
     ul{
         height: 100%;
         list-style: none;
         display: flex;
         align-items: flex-end;
+        @media (max-width: $largest-desktop) {
+            justify-content: space-between;
+           }
        
         // margin:0;
         padding:0;
@@ -54,26 +64,45 @@ $max-content: 1230px;
         li{
             flex-basis: 25%;
             position: relative;
-            font-size:1.30rem;
-            // transition:all .2s ease;
+            font-size:1.20rem;
             text-align: center;
             font-weight: 400;
+            @media (max-width: $largest-desktop) {
+                font-size:1.10rem;
+                flex-basis: 0;
+                white-space: nowrap;
+                &:first-child{
+                    a{
+                        margin:0;
+                    }
+                }
+                &:last-child{
+                    a{
+                        margin:0;
+                        white-space: nowrap;
+                    }
+                }
+               }
             a{
                 z-index:2;
                 position: relative;
                 color:black;
                 text-decoration: none;
                 margin: 0 20px;
+     
                 span{
                     transition:all .3s cubic-bezier(.65,.01,.5,.76);
                     position: absolute;
                     left:0;
                     bottom:85%;
                     color: $menu-hr;
-                    font-size:1.05rem;
+                    font-size:1.00rem;
                     z-index:-1;
                     line-height: 30px;
                     font-weight: lighter;
+                    @media (max-width: $largest-desktop) {
+                        font-size: .9rem;
+                       }
                  
                 }
                 &:hover{
@@ -86,6 +115,9 @@ $max-content: 1230px;
                         left:45%;
                         bottom:5px;
                         color: #ffd0d0;
+                        @media (max-width: $largest-desktop) {
+                            bottom: 1px;
+                           }
                         }
                 }
             }
@@ -106,36 +138,3 @@ $max-content: 1230px;
         }
     }
 }
-// .menu-fixed{
-//     z-index:10;
-//     margin-left:26px;
-//     margin-top:30px;
-//     display: block;
-//     transition: 1s all;
-//     -webkit-transition: 1s all;
-//     -moz-transition: 1s all;
-//     -ms-transition: 1s all;
-//     -o-transition: 1s all;
-//     img{
-//         width:35px;
-//         position: relative;
-//         z-index:3;
-//     }
-//     span{
-//         position: absolute;
-//         left:5px;
-//         font-family: 'Josefin Sans';
-//         font-size:2em;
-//         color:$orange;
-//         font-weight: bold;
-//         z-index:2;
-//     }
-// }
-// .menu-transition{
-//     // margin-top:45px;
-//     // transition: 1s all;
-//     // -webkit-transition: 1s all;
-//     // -moz-transition: 1s all;
-//     // -ms-transition: 1s all;
-//     // -o-transition: 1s all;
-// } 
