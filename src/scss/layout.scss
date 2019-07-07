@@ -12,6 +12,12 @@ $largest-desktop: 1440px;
 svg#yolo{
     display: none;
 }
+svg{
+    width:70px;
+    @media (max-width: $largest-desktop) {
+        width:35px;
+       }
+}
 html,body{
     height:100%;
     margin:0;

@@ -23,6 +23,9 @@
             span{
                 display: inline;
                 line-height: 2rem;
+                @media (max-width: $largest-desktop) {
+                    line-height: 1.4rem;
+                   }
             }
             &:hover{
                 color:$light-blue;
@@ -40,12 +43,15 @@
             margin-top:30px;
             font-weight: 100;
             @media (max-width: $largest-desktop) {
-                font-size:1.3rem;
+                font-size:1.4rem;
+               }
+               div{
+                   margin-left:10px;
                }
         }
         svg{
-                width: 90px;
-                height: 50px;
+                // width: 90px;
+                // height: 50px;
         }
     }
     .title-bottom{
