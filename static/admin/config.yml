@@ -62,6 +62,5 @@ collections:
         label: "Publications"
         name: "publications"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "publications-page"}
+          - {label: Publications, name: publications, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Year, name: year, widget: string}, {label: Authors, name: authors, widget: string}, {label: Files, name: files, widget: list, fields: [{label: File, name: file, widget: file}]}]}

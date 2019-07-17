@@ -1,6 +1,6 @@
 ---
 templateKey: 'publications-page'
-# path: /publications
+# path: /
 title: About our values
 ---
 ### Shade-grown coffee

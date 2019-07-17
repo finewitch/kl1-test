@@ -165,7 +165,7 @@ import TableOfContent from '../components/TableOfContent'
     componentDidMount(){
       
       var _gatsbyPage = document.getElementById('__gatsby');
-      if (_gatsbyPage !=null){
+      if (_gatsbyPage === null){
         return;
       }
       var screenResX = window.matchMedia("(max-width: 1440px)");
