@@ -13,8 +13,9 @@ import LinkIco from './atoms/LinkIco'
           <div className="landing__wrapper">
             <div className="landing__wrapper-title">
               
-              <h1><span className="landing__wrapper-title-span"></span>What<span className="landing__wrapper-title-span">’</span>s <br/>Clinical <br/>
-              Space<span className="landing__wrapper-title-span">?</span></h1>
+              {/* <h1><span className="landing__wrapper-title-span"></span>What<span className="landing__wrapper-title-span">’</span>s <br/>Clinical <br/>
+              Space<span className="landing__wrapper-title-span">?</span></h1> */}
+              <h1><span className="landing__wrapper-title-span"></span>{this.props.title}</h1>
               
         
             </div>
@@ -33,8 +34,7 @@ import LinkIco from './atoms/LinkIco'
                   </clipPath>
                   </defs>
               </svg>
-              {/* <LinkIco/> */}
-              <span>scroll to get to know us</span>
+              <span>{this.props.subheading}</span>
 
             </div>
             </div>

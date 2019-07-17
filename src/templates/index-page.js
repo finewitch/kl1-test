@@ -21,6 +21,7 @@ import TableOfContent from '../components/TableOfContent'
 // }) => (
   constructor(props) {
     super(props);
+    console.log(props, '<-------PROPS')
     this.state = {
       page: '01',
 
@@ -91,7 +92,7 @@ import TableOfContent from '../components/TableOfContent'
 
   }
       this.getDomEls = function(body, gap){
-  
+
         this.Top_4 = document.querySelector('.section-4').offsetTop - gap; //1300
         this.Top_3 = document.querySelector('.section-3').offsetTop - gap; //1300
         this.Top_2 = document.querySelector('.section-2').offsetTop - gap; //670
@@ -105,10 +106,11 @@ import TableOfContent from '../components/TableOfContent'
     return(
   <div className="root-wrapper">
     <TableOfContent page={this.state.page}/>
-    <Landing/>
+    <Landing title={this.props.title}/>
     <Goals/>
     <Publications/>
     <ContactNews/>
+    {/* <h1 className="title">{this.props.title}</h1> */}
 
     {/* <section className="section section--gradient">
       <div className="container">
@@ -161,9 +163,13 @@ import TableOfContent from '../components/TableOfContent'
     
     )}
     componentDidMount(){
-
+      
+      var _gatsbyPage = document.getElementById('__gatsby');
+      if (_gatsbyPage !=null){
+        return;
+      }
       var screenResX = window.matchMedia("(max-width: 1440px)");
-      console.log(screenResX, '---screen')
+      // console.log(screenResX, '---screen')
 
       var bodyTag = document.querySelector('body');
       bodyTag.classList.add('body-overflow');
