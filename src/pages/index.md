@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
+title: Clinical Research Space
 image: /img/apple-touch-icon.png
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
