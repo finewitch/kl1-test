@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-console.log(this, '<<<title???');
+// console.log(this, '<<<title???');
 export const PublicationsPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
