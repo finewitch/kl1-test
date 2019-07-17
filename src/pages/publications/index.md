@@ -1,9 +1,8 @@
 ---
 templateKey: publications-page
 publications:
-  - text: dddd
+  - authors: qwe
     title: ddd1
-  - text: ddd
-    title: ddd2
+    year: qwe
 ---
 
