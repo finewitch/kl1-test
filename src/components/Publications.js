@@ -3,6 +3,8 @@ import React from 'react'
 // import PropTypes from 'prop-types'
 import LinkIco from './atoms/LinkIco'
 
+// import PublicationsPageTemplate from '../templates/publications-page'
+
 export default class Publications extends React.Component {
 
   render(){
@@ -241,54 +243,7 @@ export default class Publications extends React.Component {
 					</div>
 
 					</div>
-
-					<div className="publications__wrapper-box">
-
-					<div className="publications__wrapper-box-year"> 2019</div>
-
-					<div className="publications__wrapper-box-title">
-					Internet Pornography Use and Sexual Motivation: A Systematic Review and Integration. Annals of the ICA
-					</div>
-
-					<div className="publications__wrapper-box-author">
-					Joshua B. Grubbs, Paul J. Wright, Abby Braden, Joshua A. Wilt
-					</div>
-
-					<div className="publications__wrapper-box-read">
-					<a href="/yolo">READ MORE</a>
-					</div>
-
-					<div className="publications__wrapper-box-btns">
-					<a href="/yolo">SOURCE</a>
-					<a href="/yolo">SOURCE</a>
-					<a href="/yolo">SOURCE</a>
-					</div>
-
-					</div>
-
-					<div className="publications__wrapper-box">
-
-					<div className="publications__wrapper-box-year"> 2019</div>
-
-					<div className="publications__wrapper-box-title">
-					Internet Pornography Use and Sexual Motivation: A Systematic Review and Integration. Annals of the ICA
-					</div>
-
-					<div className="publications__wrapper-box-author">
-					Joshua B. Grubbs, Paul J. Wright, Abby Braden, Joshua A. Wilt
-					</div>
-
-					<div className="publications__wrapper-box-read">
-					<a href="/yolo">READ MORE</a>
-					</div>
-
-					<div className="publications__wrapper-box-btns">
-					<a href="/yolo">SOURCE</a>
-					<a href="/yolo">SOURCE</a>
-					<a href="/yolo">SOURCE</a>
-					</div>
-
-</div>
+					{/* <PublicationsPageTemplate/> */}
 
 				</div>
 
