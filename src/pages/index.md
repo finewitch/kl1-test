@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Clinical Research Space
 image: /img/apple-touch-icon.png
-heading: Great coffee with a conscience
+heading: Great coffee with a conscience111
 subheading: Support sustainable farming while enjoying a cup
 mainpitch:
   title: Why Kaldi
