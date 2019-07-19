@@ -214,6 +214,7 @@ export const pageQuery = graphql`
         subheading
         publications {
           title
+          ownurl
           year
           authors
         }

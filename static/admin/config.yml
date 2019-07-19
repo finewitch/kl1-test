@@ -33,7 +33,7 @@ collections:
           - {label: Subheading, name: subheading, widget: string}
           - {label: Publications, name: publications, widget: list, fields: [
             {label: Title, name: title, widget: string}, 
-            {label: Slug, name: slug, widget: string},
+            {label: Ownurl, name: ownurl, widget: string},
             {label: Year, name: year, widget: string}, 
             {label: Authors, name: authors, widget: string}, 
             {label: Files, name: files, widget: list, fields: [
