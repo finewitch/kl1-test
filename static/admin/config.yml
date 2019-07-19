@@ -29,11 +29,11 @@ collections:
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: Slug, name: slug, widget: string}
           - {label: Title, name: title, widget: string}
           - {label: Subheading, name: subheading, widget: string}
           - {label: Publications, name: publications, widget: list, fields: [
             {label: Title, name: title, widget: string}, 
+            {label: Slug, name: slug, widget: string},
             {label: Year, name: year, widget: string}, 
             {label: Authors, name: authors, widget: string}, 
             {label: Files, name: files, widget: list, fields: [
