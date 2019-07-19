@@ -216,7 +216,6 @@ export const pageQuery = graphql`
           title
           year
           authors
-
         }
       }
     }
