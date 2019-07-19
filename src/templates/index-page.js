@@ -9,30 +9,13 @@ import ContactNews from '../components/ContactNews'
 
 import TableOfContent from '../components/TableOfContent'
 
-// export const IndexPageTemplate = ({
   export class IndexPageTemplate extends React.Component {
-  // image,
-  // title,
-  // heading,
-  // subheading,
-  // mainpitch,
-  // description,
-  // intro,
-// }) => (
+
   constructor(props) {
     super(props);
     console.log(props, '<-------PROPS')
     this.state = {
       page: '01',
-
-    //   menuVisible : false,
-    //   loading: true,
-    //   scrolled : false,
-    //   canvasReady : false,
-    //   scrollStoped: false,
-    //   section:0,
-    //   sectionName: null,
-
     }
     
     this.attatchScrollEvent = function (screenX){
@@ -99,7 +82,6 @@ import TableOfContent from '../components/TableOfContent'
         this.Top_1 = document.querySelector('.section-1').offsetTop - gap; //0
   
     }
-
 
   }
   render(){
