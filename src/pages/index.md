@@ -9,5 +9,8 @@ publications:
       - file: /img/coffee-gear.png
     title: moja pierwsza publikacja
     year: '2019'
+  - authors: też Kamil
+    title: druga publikacja
+    year: '2019'
 ---
 
