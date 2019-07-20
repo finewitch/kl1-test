@@ -146,7 +146,8 @@ import TableOfContent from '../components/TableOfContent'
     )}
     componentDidMount(){
       
-      var _gatsbyPage = document.getElementById('__gatsby');
+      var _gatsbyPage = document.getElementById('___gatsby');
+      console.log(_gatsbyPage, '<<<GTSBY &&& mount')
       if (_gatsbyPage === null){
         return;
       }
@@ -158,7 +159,6 @@ import TableOfContent from '../components/TableOfContent'
 
       setTimeout(
         ()=>{
-          console.log('mount')
           this.setState({ loading: false })
           this.attatchScrollEvent(screenResX);
           bodyTag.classList.remove('body-overflow');
@@ -189,6 +189,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <IndexPageTemplate
         title={frontmatter.title}
+        description={frontmatter.description}
         subheading={frontmatter.subheading}
         publications={frontmatter.publications}
       />
@@ -211,10 +212,11 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
+        
         subheading
         publications {
           title
-          ownurl
+          description
           year
           authors
         }
