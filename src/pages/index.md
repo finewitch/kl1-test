@@ -4,7 +4,7 @@ title: Clinical Research Space
 subheading: scroll to get to know us
 publications:
   - authors: Kamil Lenart
-    description: yolo123
+    description: 2019-07-19-moja-pierwsza-publikacja
     files:
       - file: /img/apple-touch-icon.png
       - file: /img/coffee-gear.png
