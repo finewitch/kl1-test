@@ -22,7 +22,7 @@ collections:
       - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "tags"}
+      - {label: "Tags", name: "tags", widget: "tags",  default: ["news"]}
 
   - name: "pages"
     label: "Pages"
@@ -34,14 +34,6 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: Title, name: title, widget: string}
           - {label: Subheading, name: subheading, widget: string}
-          - {label: Publications, name: publications, widget: list,
-            fields: [
-            {label: Title, name: title, widget: string}, 
-            {label: Description, name: description, widget: string}, 
-            {label: Year, name: year, widget: string}, 
-            {label: Authors, name: authors, widget: string}, 
-            {label: Files, name: files, widget: list, fields: [{label: File, name: file, widget: file}]},
-              ]}
           # - {label: Image, name: image, widget: image}
           # - {label: Heading, name: heading, widget: string}
           # - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
