@@ -14,11 +14,6 @@ export default class Team extends React.Component {
 
                 
 
-                    <div className="goals__bottom">
-                    
-
-                    </div>
-
 
                 </div>
 
