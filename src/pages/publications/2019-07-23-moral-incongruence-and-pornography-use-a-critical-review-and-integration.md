@@ -7,5 +7,8 @@ date: 2019-07-23T13:01:10.894Z
 description: bla
 featuredpost: true
 featuredimage: /img/blog-index.jpg
+tags:
+  - brewing
+  - chemex
 ---
 body
