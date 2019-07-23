@@ -26,6 +26,9 @@ export default class Navbar extends React.Component {
         <div className={`menu ${this.props.loading ? 'loading-menu' : null }`}>
 
           <div className="menu__main">
+         logo
+
+
 
             <ul className="menu__main-wrapper">
               <li>
@@ -36,28 +39,31 @@ export default class Navbar extends React.Component {
               <li>
                 <a href="#needtofillhere">
                 <span>02</span>
-                  About</a>
-                  /
-                  <a href="#needtofillhere">
-                <span>02.1</span>
-                  Team</a>
+                  About
+                </a>
+                </li>
+                <li>
+                <a href="#needtofillhere">
+                  <span>03</span>
+                  Team
+                  </a>
               </li>
               <li>
                 <a href="#needtofillhere">
-                <span>03</span>
+                <span>04</span>
                   Publications
                 </a>
                 /
                 <a href="#needtofillhere">
-                <span>03.1</span>
+                <span>04.1</span>
                   Resources
                 </a>
                 
               </li>
               <li>
                 <a href="#needtofillhere">
-                <span>04</span>
-                  Contact & News
+                <span>05</span>
+                  Contact us & News
                   </a>
               </li>
             </ul>

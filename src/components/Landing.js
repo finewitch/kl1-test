@@ -11,13 +11,9 @@ import LinkIco from './atoms/LinkIco'
 
         <div className="section-1 landing">
           <div className="landing__wrapper">
+            
             <div className="landing__wrapper-title">
-              
-              {/* <h1><span className="landing__wrapper-title-span"></span>What<span className="landing__wrapper-title-span">’</span>s <br/>Clinical <br/>
-              Space<span className="landing__wrapper-title-span">?</span></h1> */}
-              <h1><span className="landing__wrapper-title-span"></span>{this.props.title}</h1>
-              
-        
+              <h1><span className="landing__wrapper-title-span"></span>Clinical <br/>Research <br/>Space</h1>
             </div>
 
             <div className="landing__wrapper-scroll">

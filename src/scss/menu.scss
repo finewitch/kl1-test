@@ -48,12 +48,15 @@ $menu-height: 160px;
     }
     &__main{
         // border-bottom:1px solid $bg-menu;
+        display: flex;
+        align-items: CENTER;
     }
     ul{
         height: 100%;
         list-style: none;
         display: flex;
         align-items: flex-end;
+        justify-content: center;
         @media (max-width: $largest-desktop) {
             justify-content: space-between;
            }
@@ -62,11 +65,13 @@ $menu-height: 160px;
         padding:0;
         // padding-bottom: 12px;
         li{
-            flex-basis: 25%;
+            // flex-basis: 25%;
             position: relative;
             font-size:1.20rem;
             text-align: center;
             font-weight: 400;
+            border: 1p solid red;
+            margin: 0 20px;
             @media (max-width: $largest-desktop) {
                 font-size:1.10rem;
                 flex-basis: 0;
@@ -88,7 +93,7 @@ $menu-height: 160px;
                 position: relative;
                 color:black;
                 text-decoration: none;
-                margin: 0 20px;
+                margin: 0 10px;
      
                 span{
                     transition:all .3s cubic-bezier(.65,.01,.5,.76);

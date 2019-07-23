@@ -1,7 +1,7 @@
 import React from 'react'
 import LinkIco from './atoms/LinkIco'
 
-export default class Goals extends React.Component {
+export default class About extends React.Component {
     render(){
         return(
             <div className="section-2 goals">
@@ -17,14 +17,7 @@ export default class Goals extends React.Component {
                         <h2>
                         The CSPACE lab (Science of Personality, Addiction, and Religion, Throughout Adulthood) at Bowling Green State University is comprised of myself, my current graduate students, and a number of undergraduate students.
                         </h2>
-                        <div className="goals__top-side">
-                            <h3 className="color-green-header goals-side-title">
-                                <a href="#nowhere">
-                                    <span data-hover="TEAM" className="color-green-header">TEAM? →</span>
-                                </a>
-                            </h3>
-                        </div>
-
+                        
                     </div>
 
                     <div className="goals__bottom">

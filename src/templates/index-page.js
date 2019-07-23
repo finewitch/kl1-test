@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 
 import Layout from '../components/Layout'
 import Landing from '../components/Landing'
-import Goals from '../components/Goals'
+import About from '../components/About'
+import Team from '../components/Team'
 import Publications from '../components/Publications'
 import ContactNews from '../components/ContactNews'
 
@@ -20,9 +21,9 @@ import TableOfContent from '../components/TableOfContent'
     
     this.attatchScrollEvent = function (screenX){
       var _topGap = 600;
-    if(screenX.matches){
-      _topGap = 250;
-    }
+      if(screenX.matches){
+        _topGap = 250;
+      }
 
     console.log(_topGap, 'gap')
 
@@ -89,8 +90,9 @@ import TableOfContent from '../components/TableOfContent'
   <div className="root-wrapper">
     <TableOfContent page={this.state.page}/>
     <Landing title={this.props.title}/>
-    <Goals/>
-    <Publications/>
+    <About/>
+    <Team/>
+    <Publications data={this.props.publications}/>
     <ContactNews/>
     {/* <h1 className="title">{this.props.title}</h1> */}
 
@@ -147,7 +149,7 @@ import TableOfContent from '../components/TableOfContent'
     componentDidMount(){
       
       var _gatsbyPage = document.getElementById('___gatsby');
-      console.log(_gatsbyPage, '<<<GTSBY &&& mount')
+      // console.log(_gatsbyPage, '<<<GTSBY &&& mount')
       if (_gatsbyPage === null){
         return;
       }
@@ -184,14 +186,15 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
+  const publications = data.allMarkdownRemark.edges
+  // console.log(publications, '<<<<<<<<<')
 
   return (
     <Layout>
       <IndexPageTemplate
-        title={frontmatter.title}
-        description={frontmatter.description}
+        // title={frontmatter.title}
         subheading={frontmatter.subheading}
-        publications={frontmatter.publications}
+        publications={publications}
       />
     </Layout>
   )
@@ -200,7 +203,7 @@ const IndexPage = ({ data }) => {
 IndexPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
+      // frontmatter: PropTypes.object,
     }),
   }),
 }
@@ -209,17 +212,25 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "blog-post"}}}) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            date
+            year
+            authors
+          }
+        }
+      }
+    }
+    markdownRemark {
       frontmatter {
         title
-        
         subheading
-        publications {
-          title
-          description
-          year
-          authors
-        }
       }
     }
   }

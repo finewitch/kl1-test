@@ -11,8 +11,7 @@ export default class ContactNews extends React.Component {
 
         <div className="publications-title">
 
-            <h3 className="color-grey">drop
-            us<br/> a line
+            <h3 className="color-grey">Contact us
             </h3>
 
           <h3>news</h3>
