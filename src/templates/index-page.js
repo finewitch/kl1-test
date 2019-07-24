@@ -7,6 +7,7 @@ import About from '../components/About'
 import Team from '../components/Team'
 import Publications from '../components/Publications'
 import ContactNews from '../components/ContactNews'
+import { graphql } from 'gatsby'
 
 import TableOfContent from '../components/TableOfContent'
 
@@ -211,27 +212,26 @@ IndexPage.propTypes = {
 export default IndexPage
 
 export const pageQuery = graphql`
-  query IndexPageTemplate {
-    allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "blog-post"}}}) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            date
-            year
-            authors
-          }
+query IndexPageTemplate {
+  allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "blog-post"}}}, sort: {fields: frontmatter___date, order: DESC}) {
+    edges {
+      node {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          date
+          authors
         }
       }
     }
-    markdownRemark {
-      frontmatter {
-        title
-        subheading
-      }
+  }
+  markdownRemark {
+    frontmatter {
+      title
+      subheading
     }
   }
+}
 `

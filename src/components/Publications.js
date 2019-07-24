@@ -4,52 +4,44 @@ import React from 'react'
 import LinkIco from './atoms/LinkIco'
 import { ELOOP } from 'constants';
 
+import {publications_getSortingLAbels} from './helpers/helpers';
+
 // import PublicationsPageTemplate from '../templates/publications-page'
 
 export default class Publications extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this._allYears = [];
 		
 		this.state={
 			publications : props.data
 		}
 
-		//put the incoming years into array
-		this.props.data.map( (el)=>{
-			let data = el.node.frontmatter.year;
-			if(data != null){
-				this._allYears.push(parseInt(data));
-			}
-		})
-		//remove duplicates
-		this.years = this._allYears.reduce(function (accu, curr) {
+		this.years = publications_getSortingLAbels(this.props.data);
 
-			if(accu.indexOf(curr) == -1) accu.push(curr)
-			return accu;
-
-		}, [])
-		//sort from the highest
-		this.years = this.years.sort(function (a, b) {  return  b - a;  });
-
+		// console.log(this.years, 'years')
 
 	}
 	//EVENT HANDLERS
 	onClickHandler = function(){
-		console.log('yey', this.props.data)
+		console.log('RESPONSE--->', this.props.data)
+
+
 		var yolo = this.props.data.sort(function(a,b){
-			var c = new Date(a.date);
-			var d = new Date(b.date);
+			console.log(a)
+			var c = new Date(a.node.frontmatter.date);
+			var d = new Date(b.node.frontmatter.date);
+
+			console.log(c,d)
 			return c-d;
 			});
 
-			// console.log(yolo)
+			console.log(yolo, '<<<------SORTED')
 			// TOOOO BEEE MADE
 
 
 		this.setState({
-			// publications : 'yolo'
+			publications : yolo
 		})
 
 		console.log(this.state)
@@ -93,28 +85,27 @@ export default class Publications extends React.Component {
 				<div className="publications__wrapper">
 
 					{this.state.publications.map( (el, index)=>{
+
 						let data = el.node.frontmatter;
+						let year = new Date(data.date).getFullYear();
+
 						return (
 							<div className="publications__wrapper-box" key = {index}>
 
-								<div className="publications__wrapper-box-year">{data.year}</div>
+								<div className="publications__wrapper-box-year">{year}</div>
 
-								<div className="publications__wrapper-box-title">
-								{data.title}
-								</div>
+								<div className="publications__wrapper-box-title">{data.title}</div>
 
-								<div className="publications__wrapper-box-author">
-								{data.authors}
-								</div>
+								<div className="publications__wrapper-box-author">{data.date}{data.authors}</div>
 
 								<div className="publications__wrapper-box-read">
-								<a href={data.slug}>READ MORE</a>
+									<a href={data.slug}>READ MORE</a>
 								</div>
 
 								<div className="publications__wrapper-box-btns">
-								<a href="/#nowhere">SOURCE</a>
-								<a href="/#nowhere">SOURCE</a>
-								<a href="/#nowhere">SOURCE</a>
+									<a href="/#nowhere">SOURCE</a>
+									<a href="/#nowhere">SOURCE</a>
+									<a href="/#nowhere">SOURCE</a>
 								</div>
 
 							</div>
@@ -141,4 +132,5 @@ export default class Publications extends React.Component {
     )
   }
 }
+
 
