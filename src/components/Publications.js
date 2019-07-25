@@ -1,8 +1,6 @@
 
 import React from 'react'
 // import PropTypes from 'prop-types'
-import LinkIco from './atoms/LinkIco'
-import { ELOOP } from 'constants';
 
 import {publications_getSortingLAbels} from './helpers/helpers';
 
@@ -12,39 +10,54 @@ export default class Publications extends React.Component {
 
 	constructor(props) {
 		super(props);
-		
+		this.initialState = props.data
+		this.PublicationsSetToBeModified = Array.from(props.data)// copy props to new array so that initial props reamain intact
 		this.state={
-			publications : props.data
+			publications : this.initialState
 		}
 
 		this.years = publications_getSortingLAbels(this.props.data);
 
-		// console.log(this.years, 'years')
+		console.log(this.years, '<----YEARS')
 
 	}
 	//EVENT HANDLERS
-	onClickHandler = function(){
-		console.log('RESPONSE--->', this.props.data)
+	onClickHandler = function(year){
+		console.log('RESPONSE--->', this.props.data, 'CHOICE-->', year)
 
+		if(year === 0 ){
 
-		var yolo = this.props.data.sort(function(a,b){
-			console.log(a)
-			var c = new Date(a.node.frontmatter.date);
-			var d = new Date(b.node.frontmatter.date);
+			this.setState({
+				publications : this.initialState
+			})
 
-			console.log(c,d)
-			return c-d;
+			return;
+
+		}
+		else {
+
+			var orderedPublicationsSet = []
+			this.PublicationsSetToBeModified.forEach(el => {
+
+				var _year = new Date(el.node.frontmatter.date).getFullYear();
+				if(year === 'pre-2019'){
+					if(_year < 2019){
+
+						orderedPublicationsSet.push(el);
+
+					}
+
+				}else if(_year === year) {
+					orderedPublicationsSet.push(el);
+				}
+
 			});
 
-			console.log(yolo, '<<<------SORTED')
-			// TOOOO BEEE MADE
-
-
-		this.setState({
-			publications : yolo
-		})
-
-		console.log(this.state)
+			this.setState({
+				publications : orderedPublicationsSet
+			})
+	
+		}
 	}
 
 
@@ -57,28 +70,33 @@ export default class Publications extends React.Component {
 					<h3 className="color-white">publications</h3>
 
 					<h4>
-						{this.years.map((el, index, arr)=>{
-							 if(arr.length -1 === index){
+						<div className="publications-title-yearsort">
+							<button onClick={()=> this.onClickHandler(0)}>all</button>
+							<span>/</span>
+						</div>
 
-								 return(
-									<div key = {index}>
-									<button onClick={()=> this.onClickHandler()}>{el}</button>
+					{this.years.map((el, index, arr)=>{
+							if(arr.length -1 === index){
+
+								return(
+								<div key = {index} className="publications-title-yearsort">
+									<button onClick={()=> this.onClickHandler(el)}>{el}</button>
 									<span></span>
-									</div>
-								 )
+								</div>
+								)
 
-							 }else{
+							}else{
 								 
-								 return (
-									 <div key = {index}>
-									 <button onClick={()=> this.onClickHandler()}>{el}</button>
-									 <span>/</span>
-									 </div>
-								 )
+								return (
+									<div key = {index} className="publications-title-yearsort">
+										<button onClick={()=> this.onClickHandler(el)}>{el}</button>
+										<span>/</span>
+									</div>
+								)
 
-							 }
+							}
 
-						})}
+					})}
 					</h4>
 
 				</div>
@@ -87,6 +105,7 @@ export default class Publications extends React.Component {
 					{this.state.publications.map( (el, index)=>{
 
 						let data = el.node.frontmatter;
+						let slug = el.node.fields.slug;
 						let year = new Date(data.date).getFullYear();
 
 						return (
@@ -99,7 +118,7 @@ export default class Publications extends React.Component {
 								<div className="publications__wrapper-box-author">{data.date}{data.authors}</div>
 
 								<div className="publications__wrapper-box-read">
-									<a href={data.slug}>READ MORE</a>
+									<a href={slug}>READ MORE</a>
 								</div>
 
 								<div className="publications__wrapper-box-btns">

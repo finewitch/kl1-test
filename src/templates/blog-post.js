@@ -12,6 +12,7 @@ export const BlogPostTemplate = ({
   description,
   tags,
   title,
+  authors,
   helmet,
 }) => {
   const PostContent = contentComponent || Content
@@ -19,12 +20,15 @@ export const BlogPostTemplate = ({
   return (
     <section className="section">
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
+      <div className="container content publication-page">
+        <div className="columns section__wrapper">
           <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+            <h1 className="title centered">
               {title}
             </h1>
+            <h2 className="title centered">
+              {authors}
+            </h2>
             <p>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
@@ -74,6 +78,7 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        authors={post.frontmatter.authors}
       />
     </Layout>
   )
@@ -95,6 +100,7 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
+        authors
         description
         tags
       }

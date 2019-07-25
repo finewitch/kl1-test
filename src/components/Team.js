@@ -1,5 +1,4 @@
 import React from 'react'
-import LinkIco from './atoms/LinkIco'
 
 export default class Team extends React.Component {
     render(){

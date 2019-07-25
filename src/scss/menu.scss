@@ -1,11 +1,7 @@
 $menu-width: 100vw;
-$menu-height: 160px;
+$menu-height: 60px;
 // $max-content: 1230px;
 
-
-.menu-gap{
-    padding-top: $menu-height;
-}
 .loading-menu{
     top: -120px!important;
     transition: all 1s ease;

@@ -1,6 +1,5 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
-import LinkIco from './atoms/LinkIco'
 
 
   export default class Landing extends React.Component {

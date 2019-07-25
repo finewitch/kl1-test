@@ -1,5 +1,5 @@
 import React from 'react'
-import LinkIco from './atoms/LinkIco'
+// import LinkIco from './atoms/LinkIco'
 
 export default class About extends React.Component {
     render(){
