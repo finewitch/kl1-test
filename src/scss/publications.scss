@@ -130,11 +130,16 @@
             }
             &-title{
                 font-family: 'Alegreya';
-                // margin-left: 20px;
+                // margin-left: 20px;:
+                color:white;
+                text-decoration: none;
                 font-size:1.2rem;
                 flex-basis: 35%;
                 @media (max-width: $largest-desktop) {
                     font-size: 1rem;
+                   }
+                   &:hover{
+                       color: $green-header;
                    }
                 
             }

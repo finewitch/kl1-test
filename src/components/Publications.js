@@ -113,7 +113,7 @@ export default class Publications extends React.Component {
 
 								<div className="publications__wrapper-box-year">{year}</div>
 
-								<div className="publications__wrapper-box-title">{data.title}</div>
+								<a href={slug} className="publications__wrapper-box-title"><div>{data.title}</div></a>
 
 								<div className="publications__wrapper-box-author">{data.date}{data.authors}</div>
 
