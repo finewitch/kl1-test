@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
+// import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
@@ -13,6 +13,7 @@ export const BlogPostTemplate = ({
   tags,
   title,
   authors,
+  date,
   helmet,
 }) => {
   const PostContent = contentComponent || Content
@@ -29,7 +30,8 @@ export const BlogPostTemplate = ({
             <h2 className="title centered">
               {authors}
             </h2>
-            <p>{description}  -->desc</p>
+            <h4 className="date centered">{date}</h4>
+            <p>{description}</p>
             <PostContent content={content} />
             {/* {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -80,6 +82,7 @@ const BlogPost = ({ data }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         authors={post.frontmatter.authors}
+        date={ProcessingInstruction.frontmatter.date}
       />
     </Layout>
   )
