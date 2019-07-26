@@ -10,6 +10,10 @@ export default class Publications extends React.Component {
 
 	constructor(props) {
 		super(props);
+		console.log(props, '<<pubs111')
+		if(props.data === null || undefined){
+			return;
+		}
 		this.initialState = props.data
 		this.PublicationsSetToBeModified = Array.from(props.data)// copy props to new array so that initial props reamain intact
 		this.state={
