@@ -1,29 +1,32 @@
 .publication-page{
     // border: 1px solid red;
-    margin-top: $menu-height + 50px;
-    h1.title{
+    margin-top: $menu-height + 60px;
+    h1.title, h2.title{
         font-size: 2.3rem;
         max-width:800px;
         margin:0 auto;
         line-height: 3rem;
+        border-bottom:1px solid lightgrey;
+        border-top: 1px solid lightgrey;
+        padding:30px 0;
+    }
+    h2.title{
+        max-width:600px;
+        font-size: 1.2rem;
+        color:gray;
+        font-weight: lighter;
+        border: none;
+        line-height: 2rem;
     }
     h2{
         color:black;
         padding:0;margin:0;
-        border-bottom:1px solid gray;
-        border-bottom:1px solid black;
-    }
-    h2.title{
-        max-width:600px;
-        margin:0 auto;
-        font-size: 1.2rem;
-        color:gray;
-        font-weight: lighter;
-        padding: 30px 0;
-        border-bottom:1px solid gray;
     }
     h4.date{
-        color: lightgray;
+
+        text-align: center;
+        display: block;
+        font-weight: lighter;
     }
     p{
         font-size:1.2rem;

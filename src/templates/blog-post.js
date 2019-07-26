@@ -24,14 +24,14 @@ export const BlogPostTemplate = ({
       <div className="container content publication-page">
         <div className="columns section__wrapper">
           <div className="column is-10 is-offset-1">
+            <h4 className="date centered color-grey">{date}</h4>
             <h1 className="title centered">
               {title}
             </h1>
             <h2 className="title centered">
               {authors}
             </h2>
-            <h4 className="date centered">{date}</h4>
-            <p>{description}</p>
+            {/* <p>{description}</p> */}
             <PostContent content={content} />
             {/* {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -69,7 +69,6 @@ const BlogPost = ({ data }) => {
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -105,7 +104,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         authors
-        description
         tags
       }
     }
