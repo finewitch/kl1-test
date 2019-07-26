@@ -57,7 +57,6 @@ collections:
       - {label: Authors, name: authors, widget: string}
       - {label: Files, name: files, widget: list, fields: [{label: File, name: file, widget: file}]}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list",  default: ["publication"]}
 
