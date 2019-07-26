@@ -21,7 +21,7 @@ export default class Publications extends React.Component {
 
 		this.years = publications_getSortingLAbels(this.props.data);
 
-		console.log(this.years, '<----YEARS')
+		// console.log(this.years, '<----YEARS')
 
 	}
 	//EVENT HANDLERS
@@ -109,6 +109,7 @@ export default class Publications extends React.Component {
 
 						let data = el.node.frontmatter;
 						let slug = el.node.fields.slug;
+						let files = el.node.frontmatter.files || [];
 						let year = new Date(data.date).getFullYear();
 
 						return (
@@ -125,9 +126,15 @@ export default class Publications extends React.Component {
 								</div>
 
 								<div className="publications__wrapper-box-btns">
-									<a href="/#nowhere">SOURCE</a>
-									<a href="/#nowhere">SOURCE</a>
-									<a href="/#nowhere">SOURCE</a>
+								<a href="/#nowhere">source</a>
+									{files.map((el) =>{
+										let _file = el.file;
+										console.log(el)
+										return <a href={_file.publicURL}>{_file.extension}</a>
+										
+									})}
+									{/* <a href="/#nowhere">SOURCE</a>
+									<a href="/#nowhere">SOURCE</a> */}
 								</div>
 
 							</div>

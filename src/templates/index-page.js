@@ -90,7 +90,7 @@ export class IndexPageTemplate extends React.Component {
     return(
   <div className="root-wrapper">
     <TableOfContent page={this.state.page}/>
-    <Landing title={this.props.title}/>
+    <Landing scrollText={this.props.subheading}/>
     <About/>
     <Team/>
     <Publications data={this.props.publications}/>
@@ -187,6 +187,7 @@ IndexPageTemplate.propTypes = {
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
   const publications = data.allMarkdownRemark.edges
+  console.log(data, '<------------')
 
   return (
     <Layout>
@@ -221,6 +222,12 @@ query IndexPageTemplate {
           title
           date
           authors
+          files {
+            file {
+              publicURL
+              extension
+            }
+          }
         }
       }
     }

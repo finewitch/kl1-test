@@ -29,7 +29,7 @@ import React from 'react'
                   </clipPath>
                   </defs>
               </svg>
-              <span>{this.props.subheading}</span>
+              <span>{this.props.scrollText}</span>
 
             </div>
             </div>
