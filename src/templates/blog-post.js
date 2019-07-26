@@ -29,9 +29,9 @@ export const BlogPostTemplate = ({
             <h2 className="title centered">
               {authors}
             </h2>
-            <p>{description}</p>
+            <p>{description}  -->desc</p>
             <PostContent content={content} />
-            {tags && tags.length ? (
+            {/* {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
                 <ul className="taglist">
@@ -42,7 +42,7 @@ export const BlogPostTemplate = ({
                   ))}
                 </ul>
               </div>
-            ) : null}
+            ) : null} */}
           </div>
         </div>
       </div>
@@ -59,6 +59,7 @@ BlogPostTemplate.propTypes = {
 }
 
 const BlogPost = ({ data }) => {
+  console.log(data, '<--param')
   const { markdownRemark: post } = data
 
   return (
