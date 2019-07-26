@@ -7,11 +7,11 @@ authors: >-
   Joshua B. Grubbs, Joshua A. Wilt, Julie J. Exline, Kenneth I. Pargament, Shane
   W. Kraus
 date: 2015-12-27T15:32:58.385Z
-description: desc
+description: desc 007 here
 tags:
   - publication
 ---
-The notion of problematic pornography use remains contentious in both academic and popular literature. Although the mental health community at large is divided as to the addictive versus non-addictive nature of Internet pornography, substantial numbers of individuals report “feeling” as if their use of Internet pornography is problematic. The present work seeks to construct a model related to problematic pornography use that is clearly derived from empirical literature and that provides directions to be tested in future research. 
+The  00 notion of problematic pornography use remains contentious in both academic and popular literature. Although the mental health community at large is divided as to the addictive versus non-addictive nature of Internet pornography, substantial numbers of individuals report “feeling” as if their use of Internet pornography is problematic. The present work seeks to construct a model related to problematic pornography use that is clearly derived from empirical literature and that provides directions to be tested in future research. 
 
 The focus of the present work is on those perceptions as they relate to the overarching experience of moral incongruence in pornography use, which is generally thought of as the experience of having one’s behaviors be inconsistent with one’s beliefs. 
 
