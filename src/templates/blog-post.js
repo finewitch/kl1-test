@@ -82,7 +82,7 @@ const BlogPost = ({ data }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         authors={post.frontmatter.authors}
-        date={ProcessingInstruction.frontmatter.date}
+        date={post.frontmatter.date}
       />
     </Layout>
   )
