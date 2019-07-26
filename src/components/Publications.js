@@ -10,7 +10,6 @@ export default class Publications extends React.Component {
 
 	constructor(props) {
 		super(props);
-		console.log(props, '<<pubs111')
 		if(props.data === null || undefined){
 			return;
 		}

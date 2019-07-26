@@ -60,7 +60,7 @@ BlogPostTemplate.propTypes = {
 }
 
 const BlogPost = ({ data }) => {
-  console.log(data, '<--param')
+
   const { markdownRemark: post } = data
 
   return (

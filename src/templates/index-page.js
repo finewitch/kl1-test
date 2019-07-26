@@ -11,7 +11,7 @@ import { graphql } from 'gatsby'
 
 import TableOfContent from '../components/TableOfContent'
 
-  export class IndexPageTemplate extends React.Component {
+export class IndexPageTemplate extends React.Component {
 
   constructor(props) {
     super(props);
@@ -150,7 +150,6 @@ import TableOfContent from '../components/TableOfContent'
     componentDidMount(){
       
       var _gatsbyPage = document.getElementById('___gatsby');
-      // console.log(_gatsbyPage, '<<<GTSBY &&& mount')
       if (_gatsbyPage === null){
         return;
       }
@@ -188,7 +187,6 @@ IndexPageTemplate.propTypes = {
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
   const publications = data.allMarkdownRemark.edges
-  console.log(publications, '<<<<<<<<<')
 
   return (
     <Layout>
