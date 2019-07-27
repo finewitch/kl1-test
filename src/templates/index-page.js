@@ -187,7 +187,6 @@ IndexPageTemplate.propTypes = {
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
   const publications = data.allMarkdownRemark.edges
-  console.log(data, '<------------')
 
   return (
     <Layout>

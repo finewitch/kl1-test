@@ -1,6 +1,7 @@
 
 export function publications_getSortingLAbels(responseData){
     const borderYear = 2019;
+    const currentYear = new Date().getFullYear();
     let _allYears = [];
     let years;
 
@@ -13,6 +14,8 @@ export function publications_getSortingLAbels(responseData){
 
                     _allYears.push('pre-2019');
 
+                }else if(dateYear > currentYear){
+                    _allYears.push('In press');
                 }else{
                     
                     _allYears.push(parseInt(data));

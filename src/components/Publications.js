@@ -4,7 +4,7 @@ import React from 'react'
 
 import {publications_getSortingLAbels} from './helpers/helpers';
 
-// import PublicationsPageTemplate from '../templates/publications-page'
+import SortingYears from './organisms/SortingYearsPub';
 
 export default class Publications extends React.Component {
 
@@ -18,51 +18,13 @@ export default class Publications extends React.Component {
 		this.state={
 			publications : this.initialState
 		}
+		this.currentYear = new Date().getFullYear();
 
 		this.years = publications_getSortingLAbels(this.props.data);
 
-		// console.log(this.years, '<----YEARS')
+		console.log(this.years, '<----YEARS')
 
 	}
-	//EVENT HANDLERS
-	onClickHandler = function(year){
-		console.log('RESPONSE--->', this.props.data, 'CHOICE-->', year)
-
-		if(year === 0 ){
-
-			this.setState({
-				publications : this.initialState
-			})
-
-			return;
-
-		}
-		else {
-
-			var orderedPublicationsSet = []
-			this.PublicationsSetToBeModified.forEach(el => {
-
-				var _year = new Date(el.node.frontmatter.date).getFullYear();
-				if(year === 'pre-2019'){
-					if(_year < 2019){
-
-						orderedPublicationsSet.push(el);
-
-					}
-
-				}else if(_year === year) {
-					orderedPublicationsSet.push(el);
-				}
-
-			});
-
-			this.setState({
-				publications : orderedPublicationsSet
-			})
-	
-		}
-	}
-
 
   render(){
     return(
@@ -72,35 +34,7 @@ export default class Publications extends React.Component {
 
 					<h3 className="color-white">publications</h3>
 
-					<h4>
-						<div className="publications-title-yearsort">
-							<button onClick={()=> this.onClickHandler(0)}>all</button>
-							<span>/</span>
-						</div>
-
-					{this.years.map((el, index, arr)=>{
-							if(arr.length -1 === index){
-
-								return(
-								<div key = {index} className="publications-title-yearsort">
-									<button onClick={()=> this.onClickHandler(el)}>{el}</button>
-									<span></span>
-								</div>
-								)
-
-							}else{
-								 
-								return (
-									<div key = {index} className="publications-title-yearsort">
-										<button onClick={()=> this.onClickHandler(el)}>{el}</button>
-										<span>/</span>
-									</div>
-								)
-
-							}
-
-					})}
-					</h4>
+					<SortingYears years = {this.years} StateHandlerFunction={(year)=>this.onClickHandler(year)}/>
 
 				</div>
 				<div className="publications__wrapper">
@@ -160,6 +94,42 @@ export default class Publications extends React.Component {
 
     )
   }
+
+  	//EVENT HANDLERS
+	onClickHandler = function(year){
+		console.log('RESPONSE--->', this.initialState, 'CHOICE-->', year)
+
+		if(year === 0 ){
+
+			this.setState({ publications : this.initialState })
+			return;
+
+		}
+		else {
+
+			var orderedPublicationsSet = []
+			this.PublicationsSetToBeModified.forEach(el => {
+
+				var _year = new Date(el.node.frontmatter.date).getFullYear()
+
+				if(year === 'pre-2019'){
+
+					if(_year < this.currentYear){ orderedPublicationsSet.push(el) }
+
+				}else if(year === "In press"){
+
+					if(_year > this.currentYear){ orderedPublicationsSet.push(el) }
+
+				}else if(_year === year) { orderedPublicationsSet.push(el) }
+
+			});
+
+			this.setState({
+				publications : orderedPublicationsSet
+			})
+	
+		}
+	}
 }
 
 
