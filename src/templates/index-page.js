@@ -223,16 +223,15 @@ query IndexPageTemplate {
           date
           authors
           citation
-          externalLinks {
-            data {
-              relativePath
-            }
-            pdf {
-              relativePath
-            }
-            preregistration
-            researchgate
-            source
+          abstrakt
+          pdf {
+            publicURL
+          }
+          researchgate
+          source
+          preregistration
+          data {
+            publicURL
           }
         }
       }
@@ -244,5 +243,4 @@ query IndexPageTemplate {
     }
   }
 }
-
 `
