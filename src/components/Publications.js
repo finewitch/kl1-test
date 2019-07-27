@@ -55,7 +55,15 @@ export default class Publications extends React.Component {
 							 'authors' : pub.authors,
 							 'year' : new Date(pub.date).getFullYear(),
 							 'citation' : pub.citation,
-							 'popupHandler' : ()=>this.onClickPopup(props.citation)
+							 'popupHandler' : ()=>this.onClickPopup(props.citation),
+
+							 btns :{
+								 'source' : pub.source || null,
+								 'researchgate' : pub.researchgate || null,
+								 'preregistration' : pub.preregistration || null,
+								 'pdf' : pub.pdf || null,
+								 'data' : pub.data || null
+							 }
 						}
 
 						return (
