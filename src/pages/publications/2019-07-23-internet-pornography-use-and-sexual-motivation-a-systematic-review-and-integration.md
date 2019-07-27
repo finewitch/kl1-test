@@ -4,11 +4,15 @@ title: >-
   Internet Pornography Use and Sexual Motivation: A Systematic Review and
   Integration.
 authors: 'Joshua B. Grubbs, Paul J. Wright, Abby Braden, Joshua A. Wilt, Shane W. Kraus'
-files:
-  - file: /img/pdf-pub.pdf
-  - file: /img/docx-pub.docx
+citation: hej tu cytowanie
+externalLinks:
+  - data: /img/image_0.jpg.zip
+    pdf: /img/pdf-pub.pdf
+    preregistration: 'https://osf.io/qcwxa/'
+    researchgate: >-
+      https://www.researchgate.net/publication/295919118_What_matters_quantity_or_quality_of_pornography_use_Psychological_and_behavioral_factors_of_treatment-seeking_for_problematic_pornography_use
+    source: 'https://www.jsm.jsexmed.org/article/S1743-6095(16)00346-5/abstract'
 date: 2018-01-01T15:21:48.921Z
-description: 1111desc
 tags:
   - publication
 ---
