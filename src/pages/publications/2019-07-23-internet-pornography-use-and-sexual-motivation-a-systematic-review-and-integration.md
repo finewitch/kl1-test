@@ -5,7 +5,7 @@ title: >-
   Integration.
 authors: 'Joshua B. Grubbs, Paul J. Wright, Abby Braden, Joshua A. Wilt, Shane W. Kraus'
 citation: hej tu cytowanie
-source: ' https://www.jsm.jsexmed.org/article/S1743-6095(16)00346-5/abstract'
+source: ''
 researchgate: ' https://www.researchgate.net/publication/295919118_What_matters_quantity_or_quality_of_pornography_use_Psychological_and_behavioral_factors_of_treatment-seeking_for_problematic_pornography_use'
 preregistration: 'https://osf.io/qcwxa/'
 pdf: /img/pdf-pub.pdf
