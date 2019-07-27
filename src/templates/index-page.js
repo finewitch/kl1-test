@@ -222,12 +222,6 @@ query IndexPageTemplate {
           title
           date
           authors
-          files {
-            file {
-              publicURL
-              extension
-            }
-          }
         }
       }
     }

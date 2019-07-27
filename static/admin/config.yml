@@ -47,8 +47,15 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: Authors, name: "authors", widget: string}
-      - {label: Files, name: "files", widget: list, fields: [{label: File, name: "file", widget: file}]}
+      - {label: "Authors", name: "authors", widget: string}
+      - {label: "citation", name: "citation", widget: "markdown"}
+      - {label: "ExternalLinks", name: "externalLinks", widget: "list", fields: [
+        {label: "Source", name: "source", widget: "string"},
+        {label: "Researchgate", name: "researchgate", widget: "string"},
+        {label: "Preregistration", name: "preregistration", widget: "string"},
+        {label: "Pdf", name: "pdf", widget: "file"},
+        {label: "Data", name: "data", widget: "file"}
+        ]}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list",  default: ["publication"]}
