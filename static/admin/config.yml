@@ -48,16 +48,14 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Authors", name: "authors", widget: string}
-      - {label: "citation", name: "citation", widget: "markdown"}
-      - {label: "ExternalLinks", name: "externalLinks", widget: "list", fields: [
-        {label: "Source", name: "source", widget: "string"},
-        {label: "Researchgate", name: "researchgate", widget: "string"},
-        {label: "Preregistration", name: "preregistration", widget: "string"},
-        {label: "Pdf", name: "pdf", widget: "file"},
-        {label: "Data", name: "data", widget: "file"}
-        ]}
+      - {label: "Citation", name: "citation", widget: "markdown"}
+      - {label: "Source", name: "source", widget: "string", required: false}
+      - {label: "Researchgate", name: "researchgate", widget: "string", required: false}
+      - {label: "Preregistration", name: "preregistration", widget: "string"}
+      - {label: "PDF", name: "pdf", widget: "file"}
+      - {label: "Data", name: "data", widget: "file"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Abstrakt", name: "abstrakt", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list",  default: ["publication"]}
 
          

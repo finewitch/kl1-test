@@ -222,6 +222,18 @@ query IndexPageTemplate {
           title
           date
           authors
+          citation
+          externalLinks {
+            data {
+              relativePath
+            }
+            pdf {
+              relativePath
+            }
+            preregistration
+            researchgate
+            source
+          }
         }
       }
     }
@@ -229,8 +241,8 @@ query IndexPageTemplate {
   markdownRemark {
     frontmatter {
       title
-      subheading
     }
   }
 }
+
 `
