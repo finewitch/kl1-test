@@ -5,6 +5,8 @@ import React from 'react'
 import {publications_getSortingLAbels} from './helpers/helpers';
 
 import SortingYears from './organisms/SortingYearsPub';
+import Publication from './atoms/PublicationListEl.js';
+import PopupCitation from './atoms/PopupCitation.js';
 
 export default class Publications extends React.Component {
 
@@ -13,10 +15,14 @@ export default class Publications extends React.Component {
 		if(props.data === null || undefined){
 			return;
 		}
+		//POPUP
+		this.showPopup = false
 		this.initialState = props.data
 		this.PublicationsSetToBeModified = Array.from(props.data)// copy props to new array so that initial props reamain intact
+		
 		this.state={
-			publications : this.initialState
+			publications : this.initialState,
+			citationData : null
 		}
 		this.currentYear = new Date().getFullYear();
 
@@ -29,6 +35,7 @@ export default class Publications extends React.Component {
   render(){
     return(
       <div className="section-3 publications" id="#publications">
+		  
 			<div className="section__wrapper">
 				<div className="publications-title">
 
@@ -40,38 +47,19 @@ export default class Publications extends React.Component {
 				<div className="publications__wrapper">
 
 					{this.state.publications.map( (el, index)=>{
+						let pub = el.node.frontmatter
 
-						let data = el.node.frontmatter;
-						let slug = el.node.fields.slug;
-						let files = el.node.frontmatter.files || [];
-						let year = new Date(data.date).getFullYear();
+						let props = {
+							 'slug' : el.node.fields.slug,
+							 'title' : pub.title,
+							 'authors' : pub.authors,
+							 'year' : new Date(pub.date).getFullYear(),
+							 'citation' : pub.citation,
+							 'popupHandler' : ()=>this.onClickPopup(props.citation)
+						}
 
 						return (
-							<div className="publications__wrapper-box" key = {index}>
-
-								<div className="publications__wrapper-box-year">{year}</div>
-
-								<a href={slug} className="publications__wrapper-box-title"><div>{data.title}</div></a>
-
-								<div className="publications__wrapper-box-author">{data.date}{data.authors}</div>
-
-								<div className="publications__wrapper-box-read">
-									<a href={slug}>READ MORE</a>
-								</div>
-
-								<div className="publications__wrapper-box-btns">
-								<a href="/#nowhere">source</a>
-									{files.map((el) =>{
-										let _file = el.file;
-										console.log(el)
-										return <a href={_file.publicURL}>{_file.extension}</a>
-										
-									})}
-									{/* <a href="/#nowhere">SOURCE</a>
-									<a href="/#nowhere">SOURCE</a> */}
-								</div>
-
-							</div>
+							<Publication key = {index} {... props} />
 						)
 					})}
 
@@ -89,7 +77,13 @@ export default class Publications extends React.Component {
 				</div>
 
 			</div>
-            
+
+			{this.state.showPopup ? 
+
+			<PopupCitation data={this.state.citationData} onClickClose={()=>this.onClickClosePopup()}/>
+
+			: null}
+			    
       </div>
 
     )
@@ -129,6 +123,22 @@ export default class Publications extends React.Component {
 			})
 	
 		}
+	}
+	onClickPopup = function (data){
+
+		console.log(data, '<---DATA')
+		this.setState({
+			citationData : data,
+			showPopup: true
+		})
+	}
+
+	onClickClosePopup = function (){
+
+		this.setState({
+			showPopup : false,
+			citationData : null
+		})
 	}
 }
 

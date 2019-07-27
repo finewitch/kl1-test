@@ -9,6 +9,12 @@
 }
 }
 .publications{
+    position: relative;
+    button{
+        transition: all .3s ease-in;
+        font-family: 'Josefin Sans';
+        color:white;
+    }
     
     &-title{
         width: $largest-desktop;
@@ -24,11 +30,8 @@
             display: flex;
             align-items: center;
             button{
-                color:white;
                 height:100%;
-                font-size:1.5rem;
-                font-family: 'Josefin Sans';
-                transition: color .3s ease-in;
+                font-size:1.2rem;
                 &:hover{
                     color: $green-header;
                     transition: color .3s ease-in;
@@ -115,13 +118,9 @@
             font-family: 'Josefin Sans';
             font-weight: 100;
             justify-content: space-between;
-            // margin:0 auto;
-            // margin-left: -120px;
             &-year{
                 font-size:3.3rem;
                 flex-basis: 10%;
-                // opacity:.5;
-                // color:#00d2b5;
                 color: $light-blue;
                 font-weight: bold;
                 @media (max-width: $largest-desktop) {
@@ -157,7 +156,7 @@
                 flex-basis: 10%;
                 font-weight: 400;
                 line-height: 1.5rem;
-                a{
+                a, button{
                     color:white;
                     text-decoration: none;
                     display: block;
@@ -165,11 +164,20 @@
                 &:hover{
                         cursor: pointer;
                         color: #00d2b5;
+                       
+                    }
+                }
+                button{
+                    &:hover{
+                        border: 1px solid #00d2b5;
                     }
                 }
                 
             }
-            &-btns a{
+            &-btns a, button
+            {
+                text-transform: uppercase;
+                color:white;
                 max-width:80px;
                 display: flex;
                 justify-content: center;
@@ -180,7 +188,50 @@
                 border-radius: 7px;
                 font-size:.8rem;
             }
+            button{
+                min-width: 80%;
+                padding: 7px 0;
+
+            }
+        }
+    }
+
+    &__popup{
+        z-index: 50;
+        border-radius: 10px;
+        position: absolute;
+        // position: fixed;  
+        width: 400px;  
+        height: 300px;  
+        top: 0;  
+        left: 0;  
+        right: 0;  
+        bottom: 0;  
+        margin: auto;  
+        background:white;
+        // border: 15px solid rgba(0,0,0, 0.5);
+        
+        &-inner{
+            height: 100%;
+            color:black;
+            padding:30px;
+            &-close{
+                display: flex;
+                justify-content: flex-end;
+                cursor: pointer;
+                svg{
+                    fill: black;
+                }
+                &:hover{
+                    svg{
+                        fill: #00d2b5;
+                    }
+                }
+            }
         }
     }
 }
+
+//popup
+
 
