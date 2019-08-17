@@ -58,4 +58,15 @@ collections:
       - {label: "Abstrakt", name: "abstrakt", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list",  default: ["publication"]}
 
+  - name: "team"
+    label: "Team"
+    folder: "src/pages/team"
+    create: true
+    slug: "member"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "team-post"}
+      - {label: "Title", name: "title", widget: "string", default: "Team member"}
+      - {label: "Image", name: image, widget: image}
+      - {label: "Content", name: "content", widget: "markdown"}
+
          

@@ -11,13 +11,20 @@ import { graphql } from 'gatsby'
 
 import TableOfContent from '../components/TableOfContent'
 
+let styles = {
+  color1: '#c38d9d',
+  color2: '#e27d5f',
+  color3: '#e27d5f',
+  color4: '#59b0d9',
+  color5: '#4056a1',
+}
 export class IndexPageTemplate extends React.Component {
 
   constructor(props) {
     super(props);
     console.log(props, '<-------PROPS')
     this.state = {
-      page: '01',
+      page: styles.color1,
     }
     
     this.attatchScrollEvent = function (screenX){
@@ -26,58 +33,26 @@ export class IndexPageTemplate extends React.Component {
         _topGap = 250;
       }
 
-    console.log(_topGap, 'gap')
+    // console.log(_topGap, 'gap')
 
     var bodyTag = document.querySelector('body');
     this.getDomEls(bodyTag, _topGap);
-    
-    var rooter = document.querySelector('.root-wrapper');
-    var menu = document.querySelector('.menu');
 
     window.addEventListener('scroll', function ( e ) {
       let Ypos = window.scrollY;
 
-      if(Ypos < this.Top_2){
-
-        this.setState({
-          page: '01',
-        })
-        rooter.classList.remove('bg-section-1')
-        rooter.classList.remove('bg-section-2')
-        rooter.classList.remove('bg-section-3')
-
-        menu.classList.remove('second-menu-bg')
-
-      }else if(Ypos >= this.Top_2 && Ypos < this.Top_3){
-
-        this.setState({
-          page: '02',
-        })
-
-        rooter.classList.add('bg-section-2')
-        menu.classList.add('second-menu-bg')
-        rooter.classList.remove('bg-section-3')
-
-      }else if(Ypos >= this.Top_3 && Ypos < this.Top_4){
-        this.setState({
-          page: '03',
-        })
-        rooter.classList.add('bg-section-3')
-        rooter.classList.remove('bg-section-4')
-
-      }else if(Ypos >= this.Top_4){
-
-        this.setState({
-          page: '04',
-        })
-        rooter.classList.add('bg-section-4')
-      }
+      if(Ypos < this.Top_2)                             { this.setState({ page: styles.color1 }) }
+      else if(Ypos >= this.Top_2 && Ypos < this.Top_3)  { this.setState({ page: styles.color2 }) }
+      else if(Ypos >= this.Top_3 && Ypos < this.Top_4)  { this.setState({ page: styles.color3 }) }
+      else if(Ypos >= this.Top_4 && Ypos < this.Top_5)  { this.setState({ page: styles.color4 }) }
+      else if(Ypos >= this.Top_5)                       { this.setState({ page: styles.color5 }) }
 
     }.bind(this))
 
   }
       this.getDomEls = function(body, gap){
 
+        this.Top_5 = document.querySelector('.section-5').offsetTop - gap; //1300
         this.Top_4 = document.querySelector('.section-4').offsetTop - gap; //1300
         this.Top_3 = document.querySelector('.section-3').offsetTop - gap; //1300
         this.Top_2 = document.querySelector('.section-2').offsetTop - gap; //670
@@ -88,65 +63,24 @@ export class IndexPageTemplate extends React.Component {
   }
   render(){
     return(
-  <div className="root-wrapper">
-    <TableOfContent page={this.state.page}/>
-    <Landing scrollText={this.props.subheading}/>
-    <About/>
-    <Team/>
-    <Publications data={this.props.publications}/>
-    <ContactNews/>
-    {/* <h1 className="title">{this.props.title}</h1> */}
+      <div 
+      className="root-wrapper"
+      style={{backgroundColor: this.state.page}}>
+        
 
-    {/* <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <TableOfContent page={this.state.page}/>
+        <Landing scrollText={this.props.subheading}/>
+        <About/>
+        <Team data={this.props.team}/>
+        <Publications data={this.props.publications}/>
+        <ContactNews/>
+
       </div>
-    </section> */}
-  </div>
     
     )}
+    componentWillUnmount(){
+      console.log('unmount')
+    }
     componentDidMount(){
       
       var _gatsbyPage = document.getElementById('___gatsby');
@@ -161,6 +95,7 @@ export class IndexPageTemplate extends React.Component {
 
       setTimeout(
         ()=>{
+
           this.setState({ loading: false })
           this.attatchScrollEvent(screenResX);
           bodyTag.classList.remove('body-overflow');
@@ -184,9 +119,10 @@ IndexPageTemplate.propTypes = {
   }),
 }
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data , location}) => {
   const { frontmatter } = data.markdownRemark
   const publications = data.allMarkdownRemark.edges
+  console.log(location, 'data here>>>')
 
   return (
     <Layout>
@@ -194,6 +130,7 @@ const IndexPage = ({ data }) => {
         // title={frontmatter.title}
         subheading={frontmatter.subheading}
         publications={publications}
+        location={location.state}
       />
     </Layout>
   )

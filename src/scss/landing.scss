@@ -25,6 +25,7 @@
             h1{
                 z-index:2;
                 position: relative;
+                color: white;
             }
 
             &-span{
@@ -61,6 +62,8 @@
             }
         }
         #scroll-svg{
+            fill: white;
+            width: 45px;
             position: absolute;
             top:50px;
             animation-timing-function: linear;

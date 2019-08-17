@@ -1,7 +1,7 @@
-.section-3{
+.section-4{
    height: 100vh;
 //    border: 10px solid white;
-.section-3__wrapper{
+.section-4__wrapper{
     max-width: 100%;
     // border: 10px solid orange;
     padding: 0 50px;
@@ -31,7 +31,7 @@
             align-items: center;
             button{
                 height:100%;
-                font-size:1.2rem;
+                font-size:1.3rem;
                 &:hover{
                     color: $green-header;
                     transition: color .3s ease-in;
@@ -73,7 +73,7 @@
     .title-bottom{
         margin-top:60px;
         a:hover{
-            color:inherit;
+            color:white;
         }
     }
     .space-between-removed{
@@ -116,7 +116,7 @@
 
             a.btn, .popup-btn{
                 text-transform: uppercase;
-                color:white;
+                color:black;
                 width: 80%;
                 margin: 5px auto;
                 height: 26px;
@@ -124,7 +124,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                border: 1px solid white;
+                border: 1px solid black;
                 border-radius: 7px;
                 font-size:.8rem;
                 font-weight:lighter;
@@ -139,7 +139,7 @@
             &-year{
                 font-size:3.3rem;
                 flex-basis: 10%;
-                color: $light-blue;
+                color: black;
                 font-weight: bold;
                 @media (max-width: $largest-desktop) {
                     font-size:2.2rem;

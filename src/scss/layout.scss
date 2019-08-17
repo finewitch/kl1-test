@@ -13,7 +13,7 @@ svg#yolo{
     display: none;
 }
 svg{
-    width:70px;
+    width:45px;
     @media (max-width: $largest-desktop) {
         width:35px;
        }
@@ -41,7 +41,7 @@ body{
 }
 
 .root-wrapper{
-    background-color: $bg-landing;
+    // background-color: $bg-landing;
     transition: background-color 400ms cubic-bezier(.45,.05,.55,.95);
     -webkit-transition: background-color 400ms cubic-bezier(.45,.05,.55,.95);
     -moz-transition: background-color 400ms cubic-bezier(.45,.05,.55,.95);
@@ -61,25 +61,8 @@ body{
 .loading{
     background-color: black;
 }
-.bg-section-2{
-    // background: #213452;
-    // background: #FDFFF2;
-    // background: #939393;
-    // background: #6E5076;
-    background: #28AFB0;
-    // #213452
-}
-.bg-section-3{
-    background: #094047;
-    // #094047
-    // 009688
-}
-.bg-section-4{
-    background: #2b283b;
-    // #2b283b
-    // e89b00
-    // 3a3748
-}
+
+
 
 .section__wrapper{
     padding: 0 50px;

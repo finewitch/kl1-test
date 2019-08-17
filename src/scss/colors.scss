@@ -1,3 +1,20 @@
+.bg-section-01{
+    background-color: #F5F5F5!important;
+}
+.bg-section-02{
+    background-color: red!important;
+}
+.bg-section-03{
+    background-color: yellowgreen!important;
+}
+.bg-section-04{
+    background-color: blue!important;
+}
+.bg-section-05{
+    background-color: brown!important;
+}
+
+
 //FONT COLORS
 $white: #F5F5F5;
 $main-grey: #1A1A1A;
@@ -13,13 +30,10 @@ $green-header: #00d2b5;
 
 //BACKGROUND COLORS
 $bg-landing: #F5F5F5;
-// #fff1ac
-// $bg-landing-goals : #261e2e;
-// $bg-landing-goals : #375e95;
 $bg-landing-goals : #FDFFF2;
-// #FDFFF2
-// 375e95
 $bg-menu: #111;
+
+
 
 //MENU
 $main-menu-color:rgb(155, 155, 155);
@@ -46,7 +60,7 @@ $arc-color2: #261e2e;
         color: #000;
 }
 .color-green-header{
-    color: #000;
+    color: white;
 }
 
 :export {

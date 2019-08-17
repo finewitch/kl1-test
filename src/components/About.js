@@ -4,7 +4,7 @@ import React from 'react'
 export default class About extends React.Component {
     render(){
         return(
-            <div className="section-2 goals">
+            <div className="section-2 goals" id="about">
                 <div className="section__wrapper">
                     <div className="title-row">
                     <h3 className="color-green-header">about</h3>

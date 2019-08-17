@@ -1,0 +1,52 @@
+.section-3{
+    min-height: 100%;
+    padding:50px 0;
+    .title-row{
+        height: 150px;
+    }
+    @media (max-width: $largest-desktop) {
+        padding:100px 0;
+       }
+    h3{
+        color:black;
+        // color: #ff5722;
+        font-weight: bold;
+}
+}
+#team{
+    height: 100%;
+    margin-bottom:150px;
+}
+.team{
+    &__content{
+
+        display: flex;
+        flex-wrap: wrap;
+        &-imgcont{
+            // border: 1px solid red;
+            position: relative;
+            width:20%;
+            // height:250px;
+            span{
+                position: absolute;
+                bottom:50px;
+                font-family: 'Josefin Sans';
+                text-transform: uppercase;font-size: 1.3rem;
+                color: white;
+                opacity:1;
+                background: black;
+                padding: 5px;
+            }
+            img{
+                width:100%;
+                height: auto;
+                display: block;
+                // opacity: 0.7;
+                // transform: translate3d(-20px,0, 0);
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

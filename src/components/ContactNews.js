@@ -6,7 +6,7 @@ export default class ContactNews extends React.Component {
 
   render(){
     return(
-      <div className="section-4 publications contact">
+      <div className="section-5 publications contact" id="contact">
         <div className="section__wrapper">
 
         <div className="publications-title">
