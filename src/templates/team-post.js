@@ -65,7 +65,7 @@ export const TeamPostTemplate = ({
 // }
 
 const TeamPost = ({ data }) => {
-
+  console.log(data, '<--team post')
   const { markdownRemark: post } = data
 
   return (
@@ -100,18 +100,19 @@ TeamPost.propTypes = {
 
 export default TeamPost
 
-// export const pageQuery = graphql`
-//   query BlogPostByID($id: String!) {
-//     markdownRemark(id: { eq: $id }) {
-//       id
-//       html
-//       frontmatter {
-//         date(formatString: "MMMM DD, YYYY")
-//         title
-//         authors
-//         tags
-//         abstrakt
-//       }
-//     }
-//   }
-// `
+
+export const pageQuery = graphql`
+  query TeamMemberByID($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      id
+      html
+      frontmatter {
+        date(formatString: "MMMM DD, YYYY")
+        title
+        authors
+        tags
+        abstrakt
+      }
+    }
+  }
+`

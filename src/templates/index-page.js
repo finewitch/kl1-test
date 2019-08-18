@@ -71,7 +71,7 @@ export class IndexPageTemplate extends React.Component {
         <TableOfContent page={this.state.page}/>
         <Landing scrollText={this.props.subheading}/>
         <About/>
-        <Team data={this.props.team}/>
+        <Team data={this.props.teamMembers}/>
         <Publications data={this.props.publications}/>
         <ContactNews/>
 
@@ -132,6 +132,7 @@ const IndexPage = ({ data , location}) => {
         // title={frontmatter.title}
         subheading={frontmatter.subheading}
         publications={publications}
+        teamMembers={teamMembers}
         location={location.state}
       />
     </Layout>
@@ -183,17 +184,7 @@ query IndexPageTemplate {
         }
         frontmatter {
           title
-          date
-          authors
-          citation
-          abstrakt
-          pdf {
-            publicURL
-          }
-          researchgate
-          source
-          preregistration
-          data {
+          image {
             publicURL
           }
         }
