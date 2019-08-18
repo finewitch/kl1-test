@@ -120,9 +120,11 @@ IndexPageTemplate.propTypes = {
 }
 
 const IndexPage = ({ data , location}) => {
+  console.log(data, 'data here>>>')
   const { frontmatter } = data.markdownRemark
-  const publications = data.allMarkdownRemark.edges
-  console.log(location, 'data here>>>')
+  const publications = data.publications.edges
+  const teamMembers = data.team.edges
+  console.log(teamMembers, '<----t')
 
   return (
     <Layout>
@@ -148,7 +150,32 @@ export default IndexPage
 
 export const pageQuery = graphql`
 query IndexPageTemplate {
-  allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "blog-post"}}}, sort: {fields: frontmatter___date, order: DESC}) {
+  publications: allMarkdownRemark(filter: {fields: {slug: {regex: "\\/publications/"}}}, sort: {fields: frontmatter___date, order: DESC}) {
+    edges {
+      node {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          date
+          authors
+          citation
+          abstrakt
+          pdf {
+            publicURL
+          }
+          researchgate
+          source
+          preregistration
+          data {
+            publicURL
+          }
+        }
+      }
+    }
+  }
+  team: allMarkdownRemark(filter: {fields: {slug: {regex: "\\/team/"}}}, sort: {fields: frontmatter___date, order: DESC}) {
     edges {
       node {
         fields {
@@ -180,3 +207,5 @@ query IndexPageTemplate {
   }
 }
 `
+
+

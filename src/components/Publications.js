@@ -28,7 +28,7 @@ export default class Publications extends React.Component {
 
 		this.years = publications_getSortingLAbels(this.props.data);
 
-		console.log(this.years, '<----YEARS')
+		// console.log(this.years, '<----YEARS')
 
 	}
 
@@ -99,7 +99,7 @@ export default class Publications extends React.Component {
 
   	//EVENT HANDLERS
 	onClickHandler = function(year){
-		console.log('RESPONSE--->', this.initialState, 'CHOICE-->', year)
+		// console.log('RESPONSE--->', this.initialState, 'CHOICE-->', year)
 
 		if(year === 0 ){
 

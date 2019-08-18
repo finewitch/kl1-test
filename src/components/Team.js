@@ -6,7 +6,7 @@ const bla = [1,2,3,4,5,6,7]
 export default class Team extends React.Component {
     constructor(props) {
         super();
-        console.log(props, '<---TEAM')
+        // console.log(props, '<---TEAM')
     }
     render(){
         return(
