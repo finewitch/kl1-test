@@ -1,7 +1,7 @@
 ---
 templateKey: team-post
 title: Krysia
-image: /img/ziutek3.png
+image: /img/person2.png
 content: >-
   profil Krysi
 
