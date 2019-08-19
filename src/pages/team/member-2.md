@@ -1,7 +1,7 @@
 ---
 templateKey: team-post
 title: Karolina Memberska
-image: /img/ziutek3.png
+image: /img/person2.png
 content: >-
   I’m a big believer in the saying that you are the average of the five people
   you spend the most time with. Choose your partners thoughtfully.
