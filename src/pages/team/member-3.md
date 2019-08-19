@@ -1,7 +1,7 @@
 ---
 templateKey: team-post
 title: Przemek Kowalski
-image: /img/ziutek4.png
+image: /img/ziomek-slip.png
 content: >-
   I came to America in 1976 without actually knowing anyone here. No grand plan
   whatsoever. And one thing led to another. I wound up as a correspondent for
