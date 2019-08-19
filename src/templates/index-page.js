@@ -7,6 +7,7 @@ import About from '../components/About'
 import Team from '../components/Team'
 import Publications from '../components/Publications'
 import ContactNews from '../components/ContactNews'
+import Partners from '../components/Partners'
 import { graphql } from 'gatsby'
 
 import TableOfContent from '../components/TableOfContent'
@@ -74,6 +75,7 @@ export class IndexPageTemplate extends React.Component {
         <Team data={this.props.teamMembers}/>
         <Publications data={this.props.publications}/>
         <ContactNews/>
+        <Partners/>
 
       </div>
     

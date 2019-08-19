@@ -1,9 +1,11 @@
 .section-2{
     height:100vh;
     transition: background .5s ease-in-out;
-    // border: 10px solid red;
 }
 .goals{
+    .color-green-header{
+        opacity: 0;
+    }
     &-side-title{
         display: flex;
         &-link{
@@ -27,9 +29,7 @@
     }
     color:rgb(245, 245, 245);
     &__top{
-        // border: 2px dotted green;
         display: flex;
-        // align-content: center;
         height:25%;
         h2{
             flex-basis: 50%;
@@ -58,7 +58,6 @@
         &-side{
             flex-basis: 50%;
             display: flex;
-            // align-items: center;
             font-weight:lighter;
             a{
                 font-size:2.5rem;

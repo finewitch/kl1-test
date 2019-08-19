@@ -18,6 +18,12 @@ svg{
         width:35px;
        }
 }
+.back-arrow{
+    svg{
+        width:30px;
+        transform: rotate(90deg);
+    }
+}
 html,body{
     height:100%;
     margin:0;

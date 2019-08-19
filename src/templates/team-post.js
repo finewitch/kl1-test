@@ -5,52 +5,41 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import ArrowIcon from '../components/atoms/ArrowIcon'
 
 export const TeamPostTemplate = ({
   content,
   contentComponent,
-  tags,
   title,
-  authors,
-  date,
   helmet,
-  abstrakt
+  image
 }) => {
   const PostContent = contentComponent || Content
 
   return (
     <section className="section">
-      {helmet || ''}
-      <div className="container content publication-page">
-        <Link to="/#publications" state={{ location: 'publications' }} className="goback">      </Link>
-        <div className="columns section__wrapper">
-          <div className="column is-10 is-offset-1">
-            <h4 className="date centered color-grey">{date}</h4>
-                      
-
-
-              <h1 className="title centered">
-              {title}
-            </h1>
-            <h2 className="title centered">
-              {authors}
-            </h2>
-            {/* <p>{description}</p> */}
-            <PostContent content={abstrakt} />
-            {/* {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null} */}
-          </div>
+      {/* {helmet || ''} */}
+      <div className="container content team-member section__wrapper">
+        
+        <div className="columns image__column">
+            <img alt="team member picture" src={image}/>
         </div>
+
+        <div className="columns text__content">
+
+          <Link to="/#team" state={{ location: 'team' }} className="goback back-arrow">      
+            <ArrowIcon/>
+          </Link>
+          <h1 className="text__content-title">
+            {title}
+          </h1>
+
+          <p className="text__content-content">
+            {content}
+          </p>
+
+        </div>
+
       </div>
     </section>
   )
@@ -65,14 +54,14 @@ export const TeamPostTemplate = ({
 // }
 
 const TeamPost = ({ data }) => {
-  console.log(data, '<--team post')
+  
   const { markdownRemark: post } = data
+
+  console.table(post)
 
   return (
     <Layout>
       <TeamPostTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -82,11 +71,13 @@ const TeamPost = ({ data }) => {
             />
           </Helmet>
         }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-        authors={post.frontmatter.authors}
-        date={post.frontmatter.date}
-        abstrakt={post.frontmatter.abstrakt}
+
+        title = {post.frontmatter.title}
+
+        content = {post.frontmatter.content}
+
+        image = {post.frontmatter.image.publicURL}
+
       />
     </Layout>
   )
@@ -102,17 +93,17 @@ export default TeamPost
 
 
 export const pageQuery = graphql`
-  query TeamMemberByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      id
-      html
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        title
-        authors
-        tags
-        abstrakt
+query TeamMemberByID($id: String!) {
+  markdownRemark(id: {eq: $id}) {
+    id
+    html
+    frontmatter {
+      title
+      content
+      image {
+        publicURL
       }
     }
   }
+}
 `

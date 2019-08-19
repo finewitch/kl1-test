@@ -45,7 +45,7 @@
             ul{
                 list-style: none;
                 display: flex;
-                justify-content: flex-end;
+                // justify-content: flex-end;
                 width:100%;
                 flex-wrap: wrap;
                 margin:0;padding:0;
@@ -53,7 +53,7 @@
                 li{
                     width:35%;
                     background: #483046;
-                    margin: 10px 0 10px 25px;
+                    margin: 10px 20px 10px 0px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;

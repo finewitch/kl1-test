@@ -1,16 +1,9 @@
 .publication-page{
-    // border: 1px solid red;
-    margin: $menu-height + 50px 0;
+    margin: $menu-height + 40px 0;
     .goback{
-        font-size:1rem;
         text-align: center;
-        text-transform: uppercase;
-        font-family: 'Josefin Sans';
         display: block;
-        margin: 0 auto;
-        svg{
-            transform: rotate(90deg);
-        }
+        margin: 0 auto 20px auto;
     }
     .section__wrapper{
         margin-top:30px;

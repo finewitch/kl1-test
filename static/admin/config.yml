@@ -68,5 +68,9 @@ collections:
       - {label: "Title", name: "title", widget: "string", default: "Team member"}
       - {label: "Image", name: image, widget: image}
       - {label: "Content", name: "content", widget: "markdown"}
+      - {label: "Link", name: "link", widget: "string", default: "profile link", required: false}
+      - {label: "Link", name: "link", widget: "string", default: "profile link", required: false}
+      - {label: "Link", name: "link", widget: "string", default: "profile link", required: false}
+      - {label: "Link", name: "link", widget: "string", default: "profile link", required: false}
 
          

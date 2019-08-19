@@ -1,8 +1,4 @@
 import React from 'react';
-import team from '../img/team/ziutek1.png';
-import team1 from '../img/team/ziutek2.png';
-
-const bla = [1,2,3,4,5,6,7]
 export default class Team extends React.Component {
     constructor(props) {
         super();
@@ -19,12 +15,12 @@ export default class Team extends React.Component {
                     <div className="team__content">
                         {this.props.data.map( ( el, index )=>{
                             let name = el.node.frontmatter.title
-                            let img = el.node.frontmatter.image
+                            let img = el.node.frontmatter.image.publicURL
                             let slug = el.node.fields.slug
                             return ( 
                                 <a href={slug} className="team__content-imgcont">
                                         <span> { name } </span>
-                                        <img alt="yyy" src={team1}/>
+                                        <img alt="yyy" src={img}/>
                                     </a>
                             )
                         })

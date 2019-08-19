@@ -1,0 +1,14 @@
+.partners{
+    // border: 10px solid red;
+    background: black;
+    display: flex;
+    height: 300px;
+    justify-content: space-around;
+    align-items: center;
+    img{
+      max-height: 180px;
+    }
+    svg{
+        fill: white;
+    }
+}

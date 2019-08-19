@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import ArrowIcon from '../components/atoms/ArrowIcon'
 
 export const BlogPostTemplate = ({
   content,
@@ -22,33 +23,25 @@ export const BlogPostTemplate = ({
     <section className="section">
       {helmet || ''}
       <div className="container content publication-page">
-        <Link to="/#publications" state={{ location: 'publications' }} className="goback">      </Link>
         <div className="columns section__wrapper">
           <div className="column is-10 is-offset-1">
-            <h4 className="date centered color-grey">{date}</h4>
+
+          <Link to="/#publications" state={{ location: 'publications' }} className="goback back-arrow">      
+            <ArrowIcon/>
+          </Link>
+
+          <h4 className="date centered color-grey">{date}</h4>
                       
+          <h1 className="title centered">
+            {title}
+          </h1>
 
+          <h2 className="title centered">
+            {authors}
+          </h2>
 
-              <h1 className="title centered">
-              {title}
-            </h1>
-            <h2 className="title centered">
-              {authors}
-            </h2>
-            {/* <p>{description}</p> */}
-            <PostContent content={abstrakt} />
-            {/* {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null} */}
+          <PostContent content={abstrakt} />
+          
           </div>
         </div>
       </div>
@@ -65,8 +58,6 @@ BlogPostTemplate.propTypes = {
 }
 
 const BlogPost = ({ data }) => {
-  console.log(data, 'blog-post')
-  console.log(this, '<---iiidddd')
   const { markdownRemark: post } = data
 
   return (
