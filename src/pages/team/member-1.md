@@ -1,7 +1,7 @@
 ---
 templateKey: team-post
 title: Karol Lewczuk
-image: /img/ziutek2.png
+image: /img/person1.png
 content: profil Karola
 ---
 
