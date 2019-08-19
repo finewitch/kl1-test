@@ -1,7 +1,7 @@
 ---
 templateKey: team-post
 title: Tomek Laskowski (inny post)
-image: /img/chemex.jpg
+image: /img/ziutek1.png
 content: profil Tomasza
 ---
 
