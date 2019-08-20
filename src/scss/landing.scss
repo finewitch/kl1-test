@@ -80,7 +80,7 @@
         font-size: 8.9rem;
         text-align: center;
         margin:0;
-        font-weight:600;
+        font-weight:200;
         @media (max-width: $largest-desktop) {
             font-size: 5.9rem;
            }
@@ -109,6 +109,13 @@
     // top:30%;
     font-weight:400;
     opacity:.2;
+    svg{
+        position: fixed;
+        left:38%;
+        top: 15%;
+        width: auto;
+
+    }
     @media (max-width: $largest-desktop) {
         font-size: 45rem;
         top:5%;

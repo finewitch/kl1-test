@@ -13,11 +13,11 @@ import { graphql } from 'gatsby'
 import TableOfContent from '../components/TableOfContent'
 
 let styles = {
-  color1: '#c38d9d',
-  color2: '#e27d5f',
-  color3: 'red',
-  color4: '#59b0d9',
-  color5: '#4056a1',
+  color1: '#5d45cf',
+  color2: '#d44c74',
+  color3: '#428a8f',
+  color4: '#4f4c67',
+  color5: '#212d35',
 }
 export class IndexPageTemplate extends React.Component {
 
@@ -42,21 +42,11 @@ export class IndexPageTemplate extends React.Component {
     window.addEventListener('scroll', function ( e ) {
       let Ypos = window.scrollY;
 
-      if(Ypos < this.Top_2)                             { 
-        console.log('here1')
-        this.setState({ page: styles.color1 }) }
-      else if(Ypos >= this.Top_2 && Ypos < this.Top_3)  { 
-        console.log('here2')
-        this.setState({ page: styles.color2 }) }
-      else if(Ypos >= this.Top_3 && Ypos < this.Top_4)  { 
-        console.log('here3')
-        this.setState({ page: styles.color3 }) }
-      else if(Ypos >= this.Top_4 && Ypos < this.Top_5)  { 
-        console.log('here4')
-        this.setState({ page: styles.color4 }) }
-      else if(Ypos >= this.Top_5)                       { 
-        console.log('here5')
-        this.setState({ page: styles.color5 }) }
+      if(Ypos < this.Top_2)                             {this.setState({ page: styles.color1 }) }
+      else if(Ypos >= this.Top_2 && Ypos < this.Top_3)  {this.setState({ page: styles.color2 }) }
+      else if(Ypos >= this.Top_3 && Ypos < this.Top_4)  {this.setState({ page: styles.color3 }) }
+      else if(Ypos >= this.Top_4 && Ypos < this.Top_5)  {this.setState({ page: styles.color4 }) }
+      else if(Ypos >= this.Top_5)                       {this.setState({ page: styles.color5 }) }
 
     }.bind(this))
 
