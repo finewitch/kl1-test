@@ -4,8 +4,9 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
 import ArrowIcon from '../components/atoms/ArrowIcon'
+import rgIcon from '../img/social/rg.svg'
+import gsIcon from '../img/social/gs.svg'
 
 export const TeamPostTemplate = ({
   content,
@@ -14,7 +15,6 @@ export const TeamPostTemplate = ({
   helmet,
   image
 }) => {
-  const PostContent = contentComponent || Content
 
   return (
     <section className="section">
@@ -22,7 +22,7 @@ export const TeamPostTemplate = ({
       <div className="container content team-member section__wrapper">
         
         <div className="columns image__column">
-            <img alt="team member picture" src={image}/>
+            <img alt="team member" src={image}/>
         </div>
 
         <div className="columns text__content">
@@ -37,6 +37,8 @@ export const TeamPostTemplate = ({
           <p className="text__content-content">
             {content}
           </p>
+          <p className="text__content-ico"><img alt="external links icons" src={rgIcon}/><span>reaserch Gate</span></p>
+          <p className="text__content-ico"><img alt="external links icons" src={gsIcon}/><span>google Scholar</span></p>
 
         </div>
 

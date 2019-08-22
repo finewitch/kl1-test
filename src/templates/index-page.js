@@ -13,11 +13,11 @@ import { graphql } from 'gatsby'
 import TableOfContent from '../components/TableOfContent'
 
 let styles = {
-  color1: '#5d45cf',
-  color2: '#d44c74',
-  color3: '#428a8f',
-  color4: '#4f4c67',
-  color5: '#212d35',
+  color1: '#e3fbfa',
+  color2: '#ece0e0',
+  color3: '#aaa8b3',
+  color4: '#839fb4',
+  color5: '#0f1039',
 }
 export class IndexPageTemplate extends React.Component {
 
@@ -26,8 +26,23 @@ export class IndexPageTemplate extends React.Component {
     console.log(props, '<-------PROPS')
     this.state = {
       page: styles.color1,
+      publications:{
+        filter: 'all'
+      }
     }
-    
+    this.updateStateWithPageLocation = function(){
+      // console.log(this.props.location.pageNum)
+      if(this.props.location){
+
+        var pageNum = 'color' + this.props.location.pageNum;
+        this.setState({
+          page: styles[pageNum]
+        })
+
+      }
+      console.log('update state here couse of props!!');
+
+    }
     this.attatchScrollEvent = function (screenX){
       var _topGap = 600;
       if(screenX.matches){
@@ -80,10 +95,14 @@ export class IndexPageTemplate extends React.Component {
       </div>
     
     )}
+    componentDidUpdate(prevProps, prevState, snapshot){
+      // console.log(prevProps, prevState, snapshot, '<--upadte here')
+    }
     componentWillUnmount(){
       console.log('unmount')
     }
     componentDidMount(){
+      this.updateStateWithPageLocation();
       
       var _gatsbyPage = document.getElementById('___gatsby');
       if (_gatsbyPage === null){

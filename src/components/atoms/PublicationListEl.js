@@ -8,19 +8,21 @@ export const Publication = ({...props}) => {
 
       <div className="publications__wrapper-box-year">{props.year}</div>
 
-      <a rel="noopener noreferrer" href={props.slug} className="publications__wrapper-box-title">
-        <div>{props.title}</div>
-      </a>
+      
+      <Link className="publications__wrapper-box-title" to={props.slug}>{ props.title }
+      <br/>
+      <Link to={props.slug} className="readmore">read more</Link>
+      </Link>
 
       <div className="publications__wrapper-box-author">{props.authors}</div>
 
       <div className="publications__wrapper-box-read">
-        <Link to={props.slug} className="btn">READ MORE</Link>
+        
         <button className="popup-btn" onClick={(citation)=>props.popupHandler(citation)}>citation</button>
         {props.btns.source ? <a rel="noopener noreferrer" href = { props.btns.source } target="_blank" className="btn">publisher's site</a> : null}
-      </div>
+      {/* </div> */}
 
-      <div className="publications__wrapper-box-btns">
+      {/* <div className="publications__wrapper-box-btns"> */}
         
         {props.btns.researchgate ? <a rel="noopener noreferrer" className="btn" href = { props.btns.researchgate } target="_blank">researchgate</a> : null}
         {props.btns.preregistration ? <a rel="noopener noreferrer" className="btn" href = { props.btns.preregistration } target="_blank">preregistration</a> : null}

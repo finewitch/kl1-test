@@ -11,9 +11,8 @@ $menu-height: 60px;
     position: fixed;
     top:0;
     width:$menu-width;
-    background: $bg-landing;
+    background: $main-menu-color;
     z-index:99;
-    color:$main-menu-color;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,7 +65,6 @@ $menu-height: 60px;
             font-size:1.20rem;
             text-align: center;
             font-weight: 400;
-            border: 1p solid red;
             margin: 0 20px;
             @media (max-width: $largest-desktop) {
                 font-size:1.10rem;

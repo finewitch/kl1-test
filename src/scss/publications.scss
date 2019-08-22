@@ -9,6 +9,12 @@
 }
 }
 .publications{
+    a{
+        color: white;
+    }
+    a.readmore{
+        color: black;
+    }
     position: relative;
     button{
         transition: all .3s ease-in;
@@ -33,12 +39,17 @@
                 height:100%;
                 font-size:1.3rem;
                 &:hover{
-                    color: $green-header;
+                    color: #522cff;
                     transition: color .3s ease-in;
                 }
             }
             span{
                 margin: 0 7px;
+            }
+        }
+        .active{
+            button{
+                color: #522cff;
             }
         }
         a{
@@ -113,11 +124,12 @@
             font-family: 'Josefin Sans';
             font-weight: 100;
             justify-content: space-between;
+            width: 98%;
 
             a.btn, .popup-btn{
                 text-transform: uppercase;
                 color:black;
-                width: 80%;
+                // width: 100%;
                 margin: 5px auto;
                 height: 26px;
                 
@@ -137,10 +149,10 @@
                 font-size:.8rem;
             }
             &-year{
-                font-size:3.3rem;
-                flex-basis: 10%;
-                color: black;
-                font-weight: bold;
+                font-size:3rem;
+                flex-basis: 7%;
+                color: white;
+                font-weight: 300;
                 @media (max-width: $largest-desktop) {
                     font-size:2.2rem;
                    }
@@ -148,7 +160,7 @@
             &-title{
                 font-family: 'Alegreya';
                 // margin-left: 20px;:
-                color:white;
+                color:darkslategray;
                 text-decoration: none;
                 font-size:1.2rem;
                 flex-basis: 35%;
@@ -156,27 +168,32 @@
                     font-size: 1.1rem;
                    }
                    &:hover{
-                       color: $green-header;
+                       color: black;
                    }
                 
             }
             &-author{
                 font-size:1.1rem;
                 max-width:400px;
-                flex-basis: 20%;
+                flex-basis: 25%;
                 line-height: 1.5rem;
                 @media (max-width: $largest-desktop) {
                     font-size:1rem;
                    }
             }
-            &-read,&-btns{
+            &-read{
                 // border: 1px solid red;
-                width: 150px;
+                // width: 150px;
+                flex-basis: 20%;
                 height:120px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                flex-wrap: wrap;
+                button,a{
+                    width: 45%;
+                }
             }
         }
     }

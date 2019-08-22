@@ -22,7 +22,8 @@ export default class Publications extends React.Component {
 		
 		this.state={
 			publications : this.initialState,
-			citationData : null
+			citationData : null,
+			activeTab : 0
 		}
 		this.currentYear = new Date().getFullYear();
 
@@ -41,7 +42,7 @@ export default class Publications extends React.Component {
 
 					<h3 className="color-white">publications</h3>
 
-					<SortingYears years = {this.years} StateHandlerFunction={(year)=>this.onClickHandler(year)}/>
+					<SortingYears years = {this.years} StateHandlerFunction={(year)=>this.onClickHandler(year)} activeTab={this.state.activeTab}/>
 
 				</div>
 				<div className="publications__wrapper">
@@ -99,6 +100,11 @@ export default class Publications extends React.Component {
 
   	//EVENT HANDLERS
 	onClickHandler = function(year){
+		this.setState({
+			activeTab : year.toString()
+		})
+
+		console.log(this.state.activeTab)
 		// console.log('RESPONSE--->', this.initialState, 'CHOICE-->', year)
 
 		if(year === 0 ){

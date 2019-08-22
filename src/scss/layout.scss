@@ -22,6 +22,10 @@ svg{
     svg{
         width:30px;
         transform: rotate(90deg);
+        fill: black;
+        line{
+            stroke: black;
+        }
     }
 }
 html,body{
@@ -151,23 +155,8 @@ button{
     animation-timing-function: ease-in;
    transform: scale(1);
    animation-iteration-count: 2;
-    -webkit-animation: btn-motion 2.5s infinite; /* Safari 4+ */
 }
 
-@-webkit-keyframes btn-motion{
-    0% {
-        transform: scale(1.0);
-        -webkit-transform: scale(1.0);
-    }
-    50% {
-        transform: scale(1.2);
-        -webkit-transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1.0);
-        -webkit-transform: scale(1.0);
-    }
-}
 a{
     transition: all .6s ease;
     // color:white;
@@ -240,7 +229,6 @@ a:hover{
         left: 0;
         background: #fff;
         border-radius: 30%;
-        -webkit-animation: move 17s;
         animation-iteration-count: 1;
       }
       
@@ -255,10 +243,4 @@ a:hover{
         font-weight: bold;
       }
       
-      @-webkit-keyframes move {
-        0% {left: 0;}
-        50% {left: 90%; -webkit-transform: rotate(450deg); width: 550px; height: 550px;}
-        75% {left: 90%; -webkit-transform: rotate(450deg); width: 550px; height: 550px;}
-        100% {left: 90%; -webkit-transform: rotate(450deg); width: 550px; height: 550px;border-radius: 50%;}
-      } 
 }

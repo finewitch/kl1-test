@@ -68,8 +68,8 @@ collections:
       - {label: "Title", name: "title", widget: "string", default: "Team member"}
       - {label: "Image", name: image, widget: image}
       - {label: "Content", name: "content", widget: "markdown"}
-      - {label: "Link", name: "link", widget: "string", default: "profile link", required: false}
-      - {label: "Link", name: "link", widget: "string", default: "profile link", required: false}
+      - {label: "RG", name: "rg", widget: "string", default: "Reaserch gate", required: false}
+      - {label: "GS", name: "gs", widget: "string", default: "google scholar", required: false}
       - {label: "Link", name: "link", widget: "string", default: "profile link", required: false}
       - {label: "Link", name: "link", widget: "string", default: "profile link", required: false}
 
