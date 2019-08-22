@@ -149,7 +149,7 @@
                 font-size:.8rem;
             }
             &-year{
-                font-size:3rem;
+                font-size:2rem;
                 flex-basis: 7%;
                 color: white;
                 font-weight: 300;
@@ -163,7 +163,7 @@
                 color:darkslategray;
                 text-decoration: none;
                 font-size:1.2rem;
-                flex-basis: 35%;
+                flex-basis: 40%;
                 @media (max-width: $largest-desktop) {
                     font-size: 1.1rem;
                    }
