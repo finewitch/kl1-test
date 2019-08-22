@@ -97,6 +97,9 @@
         overflow: auto;
         // overflow-x: visible;
         height: 50%;
+        border: 1px solid black;
+    border-radius: 20px;
+    padding: 45px;
         &::-webkit-scrollbar {
             -webkit-appearance: none;
         }
@@ -129,7 +132,6 @@
             a.btn, .popup-btn{
                 text-transform: uppercase;
                 color:black;
-                // width: 100%;
                 margin: 5px auto;
                 height: 26px;
                 
@@ -139,7 +141,7 @@
                 border: 1px solid black;
                 border-radius: 7px;
                 font-size:.8rem;
-                font-weight:lighter;
+                font-weight:500;
                 &:hover{
                     border: 1px solid #00d2b5;
                     color: #00d2b5;
@@ -159,7 +161,6 @@
             }
             &-title{
                 font-family: 'Alegreya';
-                // margin-left: 20px;:
                 color:darkslategray;
                 text-decoration: none;
                 font-size:1.2rem;
@@ -182,9 +183,7 @@
                    }
             }
             &-read{
-                // border: 1px solid red;
-                // width: 150px;
-                flex-basis: 20%;
+                flex-basis: 23%;
                 height:120px;
                 display: flex;
                 flex-direction: column;
@@ -202,7 +201,6 @@
         z-index: 50;
         border-radius: 10px;
         position: absolute;
-        // position: fixed;  
         width: 400px;  
         height: 300px;  
         top: 0;  

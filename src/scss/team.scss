@@ -28,6 +28,9 @@
             // border: 1px solid red;
             height: 370px;
             overflow: hidden;
+            @media (max-width: $largest-desktop) {
+                height: 350px;
+               }
             &-data{
                 display: flex;
                 flex-direction: column;
