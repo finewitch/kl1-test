@@ -8,10 +8,11 @@ $menu-height: 60px;
 }
 .menu{
     // transition: all .3s ease-in;
+    // opacity: .95;
     position: fixed;
     top:0;
     width:$menu-width;
-    background: $main-menu-color;
+    background: rgba(255,255,255,0.95);
     z-index:99;
     display: flex;
     flex-direction: column;
@@ -22,8 +23,8 @@ $menu-height: 60px;
     &__main, &__side{
         // border: 1px solid red;
         width:100%;
-        height:50px;
-        padding-bottom:15px;
+        height:55px;
+        // padding-bottom:15px;
         position: relative;
         @media (max-width: $largest-desktop) {
             height: 45px;
@@ -50,7 +51,7 @@ $menu-height: 60px;
         height: 100%;
         list-style: none;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: center;
         @media (max-width: $largest-desktop) {
             justify-content: space-between;

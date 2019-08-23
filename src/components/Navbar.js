@@ -50,7 +50,7 @@ export default class Navbar extends React.Component {
               {this.menuLinks.map( ( el, index )=>{
                 return  (
                 <li key={index}>
-                  <NavLink link={ el.link } name={ el.name } num={ el.num } />
+                  <NavLink link={ el.link } name={ el.name } />
                 </li>
                 )
               } )}

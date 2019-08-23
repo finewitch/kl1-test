@@ -2,14 +2,6 @@ import React from 'react'
 // import PropTypes from 'prop-types'
 
 export default class SortingYears extends React.Component {
-    constructor(){
-        super()
-
-
-        // this.clickHandler = function(){
-        //     console.log('clicked');
-        // }
-    }
 
     render(){
         return(

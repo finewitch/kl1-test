@@ -27,7 +27,7 @@ export const TeamPostTemplate = ({
 
         <div className="columns text__content">
 
-          <Link to="/#team" state={{ location: 'team' }} className="goback back-arrow">      
+          <Link to="/#team" state={{ location: 'team', pageNum : 3 }} className="goback back-arrow">      
             <ArrowIcon/>
           </Link>
           <h1 className="text__content-title">

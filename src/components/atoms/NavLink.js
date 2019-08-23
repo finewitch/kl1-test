@@ -1,12 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby';
 
-export const NavLink = ({link, name, num}) => {
+export const NavLink = ({link, name}) => {
 
   return (
     <Link to={link}>
         {name}
-        <span>{ num }</span>
     </Link>
   )
 

@@ -20,6 +20,7 @@ let styles = {
   color5: '#0f1039',
 }
 export class IndexPageTemplate extends React.Component {
+  _isMounted = false;
 
   constructor(props) {
     super(props);
@@ -57,11 +58,26 @@ export class IndexPageTemplate extends React.Component {
     window.addEventListener('scroll', function ( e ) {
       let Ypos = window.scrollY;
 
-      if(Ypos < this.Top_2)                             {this.setState({ page: styles.color1 }) }
-      else if(Ypos >= this.Top_2 && Ypos < this.Top_3)  {this.setState({ page: styles.color2 }) }
-      else if(Ypos >= this.Top_3 && Ypos < this.Top_4)  {this.setState({ page: styles.color3 }) }
-      else if(Ypos >= this.Top_4 && Ypos < this.Top_5)  {this.setState({ page: styles.color4 }) }
-      else if(Ypos >= this.Top_5)                       {this.setState({ page: styles.color5 }) }
+      if(Ypos < this.Top_2)                             {
+        if (this._isMounted) {
+        this.setState({ page: styles.color1 }) } }
+
+      else if(Ypos >= this.Top_2 && Ypos < this.Top_3)  {
+        if (this._isMounted) {
+        this.setState({ page: styles.color2 }) } }
+
+      else if(Ypos >= this.Top_3 && Ypos < this.Top_4)  {
+        if (this._isMounted) {
+        this.setState({ page: styles.color3 }) } }
+
+      else if(Ypos >= this.Top_4 && Ypos < this.Top_5)  {
+        if (this._isMounted) {
+        this.setState({ page: styles.color4 }) } }
+
+      else if(Ypos >= this.Top_5)                       {
+        if (this._isMounted) {
+        this.setState({ page: styles.color5 }) } }
+
 
     }.bind(this))
 
@@ -95,29 +111,27 @@ export class IndexPageTemplate extends React.Component {
       </div>
     
     )}
-    componentDidUpdate(prevProps, prevState, snapshot){
-      // console.log(prevProps, prevState, snapshot, '<--upadte here')
-    }
-    componentWillUnmount(){
-      console.log('unmount')
+    componentWillUnmount() {
+      this._isMounted = false;
     }
     componentDidMount(){
+      this._isMounted = true;
       this.updateStateWithPageLocation();
       
-      var _gatsbyPage = document.getElementById('___gatsby');
-      if (_gatsbyPage === null){
-        return;
-      }
+    //   var _gatsbyPage = document.getElementById('___gatsby');
+    //   if (_gatsbyPage === null){
+    //     return;
+    //   }
       var screenResX = window.matchMedia("(max-width: 1440px)");
-      // console.log(screenResX, '---screen')
+    //   // console.log(screenResX, '---screen')
 
       var bodyTag = document.querySelector('body');
-      bodyTag.classList.add('body-overflow');
+    //   bodyTag.classList.add('body-overflow');
 
       setTimeout(
         ()=>{
 
-          this.setState({ loading: false })
+          // this.setState({ loading: false })
           this.attatchScrollEvent(screenResX);
           bodyTag.classList.remove('body-overflow');
 
@@ -186,12 +200,12 @@ query IndexPageTemplate {
           pdf {
             publicURL
           }
-          researchgate
-          source
-          preregistration
           data {
             publicURL
           }
+          researchgate
+          source
+          preregistration
         }
       }
     }

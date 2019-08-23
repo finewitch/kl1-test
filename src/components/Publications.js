@@ -79,7 +79,6 @@ export default class Publications extends React.Component {
 				<div className="publications-title title-bottom space-between-removed">
 				
 				<h4 className="color-grey">
-				{/* <LinkIco/> */}
 				<a href="/#needtofill">Looking for <span data-hover="RESOURCES">RESOURCES</span>? →</a></h4>
 
 

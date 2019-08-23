@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby'
 export default class Team extends React.Component {
     render(){
         return(
@@ -24,7 +25,7 @@ export default class Team extends React.Component {
                                     <div className="team__content-imgcont-data">
                                         <span className="name">  {name } </span>
 
-                                        <a href={slug}>  profile  </a>
+                                        <Link to={ slug }> profile </Link>      
                                         <a href={slug}> research gate </a>
                                         <a href={slug}> google scholar </a>
                                     </div>

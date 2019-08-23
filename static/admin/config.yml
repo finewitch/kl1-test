@@ -51,9 +51,9 @@ collections:
       - {label: "Citation", name: "citation", widget: "markdown"}
       - {label: "Source", name: "source", widget: "string", required: false}
       - {label: "Researchgate", name: "researchgate", widget: "string", required: false}
-      - {label: "Preregistration", name: "preregistration", widget: "string"}
-      - {label: "PDF", name: "pdf", widget: "file"}
-      - {label: "Data", name: "data", widget: "file"}
+      - {label: "Preregistration", name: "preregistration", widget: "string",required: false}
+      - {label: "PDF", name: "pdf", widget: "file", required: false}
+      - {label: "Data", name: "data", widget: "file", required: false}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Abstrakt", name: "abstrakt", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list",  default: ["publication"]}
