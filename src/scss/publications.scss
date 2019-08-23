@@ -199,7 +199,7 @@
 
     &__popup{
         z-index: 50;
-        border-radius: 10px;
+        border-radius: 7px;
         position: absolute;
         width: 400px;  
         height: 300px;  
@@ -214,19 +214,25 @@
         &-inner{
             height: 100%;
             color:black;
-            padding:30px;
+            // padding:30px;
             &-close{
                 display: flex;
-                justify-content: flex-end;
+                justify-content: flex-start;
                 cursor: pointer;
+                border-bottom: 1px solid lightgray;
+                padding:20px;
                 svg{
                     fill: black;
+                    width: 20px;
                 }
                 &:hover{
                     svg{
                         fill: #00d2b5;
                     }
                 }
+            }
+            &-content{
+                padding: 20px;
             }
         }
     }

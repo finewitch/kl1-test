@@ -23,7 +23,7 @@ export const BlogPostTemplate = ({
         <div className="columns section__wrapper">
           <div className="column is-10 is-offset-1 section__wrapper-content">
 
-          <Link to="/#publications" state={{ location: 'publications' , pageNum : 4}} className="goback back-arrow">      
+          <Link state={{ location: 'publications' , pageNum : 4}} className="goback back-arrow">      
             <ArrowIcon/>
           </Link>
 

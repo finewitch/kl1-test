@@ -9,6 +9,7 @@ import Publication from './atoms/PublicationListEl.js';
 import PopupCitation from './atoms/PopupCitation.js';
 
 export default class Publications extends React.Component {
+	
 
 	constructor(props) {
 		// console.log('in pb constructor')
@@ -33,6 +34,14 @@ export default class Publications extends React.Component {
 		// console.log(this.years, '<----YEARS')
 
 	}
+	// shouldComponentUpdate(nextProps, nextState) {
+		// console.log(nextProps, nextState, 'should');
+		// if (this.props.data === nextProps.data) {
+		// 	return false;
+		//   } else {
+		// 	return true;
+		//   }
+	//   }
 
   render(){
     return(

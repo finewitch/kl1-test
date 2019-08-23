@@ -26,7 +26,7 @@ export const Publication = ({...props}) => {
         
         {props.btns.researchgate ? <a rel="noopener noreferrer" className="btn" href = { props.btns.researchgate } target="_blank">researchgate</a> : null}
         {props.btns.preregistration ? <a rel="noopener noreferrer" className="btn" href = { props.btns.preregistration } target="_blank">preregistration</a> : null}
-        {props.btns.pdf ? <a rel="noopener noreferrer" className="btn" href = { props.btns.pdf } target="_blank">pdf</a> : null}
+        {props.btns.pdf ? <a rel="noopener noreferrer" className="btn" href = { props.btns.pdf.publicURL } target="_blank">pdf</a> : null}
         {props.btns.data ? <a rel="noopener noreferrer" className="btn" href = { props.btns.data } target="_blank">data</a> : null}
   
       </div>
