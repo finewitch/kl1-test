@@ -9,28 +9,13 @@ import ArrowIcon from '../components/atoms/ArrowIcon'
 
 export const BlogPostTemplate = ({
   contentComponent,
-  title,
-  authors,
-  date,
   helmet,
-  abstrakt,
-  pdf,
-  data,
-  researchgate,
-  source,
-  preregistration,
+  data
 
 }) => {
   const PostContent = contentComponent || Content
-  console.log(researchgate, 'researchgate')
 
-  let links ={
-    'source' : source || null,
-    'researchgate' : researchgate || null,
-    'preregistration' : preregistration || null,
-    'pdf' : pdf || null,
-    'data' : data || null
-  }
+
   return (
     <section className="section">
       {helmet || ''}
@@ -42,26 +27,28 @@ export const BlogPostTemplate = ({
             <ArrowIcon/>
           </Link>
 
-          <h4 className="date centered color-grey">{date}</h4>
+          <h4 className="date centered color-grey">{data.content.date}</h4>
                       
           <h1 className="title centered">
-            {title}
+            {data.content.title}
           </h1>
 
           <h2 className="title centered">
-            {authors}
+            {data.content.authors}
           </h2>
           <div className="section__wrapper-content-post">
 
-            <PostContent content={abstrakt} />
+            <PostContent content={data.content.abstrakt} />
 
             <div className="links">
-              {links.source ? <a rel="noopener noreferrer" href = { links.source } target="_blank">source</a> : null}
-              {links.citation ? <a rel="noopener noreferrer" href = { links.citation } target="_blank">citation</a> : null}
-              {links.researchgate ? <a rel="noopener noreferrer" href = { links.researchgate } target="_blank">researchgate</a> : null}
-              {links.preregistration ? <a rel="noopener noreferrer" href = { links.preregistration } target="_blank">preregistration</a> : null}
-              {links.pdf.publicURL ? <a rel="noopener noreferrer" href = { links.pdf.publicURL } target="_blank">pdf</a> : null}
-              {links.data.publicURL ? <a rel="noopener noreferrer" href = { links.data.publicURL } target="_blank">data</a> : null}
+
+              {data.links.source ? <a rel="noopener noreferrer" href = { data.links.source } target="_blank">source</a> : null}
+              {data.links.citation ? <a rel="noopener noreferrer" href = { data.links.citation } target="_blank">citation</a> : null}
+              {data.links.researchgate ? <a rel="noopener noreferrer" href = { data.links.researchgate } target="_blank">researchgate</a> : null}
+              {data.links.preregistration ? <a rel="noopener noreferrer" href = { data.links.preregistration } target="_blank">preregistration</a> : null}
+              {data.links.pdf ? <a rel="noopener noreferrer" href = { data.links.pdf.publicURL } target="_blank">pdf</a> : null}
+              {data.links.data ? <a rel="noopener noreferrer" href = { data.links.data.publicURL } target="_blank">data</a> : null}
+              
             </div>
 
           </div>
@@ -84,13 +71,31 @@ BlogPostTemplate.propTypes = {
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
 
-  console.log(data)
+  let props= {
+      content:{
+        'tags' : post.frontmatter.tags,
+        'title' : post.frontmatter.title,
+        'authors' : post.frontmatter.authors,
+        'date' : post.frontmatter.date,
+        'abstrakt' : post.frontmatter.abstrakt
+      },
+      links :{
+        'source' : post.frontmatter.source || null,
+        'researchgate' : post.frontmatter.researchgate || null,
+        'preregistration' : post.frontmatter.preregistration || null,
+        'pdf' : post.frontmatter.pdf || null,
+        'data' : post.frontmatter.data || null
+      }
+  }
 
   return (
     <Layout>
+
       <BlogPostTemplate
+
         content={post.html}
         contentComponent={HTMLContent}
+        
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -100,18 +105,11 @@ const BlogPost = ({ data }) => {
             />
           </Helmet>
         }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-        authors={post.frontmatter.authors}
-        date={post.frontmatter.date}
-        abstrakt={post.frontmatter.abstrakt}
-        researchgate={post.frontmatter.researchgate}
-        source={post.frontmatter.source}
-        pdf={post.frontmatter.pdf}
-        data={post.frontmatter.data}
-        preregistration={post.frontmatter.preregistration}
-        citation={post.frontmatter.citation}
+
+        data={props}
+
       />
+
     </Layout>
   )
 }

@@ -27,9 +27,9 @@ export class IndexPageTemplate extends React.Component {
     console.log(props, '<-------PROPS')
     this.state = {
       page: styles.color1,
-      publications:{
-        filter: 'all'
-      }
+      // publications:{
+      //   filter: 'all'
+      // }
     }
     this.updateStateWithPageLocation = function(){
       // console.log(this.props.location.pageNum)

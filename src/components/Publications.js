@@ -11,6 +11,7 @@ import PopupCitation from './atoms/PopupCitation.js';
 export default class Publications extends React.Component {
 
 	constructor(props) {
+		// console.log('in pb constructor')
 		super(props);
 		if(props.data === null || undefined){
 			return;
@@ -48,6 +49,7 @@ export default class Publications extends React.Component {
 				<div className="publications__wrapper">
 
 					{this.state.publications.map( (el, index)=>{
+
 						let pub = el.node.frontmatter
 
 						let props = {
@@ -66,7 +68,7 @@ export default class Publications extends React.Component {
 								 'data' : pub.data || null
 							 }
 						}
-
+						console.table(props.title, props.btns, '<---')
 						return (
 							<Publication key = {index} {... props} />
 						)
@@ -139,7 +141,7 @@ export default class Publications extends React.Component {
 	}
 	onClickPopup = function (data){
 
-		console.log(data, '<---DATA')
+		// console.log(data, '<---DATA')
 		this.setState({
 			citationData : data,
 			showPopup: true
