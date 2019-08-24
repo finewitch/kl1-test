@@ -1,5 +1,6 @@
-import React from 'react'
-import NavLink from './atoms/NavLink'
+import React from 'react';
+import NavLink from './atoms/NavLink';
+import logo from '../img/logo-cspace.png'
 
 export default class Navbar extends React.Component {
     constructor(props) {
@@ -44,7 +45,7 @@ export default class Navbar extends React.Component {
       return(
         <div className="menu">
           <nav className="menu__main">
-          logo
+          <img src=""/>
             <ul className="menu__main-wrapper">
 
               {this.menuLinks.map( ( el, index )=>{
