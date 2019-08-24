@@ -46,6 +46,10 @@ $menu-height: 60px;
         // border-bottom:1px solid $bg-menu;
         display: flex;
         align-items: CENTER;
+        img{
+            height: 45px;
+            margin-left: 30px;
+        }
     }
     ul{
         height: 100%;

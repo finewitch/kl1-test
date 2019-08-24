@@ -45,7 +45,7 @@ export default class Navbar extends React.Component {
       return(
         <div className="menu">
           <nav className="menu__main">
-          <img src=""/>
+          <img alt="logo" src={logo}/>
             <ul className="menu__main-wrapper">
 
               {this.menuLinks.map( ( el, index )=>{
