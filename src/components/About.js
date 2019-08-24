@@ -15,7 +15,7 @@ export default class About extends React.Component {
                     <div className="goals__top">
 
                         <h2>
-                        The CSPACE lab (Science of Personality, Addiction, and Religion, Throughout Adulthood) at Bowling Green State University is comprised of myself, my current graduate students, and a number of undergraduate students.
+                        About us: CSpace - Clinical Research Space - is a cross-institutional research group established in 2018, located in Warsaw, Poland. CSpace comprises X people and a number of external collaborators. In our research we use psychometric, self-report techniques, ecological momentary assessment and cognitive tasks.
                         </h2>
                         
                     </div>
