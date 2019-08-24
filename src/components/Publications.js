@@ -57,7 +57,7 @@ export default class Publications extends React.Component {
 				</div>
 
 				<h3 className="color-black">publications</h3>
-				
+
 				<div className="publications-title">
 
 
@@ -86,7 +86,7 @@ export default class Publications extends React.Component {
 								 'data' : pub.data || null
 							 }
 						}
-						console.table(props.title, props.btns, '<---')
+						// console.table(props.title, props.btns, '<---')
 						return (
 							<Publication key = {index} {... props} />
 						)
