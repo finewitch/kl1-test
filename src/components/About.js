@@ -44,6 +44,19 @@ export default class About extends React.Component {
 
                         </div>
 
+                        <div className="goals__bottom-column">
+                                <div className="goals__bottom-column-title">CLINICAL PSYCHOLOGY</div>
+                            
+                                <div className="goals__bottom-column-content">
+                                    <p>Cooper Perkins brings exceptional engineering skills and experience to solve our partners' most challenging technical problems.
+                                    </p>
+                                    <p>Cooper Perkins brings exceptional engineering skills and experience to solve our partners' most challenging technical problems.
+                                    </p>
+                                </div>
+
+
+                        </div>
+
                     </div>
 
 
