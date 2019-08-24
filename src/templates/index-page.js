@@ -13,8 +13,8 @@ import { graphql } from 'gatsby'
 import TableOfContent from '../components/TableOfContent'
 
 let styles = {
-  color1: '#e3fbfa',
-  color2: '#ece0e0',
+  color1: '#f7fbfe',
+  color2: '#e6f2ff',
   color3: '#aaa8b3',
   color4: '#839fb4',
   color5: '#0f1039',
@@ -97,7 +97,7 @@ export class IndexPageTemplate extends React.Component {
     return(
       <div 
       className="root-wrapper"
-      style={{backgroundColor: this.state.page}}>
+      >
         
 
         <TableOfContent page={this.state.page}/>
@@ -132,7 +132,7 @@ export class IndexPageTemplate extends React.Component {
         ()=>{
 
           // this.setState({ loading: false })
-          this.attatchScrollEvent(screenResX);
+          // this.attatchScrollEvent(screenResX);
           bodyTag.classList.remove('body-overflow');
 
         },500)

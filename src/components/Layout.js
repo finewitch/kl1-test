@@ -42,6 +42,7 @@ const TemplateWrapper = ({ children }) => {
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Martel:400,700&display=swap" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Alegreya:400,700&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:400,700,900&display=swap" rel="stylesheet"/>
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />

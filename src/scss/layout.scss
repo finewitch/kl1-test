@@ -1,4 +1,5 @@
 //VARIABLES
+$SansSerif : 'Catamaran', sans-serif;
 
 // $content-width: 1230px;
 $container-width: 1024px;
@@ -52,20 +53,21 @@ body{
 
 .root-wrapper{
     // background-color: $bg-landing;
-    transition: background-color 400ms cubic-bezier(.45,.05,.55,.95);
-    -webkit-transition: background-color 400ms cubic-bezier(.45,.05,.55,.95);
-    -moz-transition: background-color 400ms cubic-bezier(.45,.05,.55,.95);
-    -o-transition: background-color 400ms cubic-bezier(.45,.05,.55,.95);
-    -ms-transition: background-color 400ms cubic-bezier(.45,.05,.55,.95);
-    .active{
-      top:0;
-      opacity:1;
-      transition: top .5s ease      ;
-      -webkit-transition: top .5s ease      ;
-      -moz-transition: top .5s ease      ;
-      -ms-transition: top .5s ease      ;
-      -o-transition: top .5s ease      ;
-    }
+    background: #f7fbfe;
+    // transition: background-color 400ms cubic-bezier(.45,.05,.55,.95);
+    // -webkit-transition: background-color 400ms cubic-bezier(.45,.05,.55,.95);
+    // -moz-transition: background-color 400ms cubic-bezier(.45,.05,.55,.95);
+    // -o-transition: background-color 400ms cubic-bezier(.45,.05,.55,.95);
+    // -ms-transition: background-color 400ms cubic-bezier(.45,.05,.55,.95);
+    // .active{
+    //   top:0;
+    //   opacity:1;
+    //   transition: top .5s ease      ;
+    //   -webkit-transition: top .5s ease      ;
+    //   -moz-transition: top .5s ease      ;
+    //   -ms-transition: top .5s ease      ;
+    //   -o-transition: top .5s ease      ;
+    // }
     
 }
 .loading{
@@ -85,8 +87,9 @@ body{
     h3{
         font-size:30px;
         // color: #000;
-        font-family :'Josefin Sans';
+        font-family : $SansSerif;
         font-size:5rem;
+        letter-spacing: 6px;
         margin:0;
         margin-bottom: 20px;
         font-weight: bold;
@@ -124,9 +127,10 @@ body{
 
 //fonts
 
-$SansSerif : 'Josefin Sans', sans-serif;
+
 h1{
-    font-family: 'Josefin Sans', sans-serif;
+    // font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Catamaran', sans-serif;
 }
 .h2-bold{
     font-size: 50px;
@@ -176,7 +180,7 @@ a{
             // padding: 10px 0;
             max-width: 0;
             // border-bottom: 2px solid #fff;
-            color: $light-blue;
+            color:#ef4747;
             content: attr(data-hover);
             -webkit-transition: max-width 0.6s;
             -moz-transition: max-width 0.6s;

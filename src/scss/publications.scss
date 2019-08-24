@@ -1,6 +1,7 @@
 .section-4{
    height: 100vh;
 //    border: 10px solid white;
+    background: #BFE1E3;
 .section-4__wrapper{
     max-width: 100%;
     // border: 10px solid orange;
@@ -9,17 +10,28 @@
 }
 }
 .publications{
+
+    h3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:0;
+        font-weight: 900;
+        font-size: 3rem;
+    }
     a{
-        color: white;
+        color: #444444;
     }
     a.readmore{
-        color: black;
+        color: #ef4747;
+        font-family: $SansSerif;
+        font-weight: 500;
     }
     position: relative;
     button{
         transition: all .3s ease-in;
         font-family: 'Josefin Sans';
-        color:white;
+        color:#444444;
     }
     
     &-title{
@@ -49,29 +61,25 @@
         }
         .active{
             button{
-                color: #522cff;
+                color: #ff0e0e;
             }
         }
         a{
-            color:white;
+            color:#444444;
             span{
                 display: inline;
-                line-height: 2rem;
+                line-height: 3.3rem;
                 @media (max-width: $largest-desktop) {
                     line-height: 1.4rem;
                    }
             }
             &:hover{
-                color:$light-blue;
+                color:#ef4747;
             }
         }
-        h3{
-            display: flex;
-            align-items: center;
-            margin:0;
-        }
+
         h4{
-            font-family: 'Josefin Sans';
+            font-family: $SansSerif;
             font-size:2rem;
             margin: 0;
             margin-top:30px;
@@ -91,7 +99,7 @@
         // justify-content: left;
         justify-content: center;
     }
-    color:white;
+    color:#444444;
     &__wrapper{
         margin:80px auto 0px auto;
         overflow: auto;
@@ -153,7 +161,7 @@
             &-year{
                 font-size:2rem;
                 flex-basis: 7%;
-                color: white;
+                color: #444444;
                 font-weight: 300;
                 @media (max-width: $largest-desktop) {
                     font-size:2.2rem;
@@ -235,6 +243,14 @@
                 padding: 20px;
             }
         }
+    }
+}
+#duperel3{
+    position: absolute;
+    left: 0;
+    top: -70px;
+    svg{
+        width: 100%;
     }
 }
 
