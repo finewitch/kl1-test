@@ -53,7 +53,7 @@ body{
 
 .root-wrapper{
     // background-color: $bg-landing;
-    background: url(../img/tekstura.png) top left repeat;
+    background: url('https://www.toptal.com/designers/subtlepatterns/patterns/concrete_wall.png') top left repeat;
     // transition: background-color 400ms cubic-bezier(.45,.05,.55,.95);
     // -webkit-transition: background-color 400ms cubic-bezier(.45,.05,.55,.95);
     // -moz-transition: background-color 400ms cubic-bezier(.45,.05,.55,.95);
@@ -170,7 +170,7 @@ a{
     span{
         position: relative;
         display: block;
-        line-height: 5.3rem;
+        // line-height: 5.3rem;
         font-weight: bold;
         &::before{
             position: absolute;

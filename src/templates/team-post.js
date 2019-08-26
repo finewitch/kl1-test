@@ -59,8 +59,6 @@ const TeamPost = ({ data }) => {
   
   const { markdownRemark: post } = data
 
-  console.table(post)
-
   return (
     <Layout>
       <TeamPostTemplate

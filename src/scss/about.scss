@@ -7,33 +7,12 @@
     .color-green-header{
         opacity: 0;
     }
-    &-side-title{
-        display: flex;
-        &-link{
-            span{
-                font-size: 10px!important;
-            }
-
-        }
-        svg{
-            width: 90px;
-        }
-        a{
-            font-size: 40px;
-            span{
-                font-size:5rem;
-                @media (max-width: $largest-desktop) {
-                    font-size:3.7rem;
-                   }
-            }
-        }
-    }
     color: white;
     &__top{
         display: flex;
         height:25%;
         h2{
-            flex-basis: 50%;
+            // flex-basis: 50%;
             display: flex;
             align-items: center;
             font-weight:lighter;
@@ -54,7 +33,7 @@
             font-size:1.7rem;
             svg{
                 width: 90px;
-                height: 50px;
+                height: 55px;
             }
         }
         &-side{
@@ -71,13 +50,16 @@
         margin-top:100px;
         height:75%;
         div{
-            flex-basis: 50%;
+            flex-basis: 33%;
             z-index: 10;
         }
         &-column-title{
-            font-family: 'Josefin Sans';
+            font-family: $SansSerif;
             font-size:1.3rem;
             color: white;
+            text-transform: uppercase;
+            max-width: 80%;
+            height: 50px;
             @media (max-width: $largest-desktop) {
                 font-size: 1.2rem;
                }
@@ -85,6 +67,7 @@
         &-column-content{
             max-width:500px;
             font-size:1.3rem;
+            padding-right: 30px;
             @media (max-width: $largest-desktop) {
                 font-size: 1.2rem;
                }

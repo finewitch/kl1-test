@@ -39,10 +39,11 @@ const TemplateWrapper = ({ children }) => {
           href="/img/safari-pinned-tab.svg"
           color="#ff4400"
         />
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Martel:400,700&display=swap" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Alegreya:400,700&display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css?family=Catamaran:400,700,900&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:300,400,700,900&display=swap" rel="stylesheet"/>
+
+        <script src="https://kit.fontawesome.com/0a4ee8d3e4.js"></script>
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
