@@ -78,4 +78,19 @@ collections:
       - {label: "Image", name: image, widget: image, required: false}
       - {label: "Content", name: "content", widget: "markdown"}
 
-         
+  - name: "resources"
+    label: "Resources"
+    folder: "src/pages/resources"
+    create: true
+    slug: "resources"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "resources-page"}
+      - {label: Title, name: title, widget: string, default: "Resources title"}
+      - label: "Testimonials"
+        name: "testimonials"
+        widget: "list"
+        fields:
+          - {label: Link label, name: link label, widget: string, default: "Resources title"}
+          - {label: Link, name: link, widget: string, default: "Resources link"}
+
+          

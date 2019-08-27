@@ -1,6 +1,7 @@
 import React from 'react'
 import Swiper from 'react-id-swiper';
 import ArrowIcon from '../components/atoms/ArrowIcon'
+import { Link } from 'gatsby';
 
 export default class News extends React.Component {
 
@@ -43,17 +44,17 @@ export default class News extends React.Component {
                     let slug = el.node.fields.slug;
                     console.log(slug, '<------')
                     return (
-
-                        <a href={slug} className="news__box" key={index}>
+                        <Link to={slug} className="goback">   
                             <div className="news__box-date">{date}</div>        
                             <div className="news__box-title">{title}</div>        
                             <div className="news__box-content">{content}</div>     
-                            <a className="news__box-read" href={slug}>
+                            <p>&bull;	&bull;	&bull;</p>
+                            <div className="news__box-read" href={slug}>
                             read more
                             <ArrowIcon/>
-                            </a>     
+                            </div>     
 
-                        </a>
+                        </Link>
 
                     )
 

@@ -49,12 +49,9 @@
         .news__box-content{
             font-size: 1.1rem;
             color: #d3d3d3;
-            text-overflow: ellipsis;
-            overflow: hidden; 
-            text-align: center;
-            width: 90%; 
-            height: 1.2em; 
-            white-space: nowrap;
+            height: 120px;
+            overflow: hidden;
+            padding: 20px;
         }
         .news__box-read{
             color: white;
@@ -66,7 +63,7 @@
 
             svg{
                 transform: rotate(-90deg);
-                width: 20px;
+                width: 15px;
             }
         }
         &:hover{

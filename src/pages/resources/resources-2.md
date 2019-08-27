@@ -1,4 +1,5 @@
 ---
+templateKey: resources-page
 title: ankiet1
 testimonials:
   - link: linkdo1
