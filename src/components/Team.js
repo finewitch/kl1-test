@@ -37,7 +37,7 @@ export default class Team extends React.Component {
 
                                         <a href={slug}>
                                             <img alt="googlescholar" src={gsIcon}/>
-                                            <span>researchgate</span>
+                                            <span>google scholar</span>
                                         </a>
                                     </div>
 

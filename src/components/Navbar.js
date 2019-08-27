@@ -18,6 +18,11 @@ export default class Navbar extends React.Component {
           "num" : "02"
         },
         {
+          "name": "News",
+          "link": "/#news",
+          "num" : "03"
+        },
+        {
           "name": "Team",
           "link": "/#team",
           "num" : "03"
@@ -33,7 +38,7 @@ export default class Navbar extends React.Component {
           "num" : "05"
         },
         {
-          "name": "Contact us & News",
+          "name": "Contact us",
           "link": "/#contact",
           "num" : "06"
         }

@@ -86,8 +86,8 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "resources-page"}
       - {label: Title, name: title, widget: string, default: "Resources title"}
-      - label: "Testimonials"
-        name: "testimonials"
+      - label: "Link-group"
+        name: "Link-group"
         widget: "list"
         fields:
           - {label: Link label, name: link label, widget: string, default: "Resources title"}
