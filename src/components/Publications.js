@@ -48,13 +48,13 @@ export default class Publications extends React.Component {
       <div className="section-4 publications" id="publications">
 		  
 			<div className="section__wrapper">
-				<div id="duperel3">
+				{/* <div id="duperel3">
 
 					<svg width="1941" height="200" viewBox="0 0 1941 200" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<rect width="1941" height="200" rx="90" fill="#BFE1E3"/>
 					</svg>
 
-				</div>
+				</div> */}
 
 				<h3 className="color-black">publications</h3>
 

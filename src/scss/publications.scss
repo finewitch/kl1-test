@@ -1,10 +1,10 @@
 .section-4{
-   height: 100vh;
-//    border: 10px solid white;
-    background: #BFE1E3;
+    height: 100vh;
+    background: url('https://i.ibb.co/ZJzw8Jj/bg-pat.png') top left repeat;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
 .section-4__wrapper{
     max-width: 100%;
-    // border: 10px solid orange;
     padding: 0 50px;
     overflow: scroll;
 }
@@ -20,7 +20,7 @@
         font-size: 3rem;
     }
     a{
-        color: #444444;
+        color: white;
     }
     a.readmore{
         color: #ef4747;
@@ -30,8 +30,8 @@
     position: relative;
     button{
         transition: all .3s ease-in;
-        font-family: 'Josefin Sans';
-        color:#444444;
+        font-family: $SansSerif;
+        color: white;
     }
     
     &-title{
@@ -65,7 +65,7 @@
             }
         }
         a{
-            color:#444444;
+            color:white;
             span{
                 display: inline;
                 line-height: 3.3rem;
@@ -99,7 +99,7 @@
         // justify-content: left;
         justify-content: center;
     }
-    color:#444444;
+    color:white;
     &__wrapper{
         margin:80px auto 0px auto;
         overflow: auto;
@@ -168,7 +168,7 @@
             }
             &-title{
                 font-family: 'Alegreya';
-                color:darkslategray;
+                color:white;
                 text-decoration: none;
                 font-size:1.2rem;
                 flex-basis: 37%;

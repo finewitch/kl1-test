@@ -72,8 +72,8 @@ collections:
     create: true
     slug: "news"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "team-post"}
-      - {label: "Title", name: "title", widget: "string", default: "Team member"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "news-post"}
+      - {label: "Title", name: "title", widget: "string", default: "News title"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Image", name: image, widget: image, required: false}
       - {label: "Content", name: "content", widget: "markdown"}

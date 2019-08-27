@@ -20,7 +20,7 @@ import ArrowIcon from './atoms/ArrowIcon'
 
               {/* <ArrowIcon/>       */}
               <button className="trigger">
-                <i class="fa fa-angle-double-down animated infinite bounce"></i>
+                <i className="fa fa-angle-double-down animated infinite bounce"></i>
               </button>
               <span>click to explore / drop us a line</span>
 

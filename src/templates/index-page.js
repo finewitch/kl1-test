@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import Layout from '../components/Layout'
 import Landing from '../components/Landing'
 import About from '../components/About'
+import News from '../components/News'
 import Team from '../components/Team'
 import Publications from '../components/Publications'
 import ContactNews from '../components/ContactNews'
@@ -103,6 +104,7 @@ export class IndexPageTemplate extends React.Component {
         <TableOfContent page={this.state.page}/>
         <Landing scrollText={this.props.subheading}/>
         <About/>
+        <News data={this.props.news}/>
         <Team data={this.props.teamMembers}/>
         <Publications data={this.props.publications}/>
         <ContactNews/>
@@ -157,14 +159,14 @@ IndexPageTemplate.propTypes = {
 const IndexPage = ({ data , location}) => {
   console.log(data, 'data here>>>')
   const { frontmatter } = data.markdownRemark
+  const news = data.news.edges
   const publications = data.publications.edges
   const teamMembers = data.team.edges
 
   return (
     <Layout>
       <IndexPageTemplate
-        // title={frontmatter.title}
-        subheading={frontmatter.subheading}
+        news={news}
         publications={publications}
         teamMembers={teamMembers}
         location={location.state}
@@ -185,6 +187,23 @@ export default IndexPage
 
 export const pageQuery = graphql`
 query IndexPageTemplate {
+  news: allMarkdownRemark(filter: {fields: {slug: {regex: "\\/news/"}}}, sort: {fields: frontmatter___date, order: DESC}) {
+    edges {
+      node {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          date
+          content
+          image {
+            id
+          }
+        }
+      }
+    }
+  }
   publications: allMarkdownRemark(filter: {fields: {slug: {regex: "\\/publications/"}}}, sort: {fields: frontmatter___date, order: DESC}) {
     edges {
       node {
