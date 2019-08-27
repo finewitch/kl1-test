@@ -9,18 +9,13 @@ export default class ContactNews extends React.Component {
       <div className="section-5 publications contact" id="contact">
         <div className="section__wrapper">
 
-        {/* <div className="publications-title">
 
-            <h3 className="color-grey">Contact us
+            <h3 className="color-grey centered">Contact us
             </h3>
 
-          <h3>news</h3>
 
-        </div> */}
         <div className="contact__wrapper">
           <div className="contact__wrapper-contact">
-
-          <h3 className="color-grey">Contact us</h3>
 
 			  <div className="contact__wrapper-contact-title">
           <div>
@@ -59,7 +54,7 @@ export default class ContactNews extends React.Component {
         </div>
       </div>
 
-      <div className="contact__wrapper-news">
+      {/* <div className="contact__wrapper-news">
         <h3>news</h3>
             <ul>
               <li>
@@ -72,7 +67,7 @@ export default class ContactNews extends React.Component {
               <li>Update do działu resources</li>
             </ul>
 
-      </div>
+      </div> */}
 
   </div>
 

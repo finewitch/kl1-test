@@ -1,26 +1,26 @@
 .section-5{
     min-height: 100%;
     padding:50px 0;
-    background: #739092;
+    background: #1a1a1a;
     @media (max-width: $largest-desktop) {
         padding:100px 0;
        }
     h3{
         color:#F5F5F5;
         font-weight: 900;
+    }
+    .section__wrapper h4{
         justify-content: flex-start;
-}
+    }
 
 .contact__wrapper{
-    max-width: $largest-desktop;
+    max-width: 900px;
     @media (max-width: $largest-desktop) {
         max-width: $container-width;
        }
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between ;
         h4{
-            font-family: 'Josefin Sans';
+            font-family: $SansSerif;
             font-size:2rem;
             margin:40px 0 20px 0;
             color: #6eb3ac;
@@ -37,8 +37,11 @@
         }
         &-contact, &-news{
             margin-top:20px;
-            flex-basis: 50%;
+            // flex-basis: 50%;
             z-index: 10;
+            h4.third{
+                align-items: flex-start;
+            }
             @media (max-width: $largest-desktop) {
                 // flex-basis: 35%;
                }
@@ -88,24 +91,20 @@
         &-contact-title{
             display: flex;
             justify-content: space-between;
-            width:80%;
+            // width:80%;
 
         }
         &-contact-form{
             font-size: 1.5rem;
             display: flex;
             flex-direction: column;
-            font-family: 'Josefin Sans';
-            // margin-top:50px;
             .form-field{
                 min-height:100px;
-                // border: 1px solid red;
                 display: flex;
                 flex-direction: column;
                 margin-top:20px;
                 label{
-                    // margin-bottom:10px;
-                    font-family: 'Josefin Sans';
+                    font-family: $SansSerif;
                     
                 }
                 input, textarea{
@@ -124,22 +123,22 @@
                     font-weight: 100;
                 }
                 input::placeholder, textarea::placeholder{
-                    color: #fff;
-                    font-size: 1.3rem;
-                    font-family: 'Josefin Sans';
+                    color: #eeeeee;
+                    font-size: 1.1rem;
+                    font-family: $SansSerif;
                     font-weight: 100;
                 }
                 textarea{
                     border:none;
                     background: transparent;
-                    border-bottom:1px solid black;
+                    border-bottom:1px solid #9cfff6;
                     height:100%;
                     flex-grow: 1;
 
                 }
             }
                 button{
-                    font-family: 'Josefin Sans';
+                    font-family: $SansSerif;
                     width:200px;
                     min-height:60px;
                     font-size:1.4rem;

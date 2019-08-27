@@ -1,5 +1,6 @@
 import React from 'react'
 import Swiper from 'react-id-swiper';
+import ArrowIcon from '../components/atoms/ArrowIcon'
 
 export default class News extends React.Component {
 
@@ -7,23 +8,25 @@ export default class News extends React.Component {
         super(props);
         console.log(this.props, '<--props in news')
         this.params = {
-            width : 1100,
+            // width : 1000,
             containerClass: 'customized-swiper-container',
             slidesPerView: 3,
-            spaceBetween: 30,
+            spaceBetween: 50,
             pagination: {
               el: '.swiper-pagination',
               clickable: true,
             },
+
             navigation: {
-                nextEl: '.swiper-button-next .swiper-button-white',
-                prevEl: '.swiper-button-prev .swiper-button-white'
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
               },
+
           }
     }
     render(){
         return(
-            <div className="section-3  news" id="team">
+            <div className="section-3  news" id="news">
 
                 <div className="section__wrapper team">
                     <div className="title-row">
@@ -33,7 +36,7 @@ export default class News extends React.Component {
 
                <Swiper {...this.params}>
 
-                {this.props.data.map((el)=>{
+                {this.props.data.map((el,index)=>{
                     let title = el.node.frontmatter.title;
                     let date = new Date(el.node.frontmatter.date).getUTCDate() + '/' + new Date(el.node.frontmatter.date).getUTCMonth() + '/' + new Date(el.node.frontmatter.date).getFullYear();
                     let content = el.node.frontmatter.content;
@@ -41,21 +44,22 @@ export default class News extends React.Component {
                     console.log(slug, '<------')
                     return (
 
-                        <a href={slug} className="news__box">
+                        <a href={slug} className="news__box" key={index}>
                             <div className="news__box-date">{date}</div>        
                             <div className="news__box-title">{title}</div>        
-                            <div className="news__box-content">{content}</div>        
+                            <div className="news__box-content">{content}</div>     
+                            <a className="news__box-read" href={slug}>
+                            read more
+                            <ArrowIcon/>
+                            </a>     
 
                         </a>
 
                     )
 
                     })}
+
                 </Swiper> 
-
-      
-
-
             </div>
 
 

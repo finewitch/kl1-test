@@ -3,6 +3,7 @@
     background: url('https://i.ibb.co/ZJzw8Jj/bg-pat.png') top left repeat;
     border-top-left-radius: 100px;
     border-top-right-radius: 100px;
+    padding: 50px 0;
 .section-4__wrapper{
     max-width: 100%;
     padding: 0 50px;
@@ -41,7 +42,7 @@
            }
         margin: 0 auto;
         display: flex;
-        justify-content: space-between ;
+        justify-content: flex-end;
         align-items: center;
         &-yearsort{
             // border: 1px solid red;
@@ -131,21 +132,21 @@
             align-items: center;
             border-bottom: 1px solid black;
             min-height:120px;
-            font-family: 'Josefin Sans';
+            font-family: $SansSerif;
             font-weight: 100;
             justify-content: space-between;
             width: 98%;
 
             a.btn, .popup-btn{
                 text-transform: uppercase;
-                color:black;
+                color:white;
                 margin: 5px auto;
                 height: 26px;
                 
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                border: 1px solid black;
+                border: 1px solid white;
                 border-radius: 7px;
                 font-size:.8rem;
                 font-weight:500;
@@ -160,7 +161,7 @@
             &-year{
                 font-size:2rem;
                 flex-basis: 7%;
-                color: #444444;
+                color: #eeeeee;
                 font-weight: 300;
                 @media (max-width: $largest-desktop) {
                     font-size:2.2rem;

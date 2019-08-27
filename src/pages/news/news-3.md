@@ -1,5 +1,5 @@
 ---
-templateKey: team-post
+templateKey: news-post
 title: Nagroda dla Kamila
 date: 2019-05-28T11:30:21.375Z
 image: /img/products-grid2.jpg

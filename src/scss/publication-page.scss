@@ -1,4 +1,4 @@
-.publication-page{
+.publication-page, .news-page{
     margin: $menu-height + 40px 0;
     .goback{
         text-align: center;
@@ -71,5 +71,11 @@
     .content{
         // max-width:800px;
         font-size: 1.1rem;
+    }
+}
+
+.news-page{
+    .section__wrapper-content-post{
+        margin-top: 50px;
     }
 }

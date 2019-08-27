@@ -56,7 +56,7 @@ export default class Publications extends React.Component {
 
 				</div> */}
 
-				<h3 className="color-black">publications</h3>
+				<h3 className="color-white">publications</h3>
 
 				<div className="publications-title">
 

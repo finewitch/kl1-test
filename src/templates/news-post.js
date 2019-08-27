@@ -14,6 +14,7 @@ export const NewsPostTemplate = ({
 
 }) => {
   const PostContent = contentComponent || Content
+  console.log(data, 'data');
 
 
   return (
@@ -23,7 +24,7 @@ export const NewsPostTemplate = ({
         <div className="columns section__wrapper">
           <div className="column is-10 is-offset-1 section__wrapper-content">
 
-          <Link to="/#news" state={{ location: 'news'}} className="goback back-arrow">      
+          <Link to="/#news" state={{ location: 'news', pageNum : 4}} className="goback back-arrow">      
             <ArrowIcon/>
           </Link>
 
@@ -62,6 +63,8 @@ const NewsPost = ({ data }) => {
   let props= {
       content:{
         'date' : post.frontmatter.date,
+        'title': post.frontmatter.title,
+        'content' : post.frontmatter.content,
       },
   }
 
