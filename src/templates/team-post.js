@@ -13,7 +13,9 @@ export const TeamPostTemplate = ({
   contentComponent,
   title,
   helmet,
-  image
+  image,
+  rg,
+  gs
 }) => {
 
   return (
@@ -37,8 +39,12 @@ export const TeamPostTemplate = ({
           <p className="text__content-content">
             {content}
           </p>
-          <p className="text__content-ico"><img alt="external links icons" src={rgIconBl}/><span>reaserch Gate</span></p>
-          <p className="text__content-ico"><img alt="external links icons" src={gsIconBl}/><span>google Scholar</span></p>
+          <a href={rg} target="_blank" className="text__content-ico"><img alt="external links icons" src={rgIconBl}/>
+            <span>reaserch Gate</span>
+          </a>
+          <a href={gs} target="_blank" className="text__content-ico"><img alt="external links icons" src={gsIconBl}/>
+            <span>google Scholar</span>
+          </a>
 
         </div>
 
@@ -56,6 +62,8 @@ export const TeamPostTemplate = ({
 // }
 
 const TeamPost = ({ data }) => {
+
+  console.log(data)
   
   const { markdownRemark: post } = data
 
@@ -77,6 +85,10 @@ const TeamPost = ({ data }) => {
         content = {post.frontmatter.content}
 
         image = {post.frontmatter.image.publicURL}
+
+        rg = {post.frontmatter.rg}
+
+        gs = {post.frontmatter.gs}
 
       />
     </Layout>
@@ -103,6 +115,8 @@ query TeamMemberByID($id: String!) {
       image {
         publicURL
       }
+      rg
+      gs
     }
   }
 }

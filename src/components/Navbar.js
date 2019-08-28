@@ -1,17 +1,13 @@
 import React from 'react';
 import NavLink from './atoms/NavLink';
-import logo from '../img/logo-cspace.png'
+import logo from '../img/logo-cspace.png';
+import { Link } from 'gatsby';
 
 export default class Navbar extends React.Component {
     constructor(props) {
       super(props);
 
       this.menuLinks = [
-        {
-          "name": "Home",
-          "link": "/",
-          "num" : "01"
-        },
         {
           "name": "About",
           "link": "/#about",
@@ -50,8 +46,10 @@ export default class Navbar extends React.Component {
       return(
         <div className="menu">
           <nav className="menu__main">
-          <img alt="logo" src={logo}/>
             <ul className="menu__main-wrapper">
+              <Link to={'/'}>
+                <img alt="logo" src={logo}/>
+              </Link>
 
               {this.menuLinks.map( ( el, index )=>{
                 return  (

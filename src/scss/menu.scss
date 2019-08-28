@@ -46,10 +46,12 @@ $menu-height: 60px;
         // border-bottom:1px solid $bg-menu;
         display: flex;
         align-items: CENTER;
+        a{
+            display: flex;
+            align-items: center;
+        }
         img{
-            height: 18px;
-            margin-left: 30px;
-            position: absolute;
+            height: 22px;
         }
     }
     ul{

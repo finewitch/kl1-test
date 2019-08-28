@@ -23,7 +23,7 @@
             font-family: $SansSerif;
             font-size:2rem;
             margin:40px 0 20px 0;
-            color: #6eb3ac;
+            color: white;
             @media (max-width: $largest-desktop) {
                 font-size: 1.4rem;
                }
@@ -57,7 +57,7 @@
                 margin-right: -15px;
                 li{
                     width:35%;
-                    background: #6eb3ac;
+                    background: white;
                     margin: 10px 20px 10px 0px;
                     display: flex;
                     flex-direction: column;
@@ -117,7 +117,7 @@
                 input{
                     border:none;
                     background: transparent;
-                    border-bottom:1px solid #9cfff6;
+                    border-bottom:1px solid white;
                     min-height:40px;
                     margin:15px 0;
                     font-weight: 100;
@@ -132,7 +132,7 @@
                 textarea{
                     border:none;
                     background: transparent;
-                    border-bottom:1px solid #9cfff6;
+                    border-bottom:1px solid white;
                     height:100%;
                     flex-grow: 1;
 
@@ -147,14 +147,15 @@
                     background: transparent;
                     border: none;
                     color:black;
-                    // box-shadow: #d69003 -30px 0px 30px;
-                    background: #6eb3ac;
+                    border: 2px solid white;
+                    border-radius: 20px;
+                    color: white;
                     &:hover{
                         cursor: pointer;
                         box-shadow:none;
                         transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
                         background-color: #2b283b;
-                        border: 1px solid gray;
+                        border: 2px solid gray;
                         color: white;
                     }
                 }
