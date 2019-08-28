@@ -45,54 +45,6 @@ export class IndexPageTemplate extends React.Component {
       console.log('update state here couse of props!!');
 
     }
-    this.attatchScrollEvent = function (screenX){
-      var _topGap = 600;
-      if(screenX.matches){
-        _topGap = 250;
-      }
-
-    // console.log(_topGap, 'gap')
-
-    var bodyTag = document.querySelector('body');
-    this.getDomEls(bodyTag, _topGap);
-
-    window.addEventListener('scroll', function ( e ) {
-      let Ypos = window.scrollY;
-
-      if(Ypos < this.Top_2)                             {
-        if (this._isMounted) {
-        this.setState({ page: styles.color1 }) } }
-
-      else if(Ypos >= this.Top_2 && Ypos < this.Top_3)  {
-        if (this._isMounted) {
-        this.setState({ page: styles.color2 }) } }
-
-      else if(Ypos >= this.Top_3 && Ypos < this.Top_4)  {
-        if (this._isMounted) {
-        this.setState({ page: styles.color3 }) } }
-
-      else if(Ypos >= this.Top_4 && Ypos < this.Top_5)  {
-        if (this._isMounted) {
-        this.setState({ page: styles.color4 }) } }
-
-      else if(Ypos >= this.Top_5)                       {
-        if (this._isMounted) {
-        this.setState({ page: styles.color5 }) } }
-
-
-    }.bind(this))
-
-  }
-      this.getDomEls = function(body, gap){
-
-        this.Top_5 = document.querySelector('.section-5').offsetTop - gap; //1300
-        this.Top_4 = document.querySelector('.section-4').offsetTop - gap; //1300
-        this.Top_3 = document.querySelector('.section-3').offsetTop - gap; //1300
-        this.Top_2 = document.querySelector('.section-2').offsetTop - gap; //670
-        this.Top_1 = document.querySelector('.section-1').offsetTop - gap; //0
-  
-    }
-
   }
   render(){
     return(
@@ -119,22 +71,12 @@ export class IndexPageTemplate extends React.Component {
     componentDidMount(){
       this._isMounted = true;
       this.updateStateWithPageLocation();
-      
-    //   var _gatsbyPage = document.getElementById('___gatsby');
-    //   if (_gatsbyPage === null){
-    //     return;
-    //   }
-      var screenResX = window.matchMedia("(max-width: 1440px)");
-    //   // console.log(screenResX, '---screen')
 
       var bodyTag = document.querySelector('body');
-    //   bodyTag.classList.add('body-overflow');
+      bodyTag.classList.add('body-overflow');
 
       setTimeout(
         ()=>{
-
-          // this.setState({ loading: false })
-          // this.attatchScrollEvent(screenResX);
           bodyTag.classList.remove('body-overflow');
 
         },500)
@@ -158,7 +100,6 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data , location}) => {
   console.log(data, 'data here>>>')
-  const { frontmatter } = data.markdownRemark
   const news = data.news.edges
   const publications = data.publications.edges
   const teamMembers = data.team.edges
@@ -198,7 +139,7 @@ query IndexPageTemplate {
           date
           content
           image {
-            id
+            publicURL
           }
         }
       }

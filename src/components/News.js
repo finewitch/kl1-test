@@ -13,10 +13,12 @@ export default class News extends React.Component {
             containerClass: 'customized-swiper-container',
             slidesPerView: 3,
             spaceBetween: 50,
+            centeredSlides: true,
+            loop: true,
             pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-            },
+                el: '.swiper-pagination',
+                type: 'fraction',
+              },
 
             navigation: {
                 nextEl: '.swiper-button-next',
@@ -31,7 +33,7 @@ export default class News extends React.Component {
 
                 <div className="section__wrapper team">
                     <div className="title-row">
-                        <h3 className="color-green-header">News</h3>
+                        <h3 className="color-green-header">News / Blog</h3>
                     </div>
                 </div>
 
@@ -42,13 +44,28 @@ export default class News extends React.Component {
                     let date = new Date(el.node.frontmatter.date).getUTCDate() + '/' + new Date(el.node.frontmatter.date).getUTCMonth() + '/' + new Date(el.node.frontmatter.date).getFullYear();
                     let content = el.node.frontmatter.content;
                     let slug = el.node.fields.slug;
-                    console.log(slug, '<------')
+                    let imgData = el.node.frontmatter.image === null ? null : el.node.frontmatter.image.publicURL;
+                    let img = function renderImg(){
+                        console.log(imgData)
+                        if (imgData){
+                            return <img src={imgData}/>
+                        }else{
+                            return (
+                                <div>
+                                    <div className="news__box-content">{content}</div>
+                                    <p>&bull;	&bull;	&bull;</p>
+                                </div>
+                            )
+                        }
+                    }
+                    
                     return (
-                        <Link to={slug} className="goback">   
+                        <Link to={slug} className="goback" key={index}>   
                             <div className="news__box-date">{date}</div>        
-                            <div className="news__box-title">{title}</div>        
-                            <div className="news__box-content">{content}</div>     
-                            <p>&bull;	&bull;	&bull;</p>
+                            <div className="news__box-title">{title}</div>   
+
+                            { img() }
+
                             <div className="news__box-read" href={slug}>
                             read more
                             <ArrowIcon/>

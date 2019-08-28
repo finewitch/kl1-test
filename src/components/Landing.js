@@ -1,5 +1,4 @@
 import React from 'react'
-import ArrowIcon from './atoms/ArrowIcon'
 // import PropTypes from 'prop-types'
 
 
