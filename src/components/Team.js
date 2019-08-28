@@ -49,6 +49,16 @@ export default class Team extends React.Component {
                         }
 
                     </div>
+
+                    <div className="chapter-announcement">
+                        <span>
+                            
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            
+                        </span>
+                    </div>
                 </div>
         )}
 

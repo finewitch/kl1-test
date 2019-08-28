@@ -17,7 +17,7 @@
 }
 #team{
     height: 100%;
-    padding-bottom:150px;
+    padding-bottom:50px;
 }
 .team{
     &__content{
@@ -90,5 +90,21 @@
             }
         }
        
+    }
+    .chapter-announcement{
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+        span{
+            width: 300px;
+            display: flex;
+            justify-content: space-between;
+        }
+         div{
+            background: url('https://i.ibb.co/ZJzw8Jj/bg-pat.png') top left repeat;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+         }
     }
 }
