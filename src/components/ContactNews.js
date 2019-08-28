@@ -38,11 +38,11 @@ export default class ContactNews extends React.Component {
         <div className="contact__wrapper-contact-form">
           <form method="post" action="/" id="form" className="validate">
               <div className="form-field">
-                <label htmlFor="full-name">Name</label>
+                {/* <label htmlFor="full-name">Name</label> */}
                 <input type="text" name="full-name" id="full-name" placeholder="Name" required />
               </div>
               <div className="form-field">
-                <label htmlFor="email-input">Email</label>
+                {/* <label htmlFor="email-input">Email</label> */}
                 <input type="email" name="email-input" id="email-input" placeholder="example@domain.com" required />
               </div>
               <div className="form-field">

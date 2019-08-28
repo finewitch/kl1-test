@@ -61,7 +61,7 @@
                     font-size: 1.2rem;
                 }
                 a {
-                    width: 175px;
+                    width: 185px;
                     color: white;
                     display: flex;
                     justify-content: flex-start;
@@ -69,11 +69,16 @@
                     height: 45px;
                     font-weight: 100;
                     font-size: 1.2rem;
+                    border-bottom: 1px solid transparent;
+                    &:hover{
+                        border-bottom: 1px solid white;
+                    }
                     img{
                         width: 30px;
                     }
                     span{
                         margin-left: 15px;
+                        letter-spacing: .5px;
                     }
                 }
             }

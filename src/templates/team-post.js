@@ -5,8 +5,8 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import ArrowIcon from '../components/atoms/ArrowIcon'
-import rgIcon from '../img/social/rg.svg'
-import gsIcon from '../img/social/gs.svg'
+import rgIconBl from '../img/social/rgblack.svg'
+import gsIconBl from '../img/social/gsblack.svg'
 
 export const TeamPostTemplate = ({
   content,
@@ -37,8 +37,8 @@ export const TeamPostTemplate = ({
           <p className="text__content-content">
             {content}
           </p>
-          <p className="text__content-ico"><img alt="external links icons" src={rgIcon}/><span>reaserch Gate</span></p>
-          <p className="text__content-ico"><img alt="external links icons" src={gsIcon}/><span>google Scholar</span></p>
+          <p className="text__content-ico"><img alt="external links icons" src={rgIconBl}/><span>reaserch Gate</span></p>
+          <p className="text__content-ico"><img alt="external links icons" src={gsIconBl}/><span>google Scholar</span></p>
 
         </div>
 
