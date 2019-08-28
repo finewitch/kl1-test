@@ -20,28 +20,30 @@ export default class Team extends React.Component {
                             let name = el.node.frontmatter.title
                             let img = el.node.frontmatter.image.publicURL
                             let slug = el.node.fields.slug
+                            let rg = el.node.frontmatter.rg
+                            let gs = el.node.frontmatter.gs
                             return ( 
-                                <div key={index} className="team__content-box">
+                                <Link to={ slug }key={index} className="team__content-box">
 
                                     <img alt="team member" src={img}/>
 
                                     <div className="team__content-box-data">
 
                                         <span className="name">  {name } </span>
-                                        <Link to={ slug }> see full profile </Link>    
+                                        <p className="link"> see full profile </p>    
 
-                                        <a href={slug}>
+                                        <a href={rg}>
                                             <img alt="reserchgate" src={rgIcon}/>
                                             <span>researchgate</span>
                                         </a>
 
-                                        <a href={slug}>
+                                        <a href={gs}>
                                             <img alt="googlescholar" src={gsIcon}/>
                                             <span>google scholar</span>
                                         </a>
                                     </div>
 
-                                </div>
+                                </Link>
                             )
                         })
                         }

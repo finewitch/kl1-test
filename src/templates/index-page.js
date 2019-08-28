@@ -181,6 +181,8 @@ query IndexPageTemplate {
           image {
             publicURL
           }
+          rg
+          gs
         }
       }
     }

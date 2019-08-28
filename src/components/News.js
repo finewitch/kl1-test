@@ -48,7 +48,7 @@ export default class News extends React.Component {
                     let img = function renderImg(){
                         console.log(imgData)
                         if (imgData){
-                            return <img src={imgData}/>
+                            return <img alt="news post" src={imgData}/>
                         }else{
                             return (
                                 <div>

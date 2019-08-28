@@ -57,13 +57,18 @@
                     margin-top: 25px;
                     border-bottom: 1px solid gray;
                 }
+                .link{
+                    font-size: 1.2rem;
+                }
                 a {
+                    width: 175px;
                     color: white;
                     display: flex;
-                    justify-content: center;
+                    justify-content: flex-start;
                     align-items: center;
                     height: 45px;
-                    font-weight: 300;
+                    font-weight: 100;
+                    font-size: 1.2rem;
                     img{
                         width: 30px;
                     }
