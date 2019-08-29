@@ -12,7 +12,17 @@ import React from 'react'
           <div className="landing__wrapper">
             
             <div className="landing__wrapper-title">
-              <h1><span className="landing__wrapper-title-span"></span>Clinical Research <br/>Space</h1>
+              <p className="main-title">
+                <span className="main"> CSPACE </span><span className="additional">.</span> 
+              </p>
+              <p className="sub-title">
+              <span className="main">CSPACE</span> 
+              <span className="additional"> [ </span> 
+              <span className="main">CLINICAL RESEARCH SPACE</span> 
+              <span className="additional"> ] </span> 
+              <span className="main">designs. carries out and communicates clinical psychology & psychiatry research
+              </span>
+              </p>
             </div>
 
             <div className="landing__wrapper-scroll">

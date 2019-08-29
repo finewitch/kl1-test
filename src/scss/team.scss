@@ -51,16 +51,18 @@
                 border: none;
                 box-sizing: border-box;
                 border-top: 5px solid black;
-                .name{
+                span.name{
                     font-size: 1.3rem;
                     font-weight: bold;
                     margin-top: 25px;
                     border-bottom: 1px solid gray;
+                    width: auto;
+                    // text-align: center;
                 }
                 .link{
                     font-size: 1.2rem;
                 }
-                p {
+                span {
                     width: 185px;
                     color: white;
                     display: flex;

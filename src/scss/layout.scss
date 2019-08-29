@@ -53,7 +53,8 @@ body{
 
 .root-wrapper{
     // background-color: $bg-landing;
-    background: url('https://www.toptal.com/designers/subtlepatterns/patterns/concrete_wall.png') top left repeat;
+    // background: url('https://www.toptal.com/designers/subtlepatterns/patterns/concrete_wall.png') top left repeat;
+    background: url('https://i.ibb.co/ZJzw8Jj/bg-pat.png') top left repeat;
     // transition: background-color 400ms cubic-bezier(.45,.05,.55,.95);
     // -webkit-transition: background-color 400ms cubic-bezier(.45,.05,.55,.95);
     // -moz-transition: background-color 400ms cubic-bezier(.45,.05,.55,.95);
@@ -128,10 +129,31 @@ body{
 
 //fonts
 
+// @font-face{
+//     font-family:"core-sans-g-55-medium";
+//     src:''./fonts/CoreSansG-Medium.ttf") format("ttf");
+// }
+@font-face {
+    font-family: "core-sans-g-55-medium";
+    src: url('../fonts/CoreSansG-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "core-sans-g-55-light";
+    src: url('../fonts/CoreSansG-ExtraLight.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 
 h1{
     // font-family: 'Josefin Sans', sans-serif;
-    font-family: 'Catamaran', sans-serif;
+    font-family: "core-sans-g-55-medium";
+}
+h2{
+    font-family: "core-sans-g-55-light";
 }
 .h2-bold{
     font-size: 50px;

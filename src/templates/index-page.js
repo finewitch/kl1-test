@@ -11,8 +11,6 @@ import ContactNews from '../components/ContactNews'
 import Partners from '../components/Partners'
 import { graphql } from 'gatsby'
 
-import TableOfContent from '../components/TableOfContent'
-
 let styles = {
   color1: '#f7fbfe',
   color2: '#e6f2ff',
@@ -51,9 +49,7 @@ export class IndexPageTemplate extends React.Component {
       <div 
       className="root-wrapper"
       >
-        
-
-        <TableOfContent page={this.state.page}/>
+      
         <Landing scrollText={this.props.subheading}/>
         <About/>
         <News data={this.props.news}/>
@@ -79,7 +75,7 @@ export class IndexPageTemplate extends React.Component {
         ()=>{
           bodyTag.classList.remove('body-overflow');
 
-        },500)
+        },1500)
 
 
     }

@@ -39,10 +39,10 @@ export const TeamPostTemplate = ({
           <p className="text__content-content">
             {content}
           </p>
-          <a href={rg} target="_blank" className="text__content-ico"><img alt="external links icons" src={rgIconBl}/>
+          <a href={rg} target="_blank" rel="noopener noreferrer" className="text__content-ico"><img alt="external links icons" src={rgIconBl}/>
             <span>reaserch Gate</span>
           </a>
-          <a href={gs} target="_blank" className="text__content-ico"><img alt="external links icons" src={gsIconBl}/>
+          <a href={gs} target="_blank" rel="noopener noreferrer" className="text__content-ico"><img alt="external links icons" src={gsIconBl}/>
             <span>google Scholar</span>
           </a>
 

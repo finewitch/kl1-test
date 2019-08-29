@@ -18,40 +18,45 @@
         align-items: center;
         justify-content: center;
         &-title{
-            margin-top: 300px;
-            display: flex;
-            align-items: center;
+            margin-top: 200px;
             position: relative;
             max-height: 400px;
-            h1{
-                z-index:2;
-                position: relative;
-                // color: #007474;
-                color: white;
-                line-height: 9rem;
+            p.main-title{
+                text-align: center;
+                font-family: "core-sans-g-55-medium";
+                font-size: 8rem;
+                margin-bottom: 40px;
+                .main{
+                    color: white;
+                    letter-spacing: 18px;
+                    // -webkit-animation: fade-n 5s;
+                    opacity: 0;
+                    -webkit-animation: fadein 1200ms;
+                    -webkit-animation-delay:500ms;
+                    -webkit-animation-fill-mode: forwards;
+                }
+                .additional{
+                    color: #ff5722;
+                    letter-spacing: 1px;
+                    margin-left: -60px;
+                }
             }
-
-            &-span{
-                color: #ff5722;
-            }
-            svg{
-                position: absolute;
-                left:100%;
-            }
-            &-num{
-                // border: 1px solid red;
-                font-family: 'Josefin Sans';
-                color: #EFEFEF;
-                -webkit-text-stroke: 1px #D1D1D1;
-                font-size:75rem;
-                position: fixed;
-                z-index: 1;
-                margin:0;
-                height: 0;
-                right: 0;
-                // top:30%;
-                font-weight:400;
-                opacity:.5;
+            p.sub-title{
+                text-align: center;
+                font-family: "core-sans-g-55-light";
+                font-size: 1.5rem;
+                .main{
+                    color: white;
+                    // -webkit-animation: fade-n 5s;
+                    opacity: 0;
+                    -webkit-animation: fadein 1200ms;
+                    -webkit-animation-delay:500ms;
+                    -webkit-animation-fill-mode: forwards;
+                    letter-spacing: 2px;
+                }
+                .additional{
+                    color: #ff5722;
+                }
             }
         } 
         &-scroll{
@@ -89,15 +94,16 @@
             // -webkit-animation-iteration-count: 2;
         }
     }
-    h1{
-        font-size: 8.9rem;
-        text-align: center;
-        margin:0;
-        font-weight:400;
-        @media (max-width: $largest-desktop) {
-            font-size: 5.9rem;
-           }
-    }
+    // h1{
+    //     font-size: 8.9rem;
+    //     text-align: center;
+    //     margin:0;
+    //     font-weight:400;
+    //     letter-spacing: 20px;
+    //     @media (max-width: $largest-desktop) {
+    //         font-size: 5.9rem;
+    //        }
+    // }
 }
 
 button.trigger {
@@ -181,11 +187,10 @@ button.trigger .fa {
     transform: translate3d(0,-4px,0);
 }
 }
-// @-webkit-keyframes scroll-motion {
-//     0%   { top: 50px; }
-//     50% { top: 70px; }
-//     100% { top: 50px; }
-//   }
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 
 
  

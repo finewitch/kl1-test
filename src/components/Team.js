@@ -37,15 +37,15 @@ export default class Team extends React.Component {
                                         <span className="name">  {name } </span>
                                         <p className="link"> see full profile </p>    
 
-                                        <p onClick={(e)=>this.onClickHandler(e, rg)}>
+                                        <span onClick={(e)=>this.onClickHandler(e, rg)}>
                                             <img alt="reserchgate" src={rgIcon}/>
                                             <span>researchgate</span>
-                                        </p>
+                                        </span>
 
-                                        <p onClick={(e)=>this.onClickHandler(e, gs)}>
+                                        <span onClick={(e)=>this.onClickHandler(e, gs)}>
                                             <img alt="googlescholar" src={gsIcon}/>
                                             <span>google scholar</span>
-                                        </p>
+                                        </span>
                                     </div>
 
                                 </Link>

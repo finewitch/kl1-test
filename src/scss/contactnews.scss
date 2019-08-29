@@ -141,14 +141,15 @@
                 button{
                     font-family: $SansSerif;
                     width:200px;
-                    min-height:60px;
+                    min-height:50px;
                     font-size:1.4rem;
                     margin-top:30px;
                     background: transparent;
                     border: none;
                     color:black;
-                    border: 2px solid white;
+                    border: 1px solid white;
                     border-radius: 20px;
+                    text-transform: uppercase;
                     color: white;
                     &:hover{
                         cursor: pointer;
