@@ -1,5 +1,6 @@
 
 import React from 'react'
+import { Link } from 'gatsby';
 // import PropTypes from 'prop-types'
 
 import {publications_getSortingLAbels} from './helpers/helpers';
@@ -31,7 +32,8 @@ export default class Publications extends React.Component {
 
 		this.years = publications_getSortingLAbels(this.props.data);
 
-		// console.log(this.years, '<----YEARS')
+		console.log(this.props.dataResources[0].node.fields.slug, '<----res')
+		this.resourcesHref = this.props.dataResources[0].node.fields.slug;
 
 	}
 	// shouldComponentUpdate(nextProps, nextState) {
@@ -91,7 +93,8 @@ export default class Publications extends React.Component {
 				<div className="publications-title title-bottom space-between-removed">
 				
 				<h4 className="color-grey">
-				<a href="/#needtofill">Looking for <span data-hover="RESOURCES">RESOURCES</span>? →</a></h4>
+					<Link to={this.resourcesHref}>Looking for <span data-hover="RESOURCES">RESOURCES</span>? →</Link>
+				</h4>
 
 
 				</div>

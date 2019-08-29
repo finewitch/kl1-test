@@ -54,7 +54,7 @@ export class IndexPageTemplate extends React.Component {
         <About/>
         <News data={this.props.news}/>
         <Team data={this.props.teamMembers}/>
-        <Publications data={this.props.publications}/>
+        <Publications data={this.props.publications} dataResources={this.props.resources}/>
         <ContactNews/>
         <Partners/>
 
@@ -99,12 +99,14 @@ const IndexPage = ({ data , location}) => {
   const news = data.news.edges
   const publications = data.publications.edges
   const teamMembers = data.team.edges
+  const resources = data.resources.edges
 
   return (
     <Layout>
       <IndexPageTemplate
         news={news}
         publications={publications}
+        resources={resources}
         teamMembers={teamMembers}
         location={location.state}
       />
@@ -124,6 +126,15 @@ export default IndexPage
 
 export const pageQuery = graphql`
 query IndexPageTemplate {
+  resources: allMarkdownRemark(filter: {fields: {slug: {regex: "\\/resources/"}}}, sort: {fields: frontmatter___date, order: DESC}) {
+    edges {
+      node {
+        fields {
+          slug
+        }
+      }
+    }
+  }
   news: allMarkdownRemark(filter: {fields: {slug: {regex: "\\/news/"}}}, sort: {fields: frontmatter___date, order: DESC}) {
     edges {
       node {
