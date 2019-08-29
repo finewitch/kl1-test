@@ -36,16 +36,20 @@ export default class ContactNews extends React.Component {
         </div>
         <h4 className="third">— or fill a form</h4>
         <div className="contact__wrapper-contact-form">
-          <form method="post" action="/" id="form" className="validate">
-              <div className="form-field">
-                {/* <label htmlFor="full-name">Name</label> */}
-                <input type="text" name="full-name" id="full-name" placeholder="Name" required />
-              </div>
-              <div className="form-field">
-                {/* <label htmlFor="email-input">Email</label> */}
-                <input type="email" name="email-input" id="email-input" placeholder="example@domain.com" required />
-              </div>
-              <div className="form-field">
+          <form method="post" action="/" id="form">
+
+            <div className="form-row">
+
+                <div className="form-field">
+                  <input type="text" name="full-name" id="full-name" placeholder="Name" required />
+                </div>
+                <div className="form-field">
+                  <input type="email" name="email-input" id="email-input" placeholder="example@domain.com" required />
+                </div>
+
+            </div>
+
+              <div className="form-field fullrow">
                 <textarea placeholder="Your message goes here"></textarea>
               </div>
                 <button type="submit">Send</button>

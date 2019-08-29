@@ -98,11 +98,16 @@
             font-size: 1.5rem;
             display: flex;
             flex-direction: column;
+            .form-row{
+                display: flex;
+                justify-content: space-between;
+            }
             .form-field{
                 min-height:100px;
                 display: flex;
                 flex-direction: column;
                 margin-top:20px;
+                width: 45%;
                 label{
                     font-family: $SansSerif;
                     
@@ -113,6 +118,7 @@
                     font-family: 'Alegreya';
                     font-weight: 100;
                     font-size:1.3rem;
+                    width: 100%;
                 }
                 input{
                     border:none;
@@ -138,12 +144,15 @@
 
                 }
             }
+            .fullrow{
+                width: 100%;
+            }
                 button{
                     font-family: $SansSerif;
                     width:200px;
                     min-height:50px;
                     font-size:1.4rem;
-                    margin:30px auto 0 auto;
+                    margin:80px auto 0 auto;
                     display: block;
                     background: transparent;
                     border: none;
