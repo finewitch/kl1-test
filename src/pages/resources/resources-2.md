@@ -1,8 +1,12 @@
 ---
 templateKey: resources-page
-title: ankiet1
-testimonials:
-  - link: linkdo1
-    title: 1ankieta
+title: ankiety
+Link-group:
+  - link: link1
+    link label: ankieta1
+  - link: link2
+    link label: ankieta2
+  - link: link3
+    link label: ankieta3
 ---
 
