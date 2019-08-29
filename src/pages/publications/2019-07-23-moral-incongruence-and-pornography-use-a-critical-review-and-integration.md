@@ -5,7 +5,7 @@ authors: 'Joshua B. Grubbs, Samuel L. Perry'
 citation:
   apa: apa
   mla: mla tekst
-date: 2019-07-23T13:01:10.894Z
+date: 2024-07-23T13:01:00.000Z
 abstrakt: >-
   Uważając, że jego kariera dobiegła już końca, senator Jay Bulworth (Warren
   Beatty) wykupił wysoką polisę na życie i zlecił zabicie siebie zawodowemu
