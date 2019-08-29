@@ -18,9 +18,9 @@ citation:
     Shaw, Leslie M., et al. "Cerebrospinal fluid biomarker signature in
     Alzheimer's disease neuroimaging initiative subjects." Annals of neurology
     65.4 (2009): 403-413.
-source: source link
-researchgate: rg link
-preregistration: link
+source: 'https://www.netlifycms.org/docs/widgets/text/#boolean'
+researchgate: 'https://www.netlifycms.org/docs/widgets/text/#boolean'
+preregistration: 'https://www.netlifycms.org/docs/widgets/text/#boolean'
 pdf: /img/pdf-pub.pdf
 data: /img/docx-pub.docx
 date: 2019-07-23T14:28:41.296Z
