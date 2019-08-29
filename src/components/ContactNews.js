@@ -27,9 +27,9 @@ export default class ContactNews extends React.Component {
           <div>
             <h4>Our office</h4>
             <p>
-            Wóycickiego 1/3 building 14
+            Wóycickiego 1/3, building 14
             <br/>
-            01-938 Warsaw , Poland
+            01-938 Warsaw, Poland
             </p>
           </div>
 
