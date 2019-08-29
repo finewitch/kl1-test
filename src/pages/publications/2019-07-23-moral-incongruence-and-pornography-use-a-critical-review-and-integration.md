@@ -1,14 +1,22 @@
 ---
 templateKey: blog-post
 title: 'Moral incongruence and pornography use: A critical review and integration.'
-year: '2019'
 authors: 'Joshua B. Grubbs, Samuel L. Perry'
+citation:
+  apa: apa
+  mla: mla tekst
 date: 2019-07-23T13:01:10.894Z
-description: bla
-featuredpost: true
-featuredimage: /img/blog-index.jpg
+abstrakt: >-
+  Uważając, że jego kariera dobiegła już końca, senator Jay Bulworth (Warren
+  Beatty) wykupił wysoką polisę na życie i zlecił zabicie siebie zawodowemu
+  mordercy. Postanowił także złamać wszelkie reguły politycznego życia i ujawnić
+  zakulisową prawdę. Nagle, ku własnemu zdziwieniu, senator znajduje się w
+  centrum wydarzeń, staje się faworytem i na dodatek zakochuje się beznadziejnie
+  w pięknej Ninie (Halle Berry), politycznej aktywistce z innego okręgu. Ma
+  znowu po co żyć! Ma tylko jeden kłopot - musi odnaleźć człowieka, który ma go
+  zabić.
 tags:
   - brewing
   - chemex
 ---
-body
+
