@@ -21,15 +21,15 @@ export default class ContactNews extends React.Component {
           <div>
             <h4 className="second">Direct contact</h4>
             <p>
-            mojmail@google.com<br/>
-            mojmail@google.com
+            clinicalresearchspace@gmail.com
             </p>
           </div>
           <div>
             <h4>Our office</h4>
             <p>
-            Chłodna 20<br/>
-            00-999 Warszawa
+            Wóycickiego 1/3 building 14
+            <br/>
+            01-938 Warsaw , Poland
             </p>
           </div>
 
