@@ -60,7 +60,7 @@
                 .link{
                     font-size: 1.2rem;
                 }
-                a {
+                p {
                     width: 185px;
                     color: white;
                     display: flex;
@@ -101,6 +101,7 @@
             justify-content: space-between;
         }
          div{
+            box-shadow: 2px -7px 14px -10px rgba(0,0,0,1);
             background: url('https://i.ibb.co/ZJzw8Jj/bg-pat.png') top left repeat;
             width: 30px;
             height: 30px;

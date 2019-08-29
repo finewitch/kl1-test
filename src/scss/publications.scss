@@ -211,26 +211,30 @@
         z-index: 50;
         border-radius: 7px;
         position: absolute;
-        width: 400px;  
-        height: 300px;  
+        width: 500px;  
+        height: 400px;  
         top: 0;  
         left: 0;  
         right: 0;  
         bottom: 0;  
         margin: auto;  
         background:white;
-        // border: 15px solid rgba(0,0,0, 0.5);
-        
         &-inner{
             height: 100%;
             color:black;
-            // padding:30px;
             &-close{
                 display: flex;
                 justify-content: flex-start;
                 cursor: pointer;
                 border-bottom: 1px solid lightgray;
                 padding:20px;
+                p{
+                    text-align: center;
+                    width: 100%;
+                    color: gray;
+                    text-transform: uppercase;
+                    font-family: $SansSerif;
+                }
                 svg{
                     fill: black;
                     width: 20px;
@@ -243,6 +247,32 @@
             }
             &-content{
                 padding: 20px;
+                table.citations{
+                    height: 250px;
+                    width: 100%;
+                    tbody,tr{
+                        width: 100%;
+                    }
+                    tr{
+                        border-bottom: 1px solid black;
+                    }
+                    .name, .content{
+                        border-bottom: 1px solid black;
+                    }
+                    .name{
+                        width: 10%;
+                        color: gray;
+                    }
+                    .content{
+                        width: 90%;
+                        font-size: .95rem;
+                        padding: 10px 0;
+                        -webkit-user-select: all;  /* Chrome all / Safari all */
+                        -moz-user-select: all;     /* Firefox all */
+                        -ms-user-select: all;      /* IE 10+ */
+                        user-select: all;  
+                    }
+                }
             }
         }
     }
@@ -255,7 +285,5 @@
         width: 100%;
     }
 }
-
-//popup
 
 

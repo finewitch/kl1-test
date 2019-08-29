@@ -7,7 +7,6 @@ export default class News extends React.Component {
 
     constructor(props){
         super(props);
-        console.log(this.props, '<--props in news')
         this.params = {
             // width : 1000,
             containerClass: 'customized-swiper-container',
@@ -46,7 +45,6 @@ export default class News extends React.Component {
                     let slug = el.node.fields.slug;
                     let imgData = el.node.frontmatter.image === null ? null : el.node.frontmatter.image.publicURL;
                     let img = function renderImg(){
-                        console.log(imgData)
                         if (imgData){
                             return <img alt="news post" src={imgData}/>
                         }else{

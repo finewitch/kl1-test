@@ -3,6 +3,8 @@ import { Link } from 'gatsby';
 
 export const Publication = ({...props}) => {
 
+  console.log(props.citation, '<---props opup');
+
   return (
     <div className="publications__wrapper-box">
 
@@ -18,16 +20,15 @@ export const Publication = ({...props}) => {
 
       <div className="publications__wrapper-box-read">
         
-        <button className="popup-btn" onClick={(citation)=>props.popupHandler(citation)}>citation</button>
-        {props.btns.source ? <a rel="noopener noreferrer" href = { props.btns.source } target="_blank" className="btn">publisher's site</a> : null}
-      {/* </div> */}
+        {props.citation ? <button className="popup-btn" onClick={(citation)=>props.popupHandler(citation)}>citation</button> : null}
 
-      {/* <div className="publications__wrapper-box-btns"> */}
+        {props.btns.source ? <a rel="noopener noreferrer" href = { props.btns.source } target="_blank" className="btn">publisher's site</a> : null}
         
         {props.btns.researchgate ? <a rel="noopener noreferrer" className="btn" href = { props.btns.researchgate } target="_blank">researchgate</a> : null}
         {props.btns.preregistration ? <a rel="noopener noreferrer" className="btn" href = { props.btns.preregistration } target="_blank">preregistration</a> : null}
         {props.btns.pdf ? <a rel="noopener noreferrer" className="btn" href = { props.btns.pdf.publicURL } target="_blank">pdf</a> : null}
-        {props.btns.data ? <a rel="noopener noreferrer" className="btn" href = { props.btns.data } target="_blank">data</a> : null}
+
+        {props.btns.data ? <a rel="noopener noreferrer" className="btn" href = { props.btns.data.publicURL } target="_blank">data</a> : null}
   
       </div>
 

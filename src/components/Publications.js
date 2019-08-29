@@ -48,13 +48,6 @@ export default class Publications extends React.Component {
       <div className="section-4 publications" id="publications">
 		  
 			<div className="section__wrapper">
-				{/* <div id="duperel3">
-
-					<svg width="1941" height="200" viewBox="0 0 1941 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<rect width="1941" height="200" rx="90" fill="#BFE1E3"/>
-					</svg>
-
-				</div> */}
 
 				<h3 className="color-white">publications</h3>
 
@@ -86,7 +79,6 @@ export default class Publications extends React.Component {
 								 'data' : pub.data || null
 							 }
 						}
-						// console.table(props.title, props.btns, '<---')
 						return (
 							<Publication key = {index} {... props} />
 						)
@@ -159,7 +151,7 @@ export default class Publications extends React.Component {
 	}
 	onClickPopup = function (data){
 
-		// console.log(data, '<---DATA')
+		console.log(data, '<---DATA')
 		this.setState({
 			citationData : data,
 			showPopup: true

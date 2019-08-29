@@ -155,8 +155,6 @@ query IndexPageTemplate {
           title
           date
           authors
-          citation
-          abstrakt
           pdf {
             publicURL
           }
@@ -166,7 +164,13 @@ query IndexPageTemplate {
           researchgate
           source
           preregistration
+          citation {
+            apa
+            iso690
+            mla
+          }
         }
+        id
       }
     }
   }

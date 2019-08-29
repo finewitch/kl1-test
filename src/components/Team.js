@@ -3,6 +3,11 @@ import { Link } from 'gatsby';
 import rgIcon from '../img/social/rg.svg'
 import gsIcon from '../img/social/gs.svg'
 export default class Team extends React.Component {
+
+    onClickHandler = function(e, URL){
+        e.preventDefault();
+        window.open(URL, "_blank")
+    }
     render(){
         return(
             <div className="section-3 team" id="team">
@@ -32,15 +37,15 @@ export default class Team extends React.Component {
                                         <span className="name">  {name } </span>
                                         <p className="link"> see full profile </p>    
 
-                                        <a href={rg}>
+                                        <p onClick={(e)=>this.onClickHandler(e, rg)}>
                                             <img alt="reserchgate" src={rgIcon}/>
                                             <span>researchgate</span>
-                                        </a>
+                                        </p>
 
-                                        <a href={gs}>
+                                        <p onClick={(e)=>this.onClickHandler(e, gs)}>
                                             <img alt="googlescholar" src={gsIcon}/>
                                             <span>google scholar</span>
-                                        </a>
+                                        </p>
                                     </div>
 
                                 </Link>

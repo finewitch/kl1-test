@@ -71,6 +71,8 @@ BlogPostTemplate.propTypes = {
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
 
+  console.log(data)
+
   let props= {
       content:{
         'tags' : post.frontmatter.tags,
@@ -87,6 +89,7 @@ const BlogPost = ({ data }) => {
         'data' : post.frontmatter.data || null
       }
   }
+  console.log(props);
 
   return (
     <Layout>
@@ -142,7 +145,11 @@ query BlogPostByID($id: String!) {
       researchgate
       source
       preregistration
-      citation
+      citation {
+            apa
+            iso690
+            mla
+          }
     }
   }
 }
