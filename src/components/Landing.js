@@ -20,7 +20,7 @@ import React from 'react'
               <span className="additional"> [ </span> 
               <span className="main">CLINICAL RESEARCH SPACE</span> 
               <span className="additional"> ] </span> 
-              <span className="main">designs. carries out and communicates clinical psychology & psychiatry research
+              <span className="main">designs, carries out and communicates clinical psychology & psychiatry research
               </span>
               </p>
             </div>
