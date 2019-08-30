@@ -1,17 +1,10 @@
-.section-4{
-    height: 100vh;
-    background: url('https://i.ibb.co/ZJzw8Jj/bg-pat.png') top left repeat;
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px;
-    padding: 80px 0 100px 0;
-    box-shadow: 2px -7px 14px -10px rgba(0,0,0,1);
-.section-4__wrapper{
-    max-width: 100%;
-    padding: 0 50px;
-    overflow: scroll;
-}
-}
+
 .publications{
+        .section-4__wrapper{
+            max-width: 100%;
+            padding: 0 50px;
+            overflow: scroll;
+        }
 
 
     h3{
@@ -164,7 +157,11 @@
                 font-size:.8rem;
             }
             &-year{
-                font-size:2rem;
+                span{
+                    font-size: 1.5rem;
+                    white-space: nowrap;
+                }
+                font-size:1.7rem;
                 flex-basis: 7%;
                 color: #eeeeee;
                 font-weight: 300;

@@ -1,19 +1,18 @@
-.section-5{
-    min-height: 100%;
-    padding: 80px 0 100px 0;
-    background: url('https://i.ibb.co/ZJzw8Jj/bg-pat.png') top left repeat;
-    @media (max-width: $largest-desktop) {
-        padding:100px 0;
-       }
-    h3{
-        color:#F5F5F5;
-        font-weight: 900;
-    }
-    .section__wrapper h4{
-        justify-content: flex-start;
-    }
 
-.contact__wrapper{
+    .contact{
+        h3{
+            color:#F5F5F5;
+            font-weight: 900;
+        }
+
+    }
+    .contact__wrapper{
+        @media (max-width: $largest-desktop) {
+            padding:100px 0;
+           }
+        .section__wrapper h4{
+            justify-content: flex-start;
+        }
     max-width: 900px;
     @media (max-width: $largest-desktop) {
         max-width: $container-width;
@@ -170,5 +169,5 @@
                 }
         }
     }
- }
+ 
  

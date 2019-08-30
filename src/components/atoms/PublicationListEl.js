@@ -3,12 +3,22 @@ import { Link } from 'gatsby';
 
 export const Publication = ({...props}) => {
 
-  console.log(props.citation, '<---props opup');
+  console.log(props.year, '<---in pubs');
+  const currentYear = new Date().getFullYear();
+  function setYear(year){
+
+    if (year > currentYear){
+      return <span>In press</span>
+    }else{
+      return year
+    }
+
+  }
 
   return (
     <div className="publications__wrapper-box">
 
-      <div className="publications__wrapper-box-year">{props.year}</div>
+      <div className="publications__wrapper-box-year">{ setYear(props.year) }</div>
 
       <div className="publications__wrapper-box-title">
         <Link to={props.slug}>{ props.title }</Link>

@@ -1,7 +1,9 @@
-.section-3{
-    // min-height: 100%;
-    // padding: 0;
-    padding: 80px 0 100px 0;
+
+#team{
+    height: 100%;
+    padding-bottom:50px;
+}
+.team{
     .title-row{
         height: 150px;
     }
@@ -14,12 +16,6 @@
     @media (max-width: $largest-desktop) {
         padding:0;
        }
-}
-#team{
-    height: 100%;
-    padding-bottom:50px;
-}
-.team{
     &__content{
         display: flex;
         flex-wrap: wrap;

@@ -32,7 +32,7 @@ export default class Publications extends React.Component {
 
 		this.years = publications_getSortingLAbels(this.props.data);
 
-		console.log(this.props.dataResources[0].node.fields.slug, '<----res')
+		// console.log(this.props.dataResources[0].node.fields.slug, '<----res')
 		this.resourcesHref = this.props.dataResources[0].node.fields.slug;
 
 	}
@@ -47,7 +47,7 @@ export default class Publications extends React.Component {
 
   render(){
     return(
-      <div className="section-4 publications" id="publications">
+      <div className="section-5 publications" id="publications">
 		  
 			<div className="section__wrapper">
 

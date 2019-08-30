@@ -1,6 +1,6 @@
 
 export function publications_getSortingLAbels(responseData){
-    const borderYear = 2019;
+    // const borderYear = 2019;
     const currentYear = new Date().getFullYear();
     let _allYears = [];
     let years;
@@ -10,7 +10,7 @@ export function publications_getSortingLAbels(responseData){
             let data = el.node.frontmatter.date;
 			if(data != null){
                 var dateYear = new Date(data).getFullYear();
-                if(dateYear < borderYear){
+                if(dateYear < currentYear){
 
                     _allYears.push('pre-2019');
 
