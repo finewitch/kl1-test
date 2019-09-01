@@ -63,6 +63,15 @@ With the recognition of compulsive sexual behavior disorder in ICD-11, we carry 
 
 
                 </div>
+                <div className="chapter-announcement">
+                        <span>
+                            
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            
+                        </span>
+                    </div>
 
             </div>
         )}
