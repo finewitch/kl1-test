@@ -1,23 +1,48 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import ArrowIcon from '../components/atoms/ArrowIcon'
 
-export const ResourcesPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
+export const ResourcesPageTemplate = ({ resources }) => {
+  // const PageContent = contentComponent || Content
+
+  console.log(resources, '<---resources!!!!!!!!')
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
+    <section className="section">
+      <div className="container content news-page">
+        <div className="columns section__wrapper">
+          <div className="column is-10 is-offset-1 section__wrapper-content">
+
+          <Link to="/#news" state={{ location: 'news', pageNum : 4}} className="goback back-arrow">      
+            <ArrowIcon/>
+          </Link>
+
+          {/* <h4 className="date centered color-grey">{data.content.date}</h4> */}
+                      
+          <h1 className="title centered">
+            Resources
+          </h1>
+
+          <div className="section__wrapper-content-post">
+            <ul>
+            {resources.map((el)=>{
+              return (
+                <li>
+                  <a href={el.link} target="_blank" rel="noopener noreferrer">{el.link_label}</a>
+                </li>
+              )
+            })}
+            </ul>
+
+            {/* <PostContent content={data.content.content} /> */}
+
+
+
+          </div>
+          
           </div>
         </div>
       </div>
@@ -25,22 +50,20 @@ export const ResourcesPageTemplate = ({ title, content, contentComponent }) => {
   )
 }
 
-ResourcesPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
-}
+// ResourcesPageTemplate.propTypes = {
+//   title: PropTypes.string.isRequired,
+//   content: PropTypes.string,
+//   contentComponent: PropTypes.func,
+// }
 
 const ResourcesPage = ({ data }) => {
   const { markdownRemark: post } = data
-
+console.log(data, '<--')
 
   return (
     <Layout>
       <ResourcesPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
+        resources={data.markdownRemark.frontmatter.Link_group}
       />
     </Layout>
   )
@@ -53,12 +76,15 @@ ResourcesPage.propTypes = {
 export default ResourcesPage
 
 export const ResourcesPageQuery = graphql`
-  query ResourcesPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        title
+ query ResourcesPage($id: String!) {
+  markdownRemark(id: {eq: $id}) {
+    frontmatter {
+      title
+      Link_group {
+        link
+        link_label
       }
     }
   }
+}
 `
