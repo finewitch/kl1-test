@@ -1,6 +1,6 @@
 ---
 templateKey: resources-page
-title: resources
+title: resources - links
 Link-group:
   - link: link1
     link label: ankieta1
