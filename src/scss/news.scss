@@ -15,10 +15,13 @@
         background-size: 35px 44px;
     }
     .swiper-pagination{
-        bottom: 0px!important;
+        bottom: -12px!important;
+        font-size:  30px;
     }
     .swiper-pagination-current , .swiper-pagination-total{
+        margin-top: 30px;
         font-size:  30px;
+        font-family: "Catamaran";
     }
     
     
