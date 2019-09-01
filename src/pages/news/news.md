@@ -1,6 +1,6 @@
 ---
 templateKey: news-post
-title: Konferencja w Krakowie
+title: Konferencja w Krakowie Na której byliśmy sprawdzam czy tytuł się zmieści
 date: 2019-09-30T11:45:14.588Z
 image: /img/jumbotron.jpg
 content: >-
