@@ -1,15 +1,20 @@
 
 .goals{
-    margin-top: 50px;
+    margin-top: 100px;
     // padding: 80px 0px 130px;
     h3{
         color: #e7e7e7;
         font-weight: 900;
         margin: 0 auto;
+        margin-bottom: 15px;
         font-size: 3rem;
+        font-family: "core-sans-g-55-medium";
     }
     .color-green-header{
         // opacity: 0;
+        .header-color{
+            color: #ff5722;
+        }
     }
     color: white;
     &__top{

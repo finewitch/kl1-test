@@ -6,7 +6,9 @@ export default class About extends React.Component {
             <div className="section-2 goals" id="about">
                 <div className="section__wrapper">
                     <div className="title-row">
-                    <h3 className="color-green-header">CSPACE .</h3>
+                    <h3 className="color-green-header">CSPACE
+                        <span className="header-color">.</span>
+                    </h3>
 
                    
                     </div>
