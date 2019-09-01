@@ -16,7 +16,7 @@ export const ResourcesPageTemplate = ({ resources }) => {
         <div className="columns section__wrapper">
           <div className="column is-10 is-offset-1 section__wrapper-content">
 
-          <Link to="/#news" state={{ location: 'news', pageNum : 4}} className="goback back-arrow">      
+          <Link to="/#publications" state={{ location: 'news', pageNum : 4}} className="goback back-arrow">      
             <ArrowIcon/>
           </Link>
 
