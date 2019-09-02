@@ -1,6 +1,6 @@
 ---
 templateKey: team-post
-title: Przemek Kowalski
+title: Milagros Oreiro
 image: /img/ziutek2.png
 content: >-
   I came to America in 1976 without actually knowing anyone here. No grand plan
