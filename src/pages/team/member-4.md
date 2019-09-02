@@ -1,6 +1,6 @@
 ---
 templateKey: team-post
-title: Kajtek Bracki
+title: Chris Martin
 image: /img/ziutek1.png
 content: >-
   profil Kajtka.
