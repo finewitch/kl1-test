@@ -19,15 +19,27 @@
         color: white;
     }
     a.readmore{
-        color: #ef4747;
+        color: #00fff5;
         font-family: $SansSerif;
         font-weight: 500;
+        display: flex;
+        align-items: center;
+        font-size: 1.05rem;
+        span{
+            // border: 1px solid red;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+        &:hover{
+            color: black;
+            cursor: pointer;
+        }
     }
     position: relative;
     button{
         transition: all .3s ease-in;
         font-family: $SansSerif;
-        color: white;
+        color: whitesmoke;
     }
     
     &-title{
@@ -47,7 +59,8 @@
                 height:100%;
                 font-size:1.3rem;
                 &:hover{
-                    color: #522cff;
+                    cursor: pointer;
+                    color: #00fff5;
                     transition: color .3s ease-in;
                 }
             }
@@ -57,7 +70,7 @@
         }
         .active{
             button{
-                color: #ff0e0e;
+                color: #00fff5;
             }
         }
         a{
@@ -70,7 +83,7 @@
                    }
             }
             &:hover{
-                color:#ef4747;
+                color:#00fff5;
             }
         }
 
@@ -89,7 +102,7 @@
         // margin-top:60px;
         position: absolute;
         left:0;right:0;
-        bottom:80px;
+        bottom:180px;
         a:hover{
             color:white;
         }
@@ -100,7 +113,7 @@
     }
     color:white;
     &__wrapper{
-        margin:80px auto 0px auto;
+        margin:60px auto 0px auto;
         overflow: auto;
         // overflow-x: visible;
         height: 50%;

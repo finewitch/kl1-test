@@ -68,15 +68,17 @@ body{
     padding: 80px 0 200px 0;
 }
 .section-3{
-    background: url('../img/bg/bg-pat-4.png') top left repeat;
+    background: url('../img/bg/bg-pat-3.png') top left repeat;
     box-shadow: 2px -7px 14px -10px rgba(0,0,0,1);
-    padding: 80px 0 130px 0;
+    padding: 80px 0 230px 0;
     margin-top: -80px;
    
 }
 .section-4{
-    background: url('../img/bg/bg-pat-5.png') top left repeat;
+    background: url('../img/bg/bg-pat-4.png') top left repeat;
     box-shadow: 2px -7px 14px -10px rgba(0,0,0,1);
+    padding: 80px 0 130px 0;
+    margin-top: -80px;
 }
 .section-5{
     background: url('../img/bg/bg-pat-5.png') top left repeat;
@@ -85,6 +87,7 @@ body{
     margin-top: -80px;
 }
 .section-6{
+    margin-top: -80px;
     background: url('../img/bg/bg-pat-6.png') top left repeat;
     box-shadow: 2px -7px 14px -10px rgba(0,0,0,1);
 }
@@ -213,7 +216,7 @@ a{
             // padding: 10px 0;
             max-width: 0;
             // border-bottom: 2px solid #fff;
-            color:#ef4747;
+            color:#00fff5;
             content: attr(data-hover);
             -webkit-transition: max-width 0.6s;
             -moz-transition: max-width 0.6s;
