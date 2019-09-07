@@ -1,6 +1,6 @@
 ---
 templateKey: team-post
-title: Karolina Memberska
+title: Bob female raper
 image: /img/ziutek3.png
 content: >-
   I’m a big believer in the saying that you are the average of the five people
