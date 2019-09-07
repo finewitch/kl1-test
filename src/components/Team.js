@@ -10,7 +10,7 @@ export default class Team extends React.Component {
     }
     render(){
         return(
-            <div className="section-4 team" id="team">
+            <div className="section-4 team hidden" id="team">
 
                 <div className="section__wrapper team">
                     <div className="title-row">

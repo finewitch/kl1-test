@@ -28,7 +28,7 @@ export default class News extends React.Component {
     }
     render(){
         return(
-            <div className="section-3  news" id="news">
+            <div className="section-3 news hidden" id="news">
 
                 <div className="section__wrapper team">
                     <div className="title-row">

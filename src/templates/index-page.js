@@ -31,18 +31,36 @@ export class IndexPageTemplate extends React.Component {
       // }
     }
     this.updateStateWithPageLocation = function(){
-      // console.log(this.props.location.pageNum)
-      if(this.props.location){
+    
+        var section = document.querySelectorAll(".hidden");
+        var sections = {};
+        var i = 0;
+      
+        Array.prototype.forEach.call(section, function(e) {
+          sections[e.id] = e.offsetTop;
+        });
+      console.log(sections);
+        window.onscroll = function() {
+          var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
-        var pageNum = 'color' + this.props.location.pageNum;
-        this.setState({
-          page: styles[pageNum]
-        })
+          console.log(scrollPosition, 'pos')
+      
+          for (i in sections) {
+            if (sections[i] <= scrollPosition) {
 
-      }
-      console.log('update state here couse of props!!');
+              var target = document.querySelector('.active');
+              if (target === null){
+                return;
+              }
+              document.querySelector('.active').classList.remove('active')
+              document.querySelector('.menu-' + i ).classList.add('active');
+            }
+            }
+          }
+        };
+      
 
-    }
+    
   }
   render(){
     return(

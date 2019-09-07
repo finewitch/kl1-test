@@ -8,7 +8,7 @@ import React from 'react'
 
       return(
 
-        <div className="section-1 landing">
+        <div className="section-1 landing hidden" id="landing">
           <div className="landing__wrapper">
             
             <div className="landing__wrapper-title">

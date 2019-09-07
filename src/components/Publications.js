@@ -47,7 +47,7 @@ export default class Publications extends React.Component {
 
   render(){
     return(
-      <div className="section-5 publications" id="publications">
+      <div className="section-5 publications hidden" id="publications">
 		  
 			<div className="section__wrapper">
 

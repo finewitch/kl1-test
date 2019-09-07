@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 export const NavLink = ({link, name}) => {
 
   return (
-    <Link to={link}>
+    <Link to={link} className={'menu-' + name.toLowerCase()}>
         {name}
     </Link>
   )

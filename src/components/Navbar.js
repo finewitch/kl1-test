@@ -47,7 +47,7 @@ export default class Navbar extends React.Component {
         <div className="menu">
           <nav className="menu__main">
             <ul className="menu__main-wrapper">
-              <Link to={'/'}>
+              <Link to={'/'} className="logo menu-landing">
                 <img alt="logo" src={logo}/>
               </Link>
 
