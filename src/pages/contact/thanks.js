@@ -1,10 +1,14 @@
 import React from 'react'
 import Layout from '../../components/Layout'
 
-export default () => (
+export default class Thanks extends React.Component {
+  render(){
+    return(
+
   <Layout>
+    
     <section className="section">
-      <div className="container">
+      <div className="container section__wrapper">
         <div className="content">
           <h1>Thank you!</h1>
           <p>This is a custom thank you page for form submissions</p>
@@ -12,4 +16,9 @@ export default () => (
       </div>
     </section>
   </Layout>
-)
+
+)}
+  componentDidMount(){
+    console.log('redirection')
+  }
+  }
