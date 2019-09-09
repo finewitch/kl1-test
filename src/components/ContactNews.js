@@ -37,7 +37,7 @@ export default class ContactNews extends React.Component {
         <h4 className="third">— or fill a form</h4>
         <div className="contact__wrapper-contact-form">
 
-          <form name="contact" method="POST" data-netlify="true" id="form">
+          <form name="contact" method="POST" data-netlify="true">
 
             <div className="form-row">
 
