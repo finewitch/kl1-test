@@ -38,6 +38,7 @@ export default class ContactNews extends React.Component {
         <div className="contact__wrapper-contact-form">
 
           <form name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
 
             <div className="form-row">
 
