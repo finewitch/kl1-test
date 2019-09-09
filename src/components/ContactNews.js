@@ -42,16 +42,16 @@ export default class ContactNews extends React.Component {
             <div className="form-row">
 
                 <div className="form-field">
-                  <input type="text" name="full-name" id="full-name" placeholder="Name" required />
+                  <input type="text" name="name" id="full-name" placeholder="Name" required />
                 </div>
                 <div className="form-field">
-                  <input type="email" name="email-input" id="email-input" placeholder="example@domain.com" required />
+                  <input type="email" name="email" id="email-input" placeholder="example@domain.com" required />
                 </div>
 
             </div>
 
               <div className="form-field fullrow">
-                <textarea placeholder="Your message goes here"></textarea>
+                <textarea name="message" placeholder="Your message goes here"></textarea>
               </div>
                 <button type="submit">Send</button>
           </form>
