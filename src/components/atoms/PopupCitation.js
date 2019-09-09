@@ -2,11 +2,10 @@ import React from 'react'
 
 export const PopupCitation = ({data, onClickClose}) => {
     console.log(data, 'in ppup')
-    let apa = Object.keys(data)[0];
-    let mla = Object.keys(data)[2];
-    let iso = Object.keys(data)[1];
+    let APA = Object.keys(data)[0];
+    let Vancouver = Object.keys(data)[2];
+    let Harvard = Object.keys(data)[1];
 
-    console.log(apa,mla,iso);
 
 
     function generateRow(type){
@@ -37,9 +36,9 @@ export const PopupCitation = ({data, onClickClose}) => {
                 <table className="citations">
                     <tbody>
                         
-                        {data[apa] ? generateRow(apa) : null}
-                        {data[mla] ? generateRow(mla) : null}
-                        {data[iso] ? generateRow(iso) : null}
+                        {data[APA] ? generateRow(APA) : null}
+                        {data[Vancouver] ? generateRow(Vancouver) : null}
+                        {data[Harvard] ? generateRow(Harvard) : null}
                             
                     </tbody>
                 </table>

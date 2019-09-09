@@ -45,9 +45,9 @@ collections:
         name: "citation"
         widget: "object"
         fields:
-          - {label: "MLA", name: "mla", widget: "markdown", default: "mla", required: false}
-          - {label: "APA", name: "apa", widget: "markdown", default: "apa", required: false}
-          - {label: "ISO690", name: "iso690", widget: "markdown", default: "iso690", required: false}
+          - {label: "APA", name: "APA", widget: "markdown", default: "APA", required: false}
+          - {label: "Vancouver", name: "Vancouver", widget: "markdown", default: "Vancouver", required: false}
+          - {label: "Harvard", name: "Harvard", widget: "markdown", default: "Harvard", required: false}
       - {label: "Source", name: "source", widget: "string", required: false}
       - {label: "Researchgate", name: "researchgate", widget: "string", required: false}
       - {label: "Preregistration", name: "preregistration", widget: "string",required: false}
