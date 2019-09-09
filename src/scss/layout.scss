@@ -65,30 +65,50 @@ body{
 .section-2{
     background: url('../img/bg/bg-pat-2.png') top left repeat;
     box-shadow: 2px -7px 14px -10px rgba(0,0,0,1);
-    padding: 80px 0 200px 0;
+    padding: 80px 0 130px 0;
+    .chapter-announcement {
+        // margin:0;
+            div{
+                background: url('../img/bg/bg-pat-2.png') top left repeat;
+            }
+        }
 }
 .section-3{
-    background: url('../img/bg/bg-pat-3.png') top left repeat;
-    box-shadow: 2px -7px 14px -10px rgba(0,0,0,1);
-    padding: 80px 0 230px 0;
-    margin-top: -80px;
-   
-}
-.section-4{
-    background: url('../img/bg/bg-pat-4.png') top left repeat;
+    background: url('../img/bg/bg-pat-2.png') top left repeat;
     box-shadow: 2px -7px 14px -10px rgba(0,0,0,1);
     padding: 80px 0 130px 0;
     margin-top: -80px;
+    .chapter-announcement div{
+        background: url('../img/bg/bg-pat-2.png') top left repeat;
+    }
+   
+}
+.section-4{
+    background: url('../img/bg/bg-pat-3.png') top left repeat;
+    box-shadow: 2px -7px 14px -10px rgba(0,0,0,1);
+    padding: 80px 0 130px 0;
+    margin-top: -80px;
+    .chapter-announcement {
+            div{
+                background: url('../img/bg/bg-pat-3.png') top left repeat;
+            }
+        }
 }
 .section-5{
-    background: url('../img/bg/bg-pat-5.png') top left repeat;
+    background: url('../img/bg/bg-pat-1.png') top left repeat;
     box-shadow: 2px -7px 14px -10px rgba(0,0,0,1);
     height: 100vh;
     margin-top: -80px;
+    .chapter-announcement {
+    margin:0;
+        div{
+            background: url('../img/bg/bg-pat-2.png') top left repeat;
+        }
+    }
 }
 .section-6{
-    margin-top: -80px;
-    background: url('../img/bg/bg-pat-6.png') top left repeat;
+    margin-top: 0px;
+    background: url('../img/bg/bg-pat-2.png') top left repeat;
     box-shadow: 2px -7px 14px -10px rgba(0,0,0,1);
 }
 
@@ -282,4 +302,22 @@ a:hover{
         font-weight: bold;
       }
       
+}
+
+.chapter-announcement{
+    display: flex;
+    justify-content: center;
+    margin: 100px 0 10px 0;
+    span{
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+    }
+     div{
+        box-shadow: 0px 0px 10px -2px black;
+        // background: url('../img/bg/bg-pat-3.png') top left repeat;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+     }
 }

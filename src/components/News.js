@@ -2,6 +2,7 @@ import React from 'react'
 import Swiper from 'react-id-swiper';
 import ArrowIcon from '../components/atoms/ArrowIcon'
 import { Link } from 'gatsby';
+import ChapterAnnouncement from './atoms/ChapterAnnouncement'
 
 export default class News extends React.Component {
 
@@ -76,6 +77,8 @@ export default class News extends React.Component {
                     })}
 
                 </Swiper> 
+
+                <ChapterAnnouncement />
             </div>
 
 

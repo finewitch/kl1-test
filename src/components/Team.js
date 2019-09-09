@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import rgIcon from '../img/social/rg.svg'
 import gsIcon from '../img/social/gs.svg'
+import ChapterAnnouncement from './atoms/ChapterAnnouncement'
 export default class Team extends React.Component {
 
     onClickHandler = function(e, URL){
@@ -54,16 +55,8 @@ export default class Team extends React.Component {
                         }
 
                     </div>
-
-                    <div className="chapter-announcement">
-                        <span>
-                            
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            
-                        </span>
-                    </div>
+                    <ChapterAnnouncement />
+                   
                 </div>
         )}
 

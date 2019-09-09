@@ -2,13 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
 import ArrowIcon from '../components/atoms/ArrowIcon'
 
 export const ResourcesPageTemplate = ({ resources }) => {
   // const PageContent = contentComponent || Content
 
-  console.log(resources, '<---resources!!!!!!!!')
 
   return (
     <section className="section">
@@ -57,7 +55,7 @@ export const ResourcesPageTemplate = ({ resources }) => {
 // }
 
 const ResourcesPage = ({ data }) => {
-  const { markdownRemark: post } = data
+  // const { markdownRemark: post } = data
 console.log(data, '<--')
 
   return (
