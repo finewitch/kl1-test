@@ -1,11 +1,13 @@
 
 import React from 'react'
 import { Link } from 'gatsby';
+import reactStringReplace from 'react-string-replace';
 // import PropTypes from 'prop-types'
 
-import {publications_getSortingLAbels} from './helpers/helpers';
+import {publications_getSortingLAbels, findMatch} from './helpers/helpers';
 
 import SortingYears from './organisms/SortingYearsPub';
+import SearchInPubs from './organisms/SearchInPubs';
 import Publication from './atoms/PublicationListEl.js';
 import PopupCitation from './atoms/PopupCitation.js';
 import ChapterAnnouncement from './atoms/ChapterAnnouncement'
@@ -14,7 +16,6 @@ export default class Publications extends React.Component {
 	
 
 	constructor(props) {
-		// console.log('in pb constructor')
 		super(props);
 		if(props.data === null || undefined){
 			return;
@@ -22,12 +23,16 @@ export default class Publications extends React.Component {
 		//POPUP
 		this.showPopup = false
 		this.initialState = props.data
+
+		// console.log('DATA>>', props.data);
+		// this.dataToSearch
 		this.PublicationsSetToBeModified = Array.from(props.data)// copy props to new array so that initial props reamain intact
 		
 		this.state={
 			publications : this.initialState,
 			citationData : null,
-			activeTab : 0
+			activeTab : 0,
+			searchingVal : null
 		}
 		this.currentYear = new Date().getFullYear();
 
@@ -37,14 +42,6 @@ export default class Publications extends React.Component {
 		this.resourcesHref = this.props.dataResources[0].node.fields.slug;
 
 	}
-	// shouldComponentUpdate(nextProps, nextState) {
-		// console.log(nextProps, nextState, 'should');
-		// if (this.props.data === nextProps.data) {
-		// 	return false;
-		//   } else {
-		// 	return true;
-		//   }
-	//   }
 
   render(){
     return(
@@ -56,20 +53,49 @@ export default class Publications extends React.Component {
 
 				<div className="publications-title">
 
+					<SearchInPubs StateHandlerFunction={ (e)=> this.onKeyUp(e) }/>
 
 					<SortingYears years = {this.years} StateHandlerFunction={(year)=>this.onClickHandler(year)} activeTab={this.state.activeTab}/>
+					
 
 				</div>
 				<div className="publications__wrapper">
 
+		{/* {console.log(this.state.searchingVal, "<0000")} */}
+
 					{this.state.publications.map( (el, index)=>{
 
-						let pub = el.node.frontmatter
+						const regex = new RegExp(this.state.searchingVal, 'gi');
+						let pub = el.node.frontmatter,
+						title, authors, journal;
+
+						if(this.state.searchingVal){
+
+							title = reactStringReplace(pub.title, this.state.searchingVal, (match, i) => (
+								<span className="highlight">{match}</span>
+								));
+
+							authors = reactStringReplace(pub.authors, this.state.searchingVal, (match, i) => (
+								<span className="highlight">{match}</span>
+								));
+
+							journal = reactStringReplace(pub.authors, this.state.searchingVal, (match, i) => (
+								<span className="highlight">{match}</span>
+								));	
+
+							}else{
+
+								title = pub.title
+								authors = pub.authors
+								journal = pub.journal
+
+						}
 
 						let props = {
 							 'slug' : el.node.fields.slug,
-							 'title' : pub.title,
-							 'authors' : pub.authors,
+							 'title' : title,
+							 'authors' : authors,
+							 'journal' : journal,
 							 'year' : new Date(pub.date).getFullYear(),
 							 'citation' : pub.citation,
 							 'popupHandler' : ()=>this.onClickPopup(props.citation),
@@ -115,7 +141,22 @@ export default class Publications extends React.Component {
     )
   }
 
-  	//EVENT HANDLERS
+	//EVENT HANDLERS
+
+	onKeyUp = function(val){
+		// var key = e.key
+		var withoutSpecialChar =  val.replace(/([.?*+^$[\]\\(){}|-])/g, "\\$1");
+		// console.log(val)
+		var matchedPubs = findMatch(withoutSpecialChar, this.initialState);
+		console.log(matchedPubs, '<---wynik');
+		this.setState({
+			publications : matchedPubs,
+			searchingVal: withoutSpecialChar
+		})
+
+
+	}
+
 	onClickHandler = function(year){
 		this.setState({
 			activeTab : year.toString()

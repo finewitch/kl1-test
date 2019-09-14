@@ -31,29 +31,32 @@ export class IndexPageTemplate extends React.Component {
       // }
     }
     this.updateStateWithPageLocation = function(){
+
+      const menu = document.querySelector('.menu');
+  
+      var section = document.querySelectorAll(".hidden");
+      var sections = {};
+      var i = 0;
     
-        var section = document.querySelectorAll(".hidden");
-        var sections = {};
-        var i = 0;
-      
-        Array.prototype.forEach.call(section, function(e) {
-          sections[e.id] = e.offsetTop;
-        });
+      Array.prototype.forEach.call(section, function(e) {
+        sections[e.id] = e.offsetTop;
+      });
+
       console.log(sections);
         window.onscroll = function() {
           var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
-          console.log(scrollPosition, 'pos')
+          // console.log(scrollPosition, 'pos')
       
           for (i in sections) {
             if (sections[i] <= scrollPosition) {
 
-              var target = document.querySelector('.active');
+              var target = menu.querySelector('.active');
               if (target === null){
                 return;
               }
-              document.querySelector('.active').classList.remove('active')
-              document.querySelector('.menu-' + i ).classList.add('active');
+              menu.querySelector('.active').classList.remove('active')
+              menu.querySelector('.menu-' + i ).classList.add('active');
             }
             }
           }
@@ -180,6 +183,7 @@ query IndexPageTemplate {
           title
           date
           authors
+          journal
           pdf {
             publicURL
           }

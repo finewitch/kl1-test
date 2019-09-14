@@ -6,7 +6,7 @@ export default class SortingYears extends React.Component {
     render(){
         return(
             <h4>
-                <div className={`publications-title-yearsort  ${this.props.activeTab.toString() === '0' ? 'active' : 'not-active'}`}>
+                <div className={`publications-title-yearsort ${this.props.activeTab.toString() === '0' ? 'active' : 'not-active'}`}>
                     <button onClick={()=> this.props.StateHandlerFunction(0)}>all</button>
                     <span>/</span>
                 </div>

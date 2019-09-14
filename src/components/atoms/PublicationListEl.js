@@ -26,7 +26,9 @@ export const Publication = ({...props}) => {
         <Link to={props.slug} className="readmore">read more <span>→</span></Link>
       </div>
 
-      <div className="publications__wrapper-box-author">{props.authors}</div>
+      <div className="publications__wrapper-box-author">{props.authors}
+        <p>{ props.journal }</p>
+      </div>
 
       <div className="publications__wrapper-box-read">
         
