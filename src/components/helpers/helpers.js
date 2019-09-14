@@ -43,13 +43,22 @@ export function publications_getSortingLAbels(responseData){
 
 
 export function findMatch(word, list){
-    // console.log(word, 'before')
+    console.log(word, 'before')
     // var withoutSpecialChar =  word.replace(/([.?*+^$[\]\\(){}|-])/g, "\\$1");
     // console.log(word, 'after')
     return list.filter(pub=>{
-		const regex = new RegExp(word, 'gi');
-		
-		return pub.node.frontmatter.title.match(regex) || pub.node.frontmatter.authors.match(regex);
+        const regex = new RegExp(word, 'gi');
+
+        if(!pub.node.frontmatter.journal){
+
+            return pub.node.frontmatter.title.match(regex) || pub.node.frontmatter.authors.match(regex);
+
+        }else{
+            return pub.node.frontmatter.title.match(regex) || pub.node.frontmatter.authors.match(regex) || pub.node.frontmatter.journal.match(regex);
+        }
+        // console.log(pub.node.frontmatter.journal, '<--')
+
+        
 	});
 
 }

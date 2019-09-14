@@ -4,22 +4,8 @@ title: >-
   What matters: Quantity or quality of pornography use? Psychological and
   behavioral factors of seeking treatment for problematic pornography use
 authors: 'Gola, M., Lewczuk, K., Skorko M.'
-citation:
-  apa: >-
-    Gola, M., Lewczuk, K., & Skorko, M. (2016). What matters: Quantity or
-    quality of pornography use? Psychological and behavioral factors of seeking
-    treatment for problematic pornography use. The journal of sexual medicine,
-    13(5), 815-824.
-  iso690: >-
-    GOLA, Mateusz; LEWCZUK, Karol; SKORKO, Maciej. What matters: Quantity or
-    quality of pornography use? Psychological and behavioral factors of seeking
-    treatment for problematic pornography use. The journal of sexual medicine,
-    2016, 13.5: 815-824.
-  mla: >-
-    Gola, Mateusz, Karol Lewczuk, and Maciej Skorko. "What matters: Quantity or
-    quality of pornography use? Psychological and behavioral factors of seeking
-    treatment for problematic pornography use." The journal of sexual medicine
-    13.5 (2016): 815-824.
+journal: CKM
+citation: {}
 source: 'https://osf.io/qcwxa/'
 researchgate: 'https://osf.io/qcwxa/'
 preregistration: 'https://osf.io/qcwxa/'

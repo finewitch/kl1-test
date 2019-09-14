@@ -27,7 +27,7 @@ export const Publication = ({...props}) => {
       </div>
 
       <div className="publications__wrapper-box-author">{props.authors}
-        <p>{ props.journal }</p>
+        {props.citation ? <p>{ props.journal }</p> : null}
       </div>
 
       <div className="publications__wrapper-box-read">
