@@ -27,9 +27,7 @@ export default class About extends React.Component {
                             <div className="goals__bottom-column-title">Compulsive sexual behavior disorder</div>
                             <div className="goals__bottom-column-content">
                                 <p>Compulsive sexual behavior disorder and problematic pornography use 
-With the recognition of compulsive sexual behavior disorder in ICD-11, we carry out research on characteristics, determinants and therapy of the disorder. </p>
-                                {/* <p>This feedback mechanism needed to be user-friendly, allowing runners to easily interpret information.</p> */}
-
+                                With the recognition of compulsive sexual behavior disorder in ICD-11, we carry out research on characteristics, determinants and therapy of the disorder. </p>
                                 </div>
                         </div>
 
@@ -39,10 +37,7 @@ With the recognition of compulsive sexual behavior disorder in ICD-11, we carry 
                                 <div className="goals__bottom-column-content">
                                     <p>We conduct research on Internet addiction and its subtypes: social networking, pornography, gambling, video streaming, online shopping, online gaming addiction and others.
                                     </p>
-                                    {/* <p>Cooper Perkins brings exceptional engineering skills and experience to solve our partners' most challenging technical problems.
-                                    </p> */}
                                 </div>
-
 
                         </div>
 
@@ -52,8 +47,6 @@ With the recognition of compulsive sexual behavior disorder in ICD-11, we carry 
                                 <div className="goals__bottom-column-content">
                                     <p>Our research address other topics relevant for clinical psychology and psychiatry, as well as broader psychological research (e.g., emotion regulation and mindfulness).
                                     </p>
-                                    {/* <p>Cooper Perkins brings exceptional engineering skills and experience to solve our partners' most challenging technical problems.
-                                    </p> */}
                                 </div>
 
 

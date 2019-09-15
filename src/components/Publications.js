@@ -65,7 +65,6 @@ export default class Publications extends React.Component {
 
 					{this.state.publications.map( (el, index)=>{
 
-						const regex = new RegExp(this.state.searchingVal, 'gi');
 						let pub = el.node.frontmatter,
 						title, authors, journal;
 

@@ -40,7 +40,7 @@ export const TeamPostTemplate = ({
             {content}
           </p>
           <a href={rg} target="_blank" rel="noopener noreferrer" className="text__content-ico"><img alt="external links icons" src={rgIconBl}/>
-            <span>reaserch Gate</span>
+            <span>researchgate Gate</span>
           </a>
           <a href={gs} target="_blank" rel="noopener noreferrer" className="text__content-ico"><img alt="external links icons" src={gsIconBl}/>
             <span>google Scholar</span>
