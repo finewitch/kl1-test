@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 // import Footer from '../components/Footer'
+import { withPrefix } from "gatsby"
 import Navbar from '../components/Navbar'
 
 import './all.scss'
@@ -39,11 +40,9 @@ const TemplateWrapper = ({ children }) => {
           href="/img/safari-pinned-tab.svg"
           color="#ff4400"
         />
-        <link href="https://fonts.googleapis.com/css?family=Alegreya:400,700&display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css?family=Catamaran:300,400,700,900&display=swap" rel="stylesheet"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"></link>
 
-        <script src="https://kit.fontawesome.com/0a4ee8d3e4.js"></script>
+        <script src={withPrefix('all.js')} type="text/javascript" />
         
         <meta name="theme-color" content="#fff" />
 

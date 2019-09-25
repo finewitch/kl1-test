@@ -120,6 +120,9 @@ button.trigger {
     color: #ccc;
     transition: all .3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
+    &:outline{
+        color: none;
+    }
 }
 button.trigger:after {
     content: "";
