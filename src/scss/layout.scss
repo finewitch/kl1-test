@@ -1,5 +1,10 @@
 //VARIABLES
-$SansSerif : 'Catamaran', sans-serif;
+$colfax: 'Colfax Regular';
+$colfaxMedium: 'Colfax Medium';
+$colfaxBlack : 'Colfax Black';
+$colfaxLight: 'Colfax Light';
+$coreSansLIght : 'core-sans-g-55-light';
+$coreSansMedium : 'core-sans-g-55-medium';
 
 // $content-width: 1230px;
 $container-width: 1024px;
@@ -41,7 +46,7 @@ html,body{
 }
 
 body{
-    font-family: 'Alegreya', serif;
+    font-family: $coreSansLIght, serif;
     margin:0;
     // background-color: black;
 }
@@ -63,52 +68,37 @@ body{
     padding: 80px 0 100px 0;
 }
 .section-2{
-    background: url('../img/bg/bg-pat-2.png') top left repeat;
+    background: url('../img/bg/bg-pat0.png') top left repeat;
     box-shadow: 2px -7px 14px -10px rgba(0,0,0,1);
-    padding: 80px 0 130px 0;
-    .chapter-announcement {
-        // margin:0;
-            div{
-                background: url('../img/bg/bg-pat-2.png') top left repeat;
-            }
-        }
+    padding:0;
 }
 .section-3{
-    background: url('../img/bg/bg-pat-2.png') top left repeat;
-    box-shadow: 2px -7px 14px -10px rgba(0,0,0,1);
-    padding: 80px 0 130px 0;
-    margin-top: -80px;
-    .chapter-announcement div{
-        background: url('../img/bg/bg-pat-2.png') top left repeat;
-    }
+    background: url('../img/bg/bg-pat0.png') top left repeat;
+    // box-shadow: 2px -7px 14px -10px rgba(0,0,0,1);
+    padding: 0 0 230px 0;
+    // margin-top: 150px;
    
 }
 .section-4{
-    background: url('../img/bg/bg-pat-3.png') top left repeat;
-    box-shadow: 2px -7px 14px -10px rgba(0,0,0,1);
-    padding: 80px 0 130px 0;
-    margin-top: -80px;
-    .chapter-announcement {
-            div{
-                background: url('../img/bg/bg-pat-3.png') top left repeat;
-            }
-        }
+    background: url('../img/bg/bg-pat0.png') top left repeat;
+    // box-shadow: 2px -7px 14px -10px rgba(0,0,0,1);
+    padding: 80px 0 200px 0;
 }
 .section-5{
-    background: url('../img/bg/bg-pat-1.png') top left repeat;
+    background: url('../img/bg/bg-pat0.png') top left repeat;
     box-shadow: 2px -7px 14px -10px rgba(0,0,0,1);
     height: 100vh;
-    margin-top: -80px;
+    // margin-top: -80px;
     .chapter-announcement {
     margin:0;
         div{
-            background: url('../img/bg/bg-pat-2.png') top left repeat;
+            background: url('../img/bg/bg-pat0.png') top left repeat;
         }
     }
 }
 .section-6{
     margin-top: 0px;
-    background: url('../img/bg/bg-pat-2.png') top left repeat;
+    background: url('../img/bg/bg-pat0.png') top left repeat;
     box-shadow: 2px -7px 14px -10px rgba(0,0,0,1);
 }
 
@@ -127,7 +117,6 @@ body{
     h3{
         font-size:30px;
         // color: #000;
-        font-family : $SansSerif;
         font-size:5rem;
         letter-spacing: 6px;
         margin:0;
@@ -182,7 +171,6 @@ body{
 
 
 h1{
-    // font-family: 'Josefin Sans', sans-serif;
     font-family: "core-sans-g-55-medium";
 }
 h2{
@@ -266,7 +254,6 @@ a:hover{
     justify-content: center;
     align-items: center;
     p{
-        font-family: 'Josefin Sans';
         font-size:10rem;
         font-weight: bold;
     }
@@ -297,8 +284,6 @@ a:hover{
         right: auto;left:auto;
         text-transform: uppercase;
         color:black;
-        // border: 1px solid red;
-        // font-family: helvetica, sans-serif;
         font-weight: bold;
       }
       

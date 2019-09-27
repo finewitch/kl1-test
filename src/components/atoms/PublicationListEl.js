@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 export const Publication = ({...props}) => {
 
-  console.log(props.year, '<---in pubs');
+  // console.log(props.year, '<---in pubs');
   const currentYear = new Date().getFullYear();
   function setYear(year){
 

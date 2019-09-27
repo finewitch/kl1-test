@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 import rgIcon from '../img/social/rg.svg'
 import gsIcon from '../img/social/gs.svg'
-import ChapterAnnouncement from './atoms/ChapterAnnouncement'
 export default class Team extends React.Component {
 
     onClickHandler = function(e, URL){
@@ -13,14 +12,25 @@ export default class Team extends React.Component {
         return(
             <div className="section-4 team hidden" id="team">
 
-                <div className="section__wrapper team">
+                {/* <div className="section__wrapper team">
                     <div className="title-row">
                         <h3 className="color-green-header">team</h3>
                     </div>
-                </div>
+                </div> */}
 
 
                     <div className="team__content">
+
+                        <div className="team__content-box title">
+                            <div className="title__cont">
+                                <div><span>T</span><span>E</span></div>
+                                <div><span>A</span><span>M</span></div>
+                                {/* <div>AM</div> */}
+                            </div>
+
+                        
+
+                        </div>
                         
                         {this.props.data.map( ( el, index )=>{
                             let name = el.node.frontmatter.title
@@ -55,7 +65,6 @@ export default class Team extends React.Component {
                         }
 
                     </div>
-                    <ChapterAnnouncement />
                    
                 </div>
         )}
