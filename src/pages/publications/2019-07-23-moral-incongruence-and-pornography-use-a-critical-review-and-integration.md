@@ -2,9 +2,8 @@
 templateKey: blog-post
 title: 'Moral incongruence and pornography use: A critical review and integration.'
 authors: 'Joshua B. Grubbs, Samuel L. Perry'
-citation:
-  apa: apa
-  mla: mla tekst
+journal: journal
+citation: {}
 date: 2024-07-23T13:01:00.000Z
 abstrakt: >-
   Uważając, że jego kariera dobiegła już końca, senator Jay Bulworth (Warren
