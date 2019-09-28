@@ -1,4 +1,5 @@
 import React from 'react';
+
 export function SampleNextArrow(props) {
     const {style, onClick } = props;
     return (
