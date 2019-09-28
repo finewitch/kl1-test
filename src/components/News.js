@@ -2,7 +2,7 @@ import React from 'react'
 // import Swiper from 'react-id-swiper';
 // import ArrowIcon from '../components/atoms/ArrowIcon'
 import { Link } from 'gatsby';
-// import {SampleNextArrow, SamplePrevArrow} from '../components/atoms/slickArrows'
+import {SampleNextArrow, SamplePrevArrow} from '../components/atoms/SlickArrows'
 import Slider from "react-slick";
 
 export default class News extends React.Component {
@@ -21,8 +21,8 @@ export default class News extends React.Component {
             speed: 500,
             slidesToShow: 3,
             slidesToScroll: 1,
-            // nextArrow: <SampleNextArrow />,
-            // prevArrow: <SamplePrevArrow />
+            nextArrow: <SampleNextArrow />,
+            prevArrow: <SamplePrevArrow />
           };
     }
     render(){
