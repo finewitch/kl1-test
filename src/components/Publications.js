@@ -65,7 +65,7 @@ export default class Publications extends React.Component {
 
 					{this.state.publications.map( (el, index)=>{
 
-						const regex = new RegExp(this.state.searchingVal, 'gi');
+						// const regex = new RegExp(this.state.searchingVal, 'gi');
 						let pub = el.node.frontmatter,
 						title, authors, journal;
 
@@ -79,7 +79,7 @@ export default class Publications extends React.Component {
 								<span className="highlight">{match}</span>
 								));
 
-							journal = reactStringReplace(pub.authors, this.state.searchingVal, (match, i) => (
+							journal = reactStringReplace(pub.journal, this.state.searchingVal, (match, i) => (
 								<span className="highlight">{match}</span>
 								));	
 

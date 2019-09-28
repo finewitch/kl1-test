@@ -183,7 +183,7 @@ query IndexPageTemplate {
           title
           date
           authors
-          journal
+ 
           pdf {
             publicURL
           }
