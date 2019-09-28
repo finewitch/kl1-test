@@ -53,19 +53,16 @@ export default class Publications extends React.Component {
 
 				<div className="publications-title">
 
-					<SearchInPubs StateHandlerFunction={ (e)=> this.onKeyUp(e) }/>
-
 					<SortingYears years = {this.years} StateHandlerFunction={(year)=>this.onClickHandler(year)} activeTab={this.state.activeTab}/>
-					
+
+					<SearchInPubs StateHandlerFunction={ (e)=> this.onKeyUp(e) }/>
 
 				</div>
 				<div className="publications__wrapper">
 
-		{/* {console.log(this.state.searchingVal, "<0000")} */}
 
 					{this.state.publications.map( (el, index)=>{
 
-						// const regex = new RegExp(this.state.searchingVal, 'gi');
 						let pub = el.node.frontmatter,
 						title, authors, journal;
 
@@ -213,5 +210,4 @@ export default class Publications extends React.Component {
 		})
 	}
 }
-
 

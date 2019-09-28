@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../../components/Layout'
 import ArrowIcon from '../../components/atoms/ArrowIcon'
-import { graphql, Link } from 'gatsby'
+import { Link } from 'gatsby'
 
 export default class Thanks extends React.Component {
   render(){

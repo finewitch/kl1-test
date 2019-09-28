@@ -1,87 +1,88 @@
 import React from 'react'
-import Swiper from 'react-id-swiper';
-import ArrowIcon from '../components/atoms/ArrowIcon'
+// import Swiper from 'react-id-swiper';
+// import ArrowIcon from '../components/atoms/ArrowIcon'
 import { Link } from 'gatsby';
-import ChapterAnnouncement from './atoms/ChapterAnnouncement'
+// import {SampleNextArrow, SamplePrevArrow} from '../components/atoms/slickArrows'
+import Slider from "react-slick";
 
 export default class News extends React.Component {
 
+    
     constructor(props){
         super(props);
-        this.params = {
-            // width : 1000,
-            containerClass: 'customized-swiper-container',
-            slidesPerView: 3,
-            spaceBetween: 50,
-            centeredSlides: true,
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'fraction',
-              },
-
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-              },
-
-          }
+        this.state={
+            totalSlides : 10,
+            currentSlide: 1,
+        }
+        this.settings = {
+            className: 'slick__custom',
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            // nextArrow: <SampleNextArrow />,
+            // prevArrow: <SamplePrevArrow />
+          };
     }
     render(){
+       
         return(
             <div className="section-3 news hidden" id="news">
 
-                <div className="section__wrapper team">
-                    <div className="title-row">
-                        <h3 className="color-green-header">News / Blog</h3>
-                    </div>
-                </div>
+                        <Slider {...this.settings}>
 
-               <Swiper {...this.params}>
+                        {this.props.data.map((el,index)=>{
 
-                {this.props.data.map((el,index)=>{
-                    let title = el.node.frontmatter.title;
-                    let date = new Date(el.node.frontmatter.date).getUTCDate() + '/' + new Date(el.node.frontmatter.date).getUTCMonth() + '/' + new Date(el.node.frontmatter.date).getFullYear();
-                    let content = el.node.frontmatter.content;
-                    let slug = el.node.fields.slug;
-                    let imgData = el.node.frontmatter.image === null ? null : el.node.frontmatter.image.publicURL;
-                    let img = function renderImg(){
-                        if (imgData){
-                            return <img alt="news post" src={imgData}/>
-                        }else{
+                            let title = el.node.frontmatter.title;
+                            let date = new Date(el.node.frontmatter.date).getUTCDate() + '/' + new Date(el.node.frontmatter.date).getUTCMonth() + '/' + new Date(el.node.frontmatter.date).getFullYear();
+                            // let content = el.node.frontmatter.content;
+                            let slug = el.node.fields.slug;
+                            let imgData = el.node.frontmatter.image === null ? null : el.node.frontmatter.image.publicURL;
+
+                            let img = function renderImg(){
+                                if (imgData){
+                                    return <img alt="news post" src={imgData}/>
+                                }else{
+                                    return null
+                                }
+                            }
+
                             return (
-                                <div>
-                                    <div className="news__box-content">{content}</div>
-                                    <p>&bull;	&bull;	&bull;</p>
-                                </div>
+                                // <div className="slider__custom">
+                                    <div className="slider__custom-inner" key={index}>
+                                        {/* { img() } */}
+                                        <div className="slider__custom-inner-content">
+                                            <div className="date">{date}</div>        
+                                            <div className="title">{title}</div>   
+                                        </div>
+
+
+                                        <Link className="read" to={slug}>
+                                        read more
+                                        {/* <ArrowIcon/> */}
+                                        </Link>
+                                    </div>  
+
+                                // </div>
                             )
-                        }
-                    }
-                    
-                    return (
-                        <Link to={slug} className="goback" key={index}>   
-                            <div className="news__box-date">{date}</div>        
-                            <div className="news__box-title">{title}</div>   
 
-                            { img() }
+                            })}
 
-                            <div className="news__box-read" href={slug}>
-                            read more
-                            <ArrowIcon/>
-                            </div>     
+                        </Slider>
+                        
 
-                        </Link>
+                        <div className="section__wrapper news">
+                            <div className="title-row">
+                                <h3>News |<span>| Blog</span></h3>
+                            </div>
+                        </div>
 
-                    )
-
-                    })}
-
-                </Swiper> 
-
-                <ChapterAnnouncement />
-            </div>
+                </div>
 
 
         )}
 
+
 }
+ 

@@ -26,13 +26,12 @@ export class IndexPageTemplate extends React.Component {
     console.log(props, '<-------PROPS')
     this.state = {
       page: styles.color1,
-      // publications:{
-      //   filter: 'all'
-      // }
     }
     this.updateStateWithPageLocation = function(){
 
       const menu = document.querySelector('.menu');
+      const menuLinks = document.querySelectorAll('.menu-links');
+      const secondSec = document.querySelector('.about')
   
       var section = document.querySelectorAll(".hidden");
       var sections = {};
@@ -41,22 +40,35 @@ export class IndexPageTemplate extends React.Component {
       Array.prototype.forEach.call(section, function(e) {
         sections[e.id] = e.offsetTop;
       });
+      console.log(sections)
 
-      console.log(sections);
         window.onscroll = function() {
           var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+          // console.log(scrollPosition)
 
           // console.log(scrollPosition, 'pos')
+          menuLinks.forEach(el=>{
+            el.classList.remove('active');
+          })
       
           for (i in sections) {
+            if (scrollPosition  >= sections['about']/1.2){
+              // console.log('here we go');
+              secondSec.querySelectorAll('.n-visible').forEach(el=>{
+                el.classList.add('is-visible')
+              })
+
+            }
             if (sections[i] <= scrollPosition) {
 
-              var target = menu.querySelector('.active');
-              if (target === null){
-                return;
-              }
+              // var target = menu.querySelector('.active');
+              // // console.log(menu)
+              // if (target === null){
+              //   return;
+              // }
               menu.querySelector('.active').classList.remove('active')
               menu.querySelector('.menu-' + i ).classList.add('active');
+
             }
             }
           }
@@ -183,7 +195,7 @@ query IndexPageTemplate {
           title
           date
           authors
- 
+          journal
           pdf {
             publicURL
           }
@@ -227,5 +239,4 @@ query IndexPageTemplate {
   }
 }
 `
-
 

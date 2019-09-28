@@ -16,6 +16,58 @@
     @media (max-width: $largest-desktop) {
         padding:0;
        }
+       .title{
+           display: flex;
+           align-items: center;
+           &__cont{
+                justify-content: center;
+                display: flex;
+                padding: 20px;
+                // border: 15px solid black;
+                width: 50%;
+                // width: 290px;
+                height: 60%;
+                margin: 0 auto;
+                position: relative;
+                &::before{
+                    content:'';
+                    position: absolute;
+                    top:0;
+                    border: 20px solid black;
+                    border-style: solid solid none solid;
+                    width: 100%;
+                    height: 60px;
+
+                }
+                &::after{
+                    content:'';
+                    position: absolute;
+                    bottom:-15px;
+                    border: 20px solid black;
+                    border-style: none solid solid solid;
+                    width: 100%;
+                    height: 55px;
+                }
+               div{
+                   display: flex;
+                   flex-direction: column;
+                   span{
+                       font-family: $colfaxMedium;
+                       font-size: 6rem;
+                       color: white;
+                   }
+               }
+               div:last-child{
+                   margin-top: 50px;
+                   padding-left:20px;
+               }
+               div:first-child{
+                   margin-top: 5px;
+               }
+               
+
+           }
+       }
     &__content{
         display: flex;
         flex-wrap: wrap;
@@ -40,7 +92,6 @@
             }
             &-data{
                 display: none;
-                font-family: $SansSerif;
                 position: absolute;
                 top: 0;left:0;
                 width: 100%;

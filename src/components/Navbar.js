@@ -30,7 +30,7 @@ export default class Navbar extends React.Component {
         },
         {
           "name": "Resources",
-          "link": "/#publications",
+          "link": "/resources/resources-2/",
           "num" : "05"
         },
         {
@@ -47,7 +47,7 @@ export default class Navbar extends React.Component {
         <div className="menu">
           <nav className="menu__main">
             <ul className="menu__main-wrapper">
-              <Link to={'/'} className="logo menu-landing">
+              <Link to={'/'} className="logo menu-landing active">
                 <img alt="logo" src={logo}/>
               </Link>
 

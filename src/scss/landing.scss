@@ -2,15 +2,10 @@
     position: relative;
 }
 
-// .section-1{
-//     transition: background .3s ease-in;
-// }
-
 
 .landing{
     height: 100vh;
     min-height:100%;
-    transition: background-color 1s ease;
     &__wrapper{
         height: 100%;
         display: flex;
@@ -35,7 +30,7 @@
                     -webkit-animation-fill-mode: forwards;
                 }
                 .additional{
-                    color: #ff5722;
+                    color: $orange;
                     letter-spacing: 1px;
                     margin-left: -60px;
                 }
@@ -53,14 +48,14 @@
                     letter-spacing: 2px;
                 }
                 .additional{
-                    color: #ff5722;
+                    color: $orange;
                 }
             }
         } 
         &-scroll{
             // margin-top:50px;
             margin-top:auto;
-            margin-bottom: 15px;
+            margin-bottom: 50px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -68,7 +63,6 @@
             span{
                 margin-top:10px;
                 color: #ccc;
-                font-family: $SansSerif;
             }
         }
         #scroll-svg{
@@ -120,6 +114,9 @@ button.trigger {
     color: #ccc;
     transition: all .3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
+    &:focus{
+        outline: none;
+    }
 }
 button.trigger:after {
     content: "";

@@ -4,6 +4,7 @@ import React from 'react'
 
   export default class Landing extends React.Component {
 
+
     render(){
 
       return(
@@ -28,10 +29,10 @@ import React from 'react'
             <div className="landing__wrapper-scroll">
 
               {/* <ArrowIcon/>       */}
-              <button className="trigger">
+              <button className="trigger" onClick={()=>this.onClickHandler()}>
                 <i className="fa fa-angle-double-down animated infinite bounce"></i>
               </button>
-              <span>scroll down to explore / drop us a line</span>
+              <span >scroll down to explore / drop us a line</span>
 
               </div>
             </div>
@@ -40,6 +41,9 @@ import React from 'react'
 
       )
     }
+    onClickHandler(){
+      document.querySelector('#about').scrollIntoView({ block: 'end',  behavior: 'smooth' });
+     }
     
   }
   
