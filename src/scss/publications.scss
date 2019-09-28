@@ -27,7 +27,7 @@ span.highlight{
     background-color: #2456b1;
 }
 a.readmore{
-    color: #00fff5;
+    color: $orange;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -52,13 +52,14 @@ button{
     width: $largest-desktop;
     @media (max-width: $largest-desktop) {
         width:auto;
-       }
+    }
     margin: 0 auto;
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     .publications-search{
-        margin-top: 30px;
+        // margin-top: 30px;
         font-size: 1.3rem;
         border-bottom: 1px solid gray;
         width: 350px;
@@ -93,7 +94,7 @@ button{
             font-size:1.2rem;
             &:hover{
                 cursor: pointer;
-                color: #00fff5;
+                color: $orange;
                 transition: color .3s ease-in;
             }
         }
@@ -103,7 +104,7 @@ button{
     }
     .active{
         button{
-            color: #00fff5;
+            color: $orange;
         }
     }
     a{
@@ -116,7 +117,7 @@ button{
                }
         }
         &:hover{
-            color:#00fff5;
+            color: $orange;
         }
     }
 
@@ -194,8 +195,8 @@ padding: 45px;
             font-size:.8rem;
             font-weight:500;
             &:hover{
-                border: 1px solid #00d2b5;
-                color: #00d2b5;
+                border: 1px solid $orange;
+                color: $orange;
             }
         }
         .popup-btn{
@@ -290,7 +291,7 @@ padding: 45px;
             }
             &:hover{
                 svg{
-                    fill: #00d2b5;
+                    fill: $orange;
                 }
             }
         }
