@@ -23,7 +23,7 @@ export class IndexPageTemplate extends React.Component {
 
   constructor(props) {
     super(props);
-    console.log(props, '<-------PROPS')
+    // console.log(props, '<-------PROPS')
     this.state = {
       page: styles.color1,
     }
@@ -40,7 +40,7 @@ export class IndexPageTemplate extends React.Component {
       Array.prototype.forEach.call(section, function(e) {
         sections[e.id] = e.offsetTop;
       });
-      console.log(sections)
+      // console.log(sections)
 
         window.onscroll = function() {
           var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
@@ -128,7 +128,7 @@ IndexPageTemplate.propTypes = {
 }
 
 const IndexPage = ({ data , location}) => {
-  console.log(data, 'data here>>>')
+  // console.log(data, 'data here>>>')
   const news = data.news.edges
   const publications = data.publications.edges
   const teamMembers = data.team.edges

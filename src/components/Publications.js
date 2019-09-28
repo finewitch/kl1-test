@@ -145,7 +145,7 @@ export default class Publications extends React.Component {
 		var withoutSpecialChar =  val.replace(/([.?*+^$[\]\\(){}|-])/g, "\\$1");
 		// console.log(val)
 		var matchedPubs = findMatch(withoutSpecialChar, this.initialState);
-		console.log(matchedPubs, '<---wynik');
+		// console.log(matchedPubs, '<---wynik');
 		this.setState({
 			publications : matchedPubs,
 			searchingVal: withoutSpecialChar
@@ -159,7 +159,7 @@ export default class Publications extends React.Component {
 			activeTab : year.toString()
 		})
 
-		console.log(this.state.activeTab)
+		// console.log(this.state.activeTab)
 		// console.log('RESPONSE--->', this.initialState, 'CHOICE-->', year)
 
 		if(year === 0 ){
@@ -195,7 +195,7 @@ export default class Publications extends React.Component {
 	}
 	onClickPopup = function (data){
 
-		console.log(data, '<---DATA')
+		// console.log(data, '<---DATA')
 		this.setState({
 			citationData : data,
 			showPopup: true

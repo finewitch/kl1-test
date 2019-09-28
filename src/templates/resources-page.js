@@ -56,7 +56,7 @@ export const ResourcesPageTemplate = ({ resources }) => {
 
 const ResourcesPage = ({ data }) => {
   // const { markdownRemark: post } = data
-console.log(data, '<--')
+// console.log(data, '<--')
 
   return (
     <Layout>

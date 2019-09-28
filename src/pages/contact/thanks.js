@@ -25,7 +25,7 @@ export default class Thanks extends React.Component {
 
 )}
   componentDidMount(){
-    console.log('redirection')
+    // console.log('redirection')
     setTimeout(()=>{
       window.location = '/';
     }, 3000)

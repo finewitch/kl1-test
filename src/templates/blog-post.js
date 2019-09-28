@@ -71,7 +71,7 @@ BlogPostTemplate.propTypes = {
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
 
-  console.log(data)
+  // console.log(data)
 
   let props= {
       content:{
@@ -89,7 +89,7 @@ const BlogPost = ({ data }) => {
         'data' : post.frontmatter.data || null
       }
   }
-  console.log(props);
+  // console.log(props);
 
   return (
     <Layout>

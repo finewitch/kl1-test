@@ -14,7 +14,7 @@ export const NewsPostTemplate = ({
 
 }) => {
   const PostContent = contentComponent || Content
-  console.log(data, 'data');
+  // console.log(data, 'data');
 
 
   return (

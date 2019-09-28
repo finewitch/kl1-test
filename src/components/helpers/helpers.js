@@ -43,7 +43,7 @@ export function publications_getSortingLAbels(responseData){
 
 
 export function findMatch(word, list){
-    console.log(word, 'before')
+    // console.log(word, 'before')
     // var withoutSpecialChar =  word.replace(/([.?*+^$[\]\\(){}|-])/g, "\\$1");
     // console.log(word, 'after')
     return list.filter(pub=>{
