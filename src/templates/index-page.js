@@ -57,6 +57,12 @@ export class IndexPageTemplate extends React.Component {
               secondSec.querySelectorAll('.n-visible').forEach(el=>{
                 el.classList.add('is-visible')
               })
+              secondSec.querySelectorAll('.border-t-none').forEach(el=>{
+                el.classList.add('border-t-visible')
+              })
+              secondSec.querySelectorAll('.border-b-none').forEach(el=>{
+                el.classList.add('border-b-visible')
+              })
 
             }
             if (sections[i] <= scrollPosition) {

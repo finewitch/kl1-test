@@ -17,6 +17,8 @@ const TemplateWrapper = ({ children }) => {
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
+        {/* FAVICON */}
+
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -40,17 +42,15 @@ const TemplateWrapper = ({ children }) => {
           href="/img/safari-pinned-tab.svg"
           color="#ff4400"
         />
-        <link href="https://fonts.googleapis.com/css?family=Alegreya:400,700&display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css?family=Catamaran:300,400,700,900&display=swap" rel="stylesheet"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"></link>
-
+        {/* FONTS */}
+        <link href="https://fonts.googleapis.com/css?family=Alegreya:400&display=swap" rel="stylesheet"/>
         <script src="https://kit.fontawesome.com/0a4ee8d3e4.js"></script>
-        <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" /> 
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
-    
-        
-        <meta name="theme-color" content="#fff" />
 
+        {/* PLUGINS */}
+        <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" /> 
+        
+
+        <meta name="theme-color" content="#fff" />
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />

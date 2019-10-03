@@ -7,9 +7,9 @@ export default class About extends React.Component {
                 <div className="section__wrapper">
 
                     <div className="about__column left">
-                        <div>
-
-                            <p className="font-1">
+                        {/* <hr /> */}
+                        <div className="border-t-none">
+                            <p className="font-1 border-n-visible">
                                 <span className="n-visible">CSPACE</span>
                                 <span className="font-red">.</span>
                             </p>
@@ -20,7 +20,7 @@ export default class About extends React.Component {
 
                         </div>
 
-                        <div>
+                        <div className="border-b-none">
                             <p className="n-visible"> . . . is a cross-institutional clinical </p>
                             <p className="n-visible">psychology & psychiatry research</p>
                             <p>
@@ -33,7 +33,7 @@ export default class About extends React.Component {
                     </div>
 
                     <div className="about__column right">
-                        <div>
+                        <div className="border-b-none">
                             
                             <p className="font-gray">
                                 <span className="font-1">
@@ -56,7 +56,7 @@ export default class About extends React.Component {
 
                         </div>
 
-                        <div>
+                        <div className="border-t-none">
 
                             <p className="n-visible">Want to</p>
                             <p className="n-visible">Collaborate </p>

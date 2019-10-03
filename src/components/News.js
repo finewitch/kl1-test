@@ -1,5 +1,4 @@
 import React from 'react'
-// import Swiper from 'react-id-swiper';
 // import ArrowIcon from '../components/atoms/ArrowIcon'
 import { Link } from 'gatsby';
 import {SampleNextArrow, SamplePrevArrow} from '../components/atoms/SlickArrows'
