@@ -48,6 +48,8 @@ const TemplateWrapper = ({ children }) => {
 
         {/* PLUGINS */}
         <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" /> 
+        {/* <script src="https://cdn.jsdelivr.net/npm/typeit@VERSION_NUMBER/dist/typeit.min.js" /> */}
+
         
 
         <meta name="theme-color" content="#fff" />

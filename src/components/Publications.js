@@ -2,6 +2,7 @@
 import React from 'react'
 import { Link } from 'gatsby';
 import reactStringReplace from 'react-string-replace';
+
 // import PropTypes from 'prop-types'
 
 import {publications_getSortingLAbels, findMatch} from './helpers/helpers';
@@ -13,9 +14,8 @@ import PopupCitation from './atoms/PopupCitation.js';
 import ChapterAnnouncement from './atoms/ChapterAnnouncement'
 
 export default class Publications extends React.Component {
-	
-
-	constructor(props) {
+			
+		constructor(props) {
 		super(props);
 		if(props.data === null || undefined){
 			return;
@@ -23,22 +23,17 @@ export default class Publications extends React.Component {
 		//POPUP
 		this.showPopup = false
 		this.initialState = props.data
-
-		// console.log('DATA>>', props.data);
-		// this.dataToSearch
 		this.PublicationsSetToBeModified = Array.from(props.data)// copy props to new array so that initial props reamain intact
 		
 		this.state={
 			publications : this.initialState,
 			citationData : null,
 			activeTab : 0,
-			searchingVal : null
+			searchingVal : null,
 		}
 		this.currentYear = new Date().getFullYear();
 
 		this.years = publications_getSortingLAbels(this.props.data);
-
-		// console.log(this.props.dataResources[0].node.fields.slug, '<----res')
 		this.resourcesHref = this.props.dataResources[0].node.fields.slug;
 
 	}
@@ -49,7 +44,7 @@ export default class Publications extends React.Component {
 		  
 			<div className="section__wrapper">
 
-				<h3 className="color-white">publications</h3>
+				<h3 className="color-white" id="typeit-header">{this.instance}</h3>
 
 				<div className="publications-title">
 
@@ -69,15 +64,15 @@ export default class Publications extends React.Component {
 						if(this.state.searchingVal){
 
 							title = reactStringReplace(pub.title, this.state.searchingVal, (match, i) => (
-								<span className="highlight">{match}</span>
+								<span className="highlight" key={i}>{match}</span>
 								));
 
 							authors = reactStringReplace(pub.authors, this.state.searchingVal, (match, i) => (
-								<span className="highlight">{match}</span>
+								<span className="highlight" key={i}>{match}</span>
 								));
 
 							journal = reactStringReplace(pub.journal, this.state.searchingVal, (match, i) => (
-								<span className="highlight">{match}</span>
+								<span className="highlight" key={i}>{match}</span>
 								));	
 
 							}else{
@@ -143,9 +138,7 @@ export default class Publications extends React.Component {
 	onKeyUp = function(val){
 		// var key = e.key
 		var withoutSpecialChar =  val.replace(/([.?*+^$[\]\\(){}|-])/g, "\\$1");
-		// console.log(val)
 		var matchedPubs = findMatch(withoutSpecialChar, this.initialState);
-		console.log(matchedPubs, '<---wynik');
 		this.setState({
 			publications : matchedPubs,
 			searchingVal: withoutSpecialChar
@@ -195,7 +188,6 @@ export default class Publications extends React.Component {
 	}
 	onClickPopup = function (data){
 
-		console.log(data, '<---DATA')
 		this.setState({
 			citationData : data,
 			showPopup: true

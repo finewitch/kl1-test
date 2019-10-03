@@ -8,7 +8,6 @@ export default class News extends React.Component {
 
     
     constructor(props){
-        console.log(props.data.length, 'props')
         super(props);
         this.state={
             totalSlides : 10,
@@ -83,11 +82,6 @@ export default class News extends React.Component {
 
 
         )}
-
-        componentDidMount(){
-            console.log('in news here')
-        }
-
 
 }
  

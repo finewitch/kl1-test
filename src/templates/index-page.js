@@ -10,6 +10,8 @@ import Publications from '../components/Publications'
 import ContactNews from '../components/ContactNews'
 import Partners from '../components/Partners'
 import { graphql } from 'gatsby'
+import TypeIt from 'typeit';
+
 
 let styles = {
   color1: '#f7fbfe',
@@ -26,7 +28,9 @@ export class IndexPageTemplate extends React.Component {
     console.log(props, '<-------PROPS')
     this.state = {
       page: styles.color1,
+      pubsInViewport : false,
     }
+    // this.inViewPort = false;
     this.updateStateWithPageLocation = function(){
 
       const menu = document.querySelector('.menu');
@@ -40,13 +44,12 @@ export class IndexPageTemplate extends React.Component {
       Array.prototype.forEach.call(section, function(e) {
         sections[e.id] = e.offsetTop;
       });
-      console.log(sections)
+
 
         window.onscroll = function() {
-          var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-          // console.log(scrollPosition)
 
-          // console.log(scrollPosition, 'pos')
+          var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
           menuLinks.forEach(el=>{
             el.classList.remove('active');
           })
@@ -65,36 +68,34 @@ export class IndexPageTemplate extends React.Component {
               })
 
             }
+
+            // MAKE CHANGE IN PUBLICATIONS COMPONENT PROPS TO TRIGER THE TYPEIN PLUGIN
+            if (scrollPosition  >= sections['team']){
+              window.myTypeItInstance.go();
+            }
+
+            }
             if (sections[i] <= scrollPosition) {
 
-              // var target = menu.querySelector('.active');
-              // // console.log(menu)
-              // if (target === null){
-              //   return;
-              // }
               menu.querySelector('.active').classList.remove('active')
               menu.querySelector('.menu-' + i ).classList.add('active');
 
             }
             }
           }
-        };
-      
-
-    
   }
   render(){
     return(
-      <div 
-      className="root-wrapper"
-      >
+      <div className="root-wrapper">
       
         <Landing scrollText={this.props.subheading}/>
         <About/>
         <News data={this.props.news}/>
         <Team data={this.props.teamMembers}/>
-        <Publications data={this.props.publications} dataResources={this.props.resources}/>
-        <ContactNews/>
+
+        <Publications data={this.props.publications} dataResources={this.props.resources} inViewport={this.state.pubsInViewport}/>
+
+        <ContactNews onScroll={this.handleScroll}/>
         <Partners/>
 
       </div>
@@ -104,6 +105,17 @@ export class IndexPageTemplate extends React.Component {
       this._isMounted = false;
     }
     componentDidMount(){
+
+      window.myTypeItInstance = new TypeIt('#typeit-header', {
+        speed: 300,
+        startDelay: 900
+      })
+      .type('Pubs')
+      .pause(250)
+      .delete(2)
+      .type('blications')
+      .pause(300)
+
       this._isMounted = true;
       this.updateStateWithPageLocation();
 
