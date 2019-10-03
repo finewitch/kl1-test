@@ -9,7 +9,7 @@ export default class Navbar extends React.Component {
       const substring = 'resources'
       this.separatepage = false;
 
-      if(window.location.pathname.includes(substring)){
+      if(typeof window !== 'undefined' && window.location.pathname.includes(substring)){
         this.separatepage = true;
       }else{
         this.separatepage = false;
@@ -55,7 +55,7 @@ export default class Navbar extends React.Component {
         <div className="menu">
           <nav className="menu__main">
             <ul className="menu__main-wrapper">
-              
+
               <Link to={'/'} className="logo menu-landing active">
                 <img alt="logo" src={logo}/>
               </Link>
