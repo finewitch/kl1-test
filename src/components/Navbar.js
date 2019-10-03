@@ -6,6 +6,14 @@ import { Link } from 'gatsby';
 export default class Navbar extends React.Component {
     constructor(props) {
       super(props);
+      const substring = 'resources'
+      this.separatepage = false;
+
+      if(window.location.pathname.includes(substring)){
+        this.separatepage = true;
+      }else{
+        this.separatepage = false;
+      }
 
       this.menuLinks = [
         {
@@ -47,16 +55,29 @@ export default class Navbar extends React.Component {
         <div className="menu">
           <nav className="menu__main">
             <ul className="menu__main-wrapper">
+              
               <Link to={'/'} className="logo menu-landing active">
                 <img alt="logo" src={logo}/>
               </Link>
 
               {this.menuLinks.map( ( el, index )=>{
-                return  (
-                <li key={index}>
-                  <NavLink link={ el.link } name={ el.name } />
-                </li>
-                )
+                if(this.separatepage && el.name === 'Resources'){
+
+                  return  (
+                    <li key={index}>
+                      <NavLink link={ el.link } name={ el.name } active/>
+                    </li>
+                    )
+
+                }else{
+
+                  return  (
+                  <li key={index}>
+                    <NavLink link={ el.link } name={ el.name }/>
+                  </li>
+                  )
+
+                }
               } )}
 
             </ul>

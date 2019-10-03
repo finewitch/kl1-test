@@ -26,9 +26,9 @@ export const ResourcesPageTemplate = ({ resources }) => {
 
           <div className="section__wrapper-content-post">
             <ul>
-            {resources.map((el)=>{
+            {resources.map((el, i)=>{
               return (
-                <li>
+                <li key={i}>
                   <a href={el.link} target="_blank" rel="noopener noreferrer">{el.link_label}</a>
                 </li>
               )
