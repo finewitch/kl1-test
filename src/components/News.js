@@ -8,6 +8,7 @@ export default class News extends React.Component {
 
     
     constructor(props){
+        console.log(props.data.length, 'props')
         super(props);
         this.state={
             totalSlides : 10,
@@ -15,13 +16,16 @@ export default class News extends React.Component {
         }
         this.settings = {
             className: 'slick__custom',
-            dots: true,
             infinite: true,
             speed: 500,
+            dots: true,
             slidesToShow: 3,
             slidesToScroll: 1,
             nextArrow: <SampleNextArrow />,
-            prevArrow: <SamplePrevArrow />
+            prevArrow: <SamplePrevArrow />,
+            customPaging: function(i) {
+                return <span className="counter">{i + 1} of {props.data.length}</span>;
+              },
           };
     }
     render(){
@@ -67,9 +71,7 @@ export default class News extends React.Component {
                             )
 
                             })}
-
                         </Slider>
-                        
 
                         <div className="section__wrapper news">
                             <div className="title-row">
@@ -81,6 +83,10 @@ export default class News extends React.Component {
 
 
         )}
+
+        componentDidMount(){
+            console.log('in news here')
+        }
 
 
 }

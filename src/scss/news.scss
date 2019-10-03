@@ -2,17 +2,22 @@
     padding-top: 250px;
 }
 .news{
+    
     .title-row{
         font-size:3rem;
         font-family: $colfaxBlack;
         color: white;
-        margin-top: 120px;
+        margin-top: 150px;
         h3{
             margin:0 auto;
         }
         span{
             color: black;
         }
+    }
+    .counter{
+        font-size: 1.2rem;
+        color: white;
     }
 }
 

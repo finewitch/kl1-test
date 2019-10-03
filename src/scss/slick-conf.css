@@ -1,5 +1,4 @@
 
-
 .slick-slider{
     /* border: 1px solid red; */
     width: 90%;
@@ -28,4 +27,24 @@
 }
 .slik-prev{
     left: -100px;
+}
+
+/* PAGINATION */
+.slick-dots{
+    display: flex!important;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+.slick-dots li
+{
+    position: relative;
+    display: none;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+.slick-dots li.slick-active
+{
+    display: inline-block;
 }
