@@ -74,14 +74,13 @@ export class IndexPageTemplate extends React.Component {
               window.myTypeItInstance.go();
             }
 
-            }
             if (sections[i] <= scrollPosition) {
 
               menu.querySelector('.active').classList.remove('active')
               menu.querySelector('.menu-' + i ).classList.add('active');
 
             }
-            }
+            }}
           }
   }
   render(){
