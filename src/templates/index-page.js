@@ -106,7 +106,7 @@ export class IndexPageTemplate extends React.Component {
     componentDidMount(){
 
       window.myTypeItInstance = new TypeIt('#typeit-header', {
-        speed: 300,
+        speed: 220,
         startDelay: 900
       })
       .type('Pubs')
