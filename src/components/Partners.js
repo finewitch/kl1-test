@@ -5,7 +5,7 @@ import logo_2 from '../img/partners/logo2.svg';
 import logo_3 from '../img/partners/logo3.svg';
 import logo_4 from '../img/partners/logo4.svg';
 import logo_5 from '../img/partners/logo5.svg';
-import logo_6 from '../img/partners/logo99.svg';
+import logo_6 from '../img/partners/logo6.svg';
 
 const links={
   link1: 'yolo',
