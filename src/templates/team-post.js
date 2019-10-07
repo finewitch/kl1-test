@@ -19,7 +19,7 @@ export const TeamPostTemplate = ({
 }) => {
 
   return (
-    <section className="section">
+    <section className="section teammember__section">
       {/* {helmet || ''} */}
       <div className="container content team-member section__wrapper">
         

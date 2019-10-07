@@ -9,7 +9,7 @@ export const ResourcesPageTemplate = ({ resources }) => {
 
 
   return (
-    <section className="section">
+    <section className="section resources__section">
       <div className="container content news-page">
         <div className="columns section__wrapper">
           <div className="column is-10 is-offset-1 section__wrapper-content">

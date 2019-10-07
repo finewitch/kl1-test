@@ -1,7 +1,9 @@
+.teammember__section{
+    background: url('../img/bg/bg-pat0.png') top left repeat;
+}
 .team-member{
     margin: $menu-height auto 0 auto;
     display: flex;
-    background-color: white;
     div img{
         max-width: 500px;
         height: auto;

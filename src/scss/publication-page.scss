@@ -1,5 +1,10 @@
+.resources__section{
+    background: url('../img/bg/bg-pat0.png') top left repeat;
+    min-height: 100vh;
+}
 .publication-page, .news-page{
-    margin: $menu-height + 40px 0;
+    margin-top: $menu-height;
+    padding-top: 40px;
     .goback{
         text-align: center;
         display: block;
