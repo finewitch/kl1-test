@@ -2,6 +2,7 @@
 templateKey: news-post
 title: Konferencja w Warszawie
 date: 2019-09-12T12:35:00.131Z
+image: /img/c-narysowane-farbą.jpg
 content: >-
   W wyniku kumulujących się kryzysów integracja europejska znalazła się w ważnym
   i trudnym do jednoznacznego określenia momencie. W 2019 roku Unia Europejska
