@@ -111,8 +111,10 @@ export class IndexPageTemplate extends React.Component {
         afterComplete: (instance) => {
 
           setTimeout(()=>{
-            instance.opts.cursor = false;
-            document.querySelector('.ti-cursor').classList.add('hide-cursor');
+            var cursor = document.querySelector('.ti-cursor');
+            if(cursor){
+              document.querySelector('.ti-cursor').classList.add('hide-cursor');
+            }
           },3000)
 
        },
