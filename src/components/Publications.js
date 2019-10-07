@@ -11,7 +11,6 @@ import SortingYears from './organisms/SortingYearsPub';
 import SearchInPubs from './organisms/SearchInPubs';
 import Publication from './atoms/PublicationListEl.js';
 import PopupCitation from './atoms/PopupCitation.js';
-import ChapterAnnouncement from './atoms/ChapterAnnouncement'
 
 export default class Publications extends React.Component {
 			
@@ -109,7 +108,7 @@ export default class Publications extends React.Component {
 
 				
 
-				<div className="publications-title title-bottom space-between-removed">
+				<div className="publications-title title-bottom">
 				
 				<h4 className="color-grey">
 					<Link to={this.resourcesHref}>Looking for <span data-hover="RESOURCES">RESOURCES</span>? →</Link>
@@ -119,8 +118,6 @@ export default class Publications extends React.Component {
 				</div>
 
 			</div>
-
-			<ChapterAnnouncement />
 
 			{this.state.showPopup ? 
 

@@ -48,3 +48,8 @@
 {
     display: inline-block;
 }
+
+
+#typeit-header span.ti-cursor{
+        color: black!important;
+    }

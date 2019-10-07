@@ -6,11 +6,35 @@ export default class ContactNews extends React.Component {
 
   render(){
     return(
-      <div className="section-6 publications contact hidden" id="contact">
+      <div className="section-6 contact hidden" id="contact">
 
         <div className="section__wrapper">
-
-            <h3 className="color-grey centered">Contact us</h3>
+            <div className="contact-title">
+              <h3 className="color-grey contact-title-hor">
+                <span>C</span>
+                <span>o</span>
+                <span>n</span>
+                <span>t</span>
+                <span>a</span>
+                <span>c</span>
+                <span>t</span>
+                <span>&nbsp;</span>
+                <span>u</span>
+                <span>s</span>
+              </h3>
+              <h3 className="color-grey contact-title-vert">
+                <span>C</span>
+                <span>o</span>
+                <span>n</span>
+                <span>t</span>
+                <span>a</span>
+                <span>c</span>
+                <span>t</span>
+                <span>&nbsp;</span>
+                <span>u</span>
+                <span>s</span>
+                </h3>
+            </div>
 
             <div className="contact__wrapper-contact">
 

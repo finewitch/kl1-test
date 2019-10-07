@@ -71,7 +71,7 @@ export class IndexPageTemplate extends React.Component {
 
             // MAKE CHANGE IN PUBLICATIONS COMPONENT PROPS TO TRIGER THE TYPEIN PLUGIN
             if (scrollPosition  >= sections['team']){
-              window.myTypeItInstance.go();
+              window.myTypeItInstance.go()
             }
 
             if (sections[i] <= scrollPosition) {
@@ -106,13 +106,21 @@ export class IndexPageTemplate extends React.Component {
     componentDidMount(){
 
       window.myTypeItInstance = new TypeIt('#typeit-header', {
-        speed: 220,
-        startDelay: 900
+        speed: 420,
+        startDelay: 900,
+        afterComplete: (instance) => {
+
+          setTimeout(()=>{
+            instance.opts.cursor = false;
+            document.querySelector('.ti-cursor').classList.add('hide-cursor');
+          },3000)
+
+       },
       })
-      .type('Pubs')
+      .type('Publicatios')
       .pause(250)
       .delete(2)
-      .type('blications')
+      .type('ons')
       .pause(300)
 
       this._isMounted = true;

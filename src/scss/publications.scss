@@ -1,5 +1,9 @@
-
+.hide-cursor{
+    opacity: 0;
+    animation: none!important;
+}
 .publications{
+    color: white;
     .section-4__wrapper{
         max-width: 100%;
         padding: 0 50px;
@@ -17,6 +21,7 @@ h3{
 }
 a{
     color: white;
+    text-decoration: none;
     span{
         display: inline;
         font-weight: normal;
@@ -38,7 +43,7 @@ a.readmore{
         margin-left: 5px;
     }
     &:hover{
-        color: black;
+        // color: black;
         cursor: pointer;
     }
 }
@@ -108,12 +113,13 @@ button{
         }
     }
     a{
+        // text-decoration: none;
         color:white;
         span{
             display: inline;
-            line-height: 1.9rem;
+            line-height: 2rem;
             @media (max-width: $largest-desktop) {
-                line-height: 1.4rem;
+                // line-height: 1.4rem;
                }
         }
         &:hover{
@@ -132,26 +138,29 @@ button{
     }
 }
 .title-bottom{
-    // margin-top:60px;
+    justify-content: flex-end;
     position: absolute;
     left:0;right:0;
-    bottom:180px;
+    bottom:130px;
+    font-family:'Colfax Black';
+    font-size: 2rem;
+    a span{
+        transition: .5s ease;
+    }
+
     a:hover{
         color:white;
+        span{
+            transition: .5s ease;
+            color: $orange;
+        }
     }
 }
-.space-between-removed{
-    // justify-content: left;
-    justify-content: center;
-}
-color:white;
 &__wrapper{
     margin:60px auto 0px auto;
     overflow: auto;
-    // overflow-x: visible;
     height: 50%;
-// border-radius: 20px;
-padding: 45px;
+    padding: 45px;
     &::-webkit-scrollbar {
         -webkit-appearance: none;
     }
@@ -218,18 +227,19 @@ padding: 45px;
         &-title{
             font-family: 'Alegreya';
             color:white;
-            text-decoration: none;
+            // text-decoration: none;
             font-size:1.2rem;
             flex-basis: 37%;
             @media (max-width: $largest-desktop) {
                 font-size: 1.1rem;
                }
                &:hover{
-                   color: black;
+                //    color: black;
                }
             
         }
         &-author{
+            font-family: 'Alegreya';
             font-size:1.1rem;
             max-width:400px;
             flex-basis: 25%;

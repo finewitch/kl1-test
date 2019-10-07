@@ -1,11 +1,53 @@
 
     .contact{
         h3{
-            color:#F5F5F5;
-            font-weight: 900;
+            
+            // font-weight: 900;
+            // font-size: 3.5rem;
+            justify-content: flex-start;
         }
         h4{
             justify-content: flex-start;
+        }
+        &-title{
+            h3 span{
+                // width: 70px;
+                height:70px;
+                display: inline-block;
+                // border: 1px solid white;
+                
+            }
+            // border: 1px solid red;
+            font-family: 'Colfax Black';
+            position: relative;
+            &-hor{
+                // border: 1px solid yellowgreen;
+                color: black;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                span:nth-child(2){
+                    color: red;
+                    opacity: 0;
+                }
+            }
+            &-vert{
+                // border: 1px solid orange;
+                display: flex;
+                flex-direction: column;
+                position: absolute!important;
+                top: -57px;
+                left: 65px;
+                color:#F5F5F5;
+                span{
+                    // border: 1px solid red;
+                    display: flex!important;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    // height: 90px!important;
+                }
+            }
         }
 
     }
@@ -36,8 +78,10 @@
             }
             p{
                 color: #F5F5F5;
-                font-size:1.3rem;
+                font-size:1.2rem;
                 line-height: 1.8rem;
+                font-family: 'Colfax Regular';
+
                 @media (max-width: $largest-desktop) {
                     font-size:1.1rem;
                    }
