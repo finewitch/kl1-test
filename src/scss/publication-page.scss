@@ -3,8 +3,10 @@
     min-height: 100vh;
 }
 .publication-page, .news-page{
-    margin-top: $menu-height;
-    padding-top: 40px;
+    background: url('../img/bg/bg-pat0.png') top left repeat;
+    // margin-top: $menu-height;
+    padding-top: 100px;
+    min-height: 100vh;
     .goback{
         text-align: center;
         display: block;
