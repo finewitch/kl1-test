@@ -12,16 +12,15 @@
        }
        .title{
            display: flex;
-           align-items: center;
+        //    align-items: center;
+        // padding-top: 15px;
            &__cont{
                 justify-content: center;
                 display: flex;
                 padding: 20px;
-                // border: 15px solid black;
                 width: 50%;
-                // width: 290px;
                 height: 60%;
-                margin: 0 auto;
+                margin: 60px auto auto auto;
                 position: relative;
                 &::before{
                     content:'';

@@ -2,6 +2,9 @@
     opacity: 0;
     animation: none!important;
 }
+.blackdot{
+    color: black;
+}
 .publications{
     color: white;
     .section-4__wrapper{
@@ -141,7 +144,7 @@ button{
     justify-content: flex-end;
     position: absolute;
     left:0;right:0;
-    bottom:130px;
+    bottom:80px;
     font-family:'Colfax Black';
     font-size: 2rem;
     a span{

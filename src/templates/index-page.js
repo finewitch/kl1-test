@@ -70,7 +70,7 @@ export class IndexPageTemplate extends React.Component {
             }
 
             // MAKE CHANGE IN PUBLICATIONS COMPONENT PROPS TO TRIGER THE TYPEIN PLUGIN
-            if (scrollPosition  >= sections['team']){
+            if (scrollPosition  >= ( sections['team']* 1.2) ){
               window.myTypeItInstance.go()
             }
 
@@ -123,6 +123,7 @@ export class IndexPageTemplate extends React.Component {
       .pause(250)
       .delete(2)
       .type('ons')
+      .type(`<span class="blackdot">.</span>`)
       .pause(300)
 
       this._isMounted = true;

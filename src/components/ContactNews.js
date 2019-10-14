@@ -30,8 +30,8 @@ export default class ContactNews extends React.Component {
                 <span>a</span>
                 <span>c</span>
                 <span>t</span>
-                <span>&nbsp;</span>
-                <span>u</span>
+                {/* <span>&nbsp;</span> */}
+                <span className="innerspace">u</span>
                 <span>s</span>
                 </h3>
             </div>
