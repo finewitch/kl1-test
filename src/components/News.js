@@ -44,7 +44,7 @@ export default class News extends React.Component {
 
                             let img = function renderImg(){
                                 if (imgData){
-                                    return <img alt="news post" src={imgData}/>
+                                    return <img className="img-pos" alt="news post" src={imgData}/>
                                 }else{
                                     return null
                                 }
@@ -53,12 +53,13 @@ export default class News extends React.Component {
                             return (
                                 // <div className="slider__custom">
                                     <div className="slider__custom-inner" key={index}>
-                                        {/* { img() } */}
+                                        { img() }
                                         <div className="slider__custom-inner-content">
                                             <div className="date">{date}</div>        
                                             <div className="title">{title}</div>   
                                         </div>
 
+                                        {/* {img()} */}
 
                                         <Link className="read" to={slug}>
                                         read more

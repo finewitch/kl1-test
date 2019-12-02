@@ -2,14 +2,15 @@
     background: url('../img/bg/bg-pat0.png') top left repeat;
 }
 .team-member{
-    margin: $menu-height auto 0 auto;
+    margin:auto auto 0 auto;
+    padding-top: $menu-height;
     display: flex;
     div img{
         max-width: 500px;
         height: auto;
     }
     .image__column{
-        background: #F5F5F5;
+        background: url('../img/bg/bg-pat0.png') top left repeat;
         height: 100vh;
         width: 500px;
         display: flex;
@@ -24,6 +25,8 @@
         margin-left: 100px;
         display: flex;
         flex-direction: column;
+        color: white;
+        line-height: 1.6rem;
         // align-items: center;
         justify-content: center;
 
@@ -42,6 +45,8 @@
             }
             span{
                 text-transform: uppercase;
+                letter-spacing: .2rem;
+                color: black;
                 margin-left: 20px;
                 // font-family: $SansSerif;
             }

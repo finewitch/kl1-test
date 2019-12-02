@@ -39,10 +39,8 @@ export const NewsPostTemplate = ({
 
             <PostContent content={data.content.content} />
 
-
-
           </div>
-          
+            {data.content.img ? <img src={data.content.img.publicURL} /> : null}
           </div>
         </div>
       </div>
@@ -66,6 +64,7 @@ const NewsPost = ({ data }) => {
         'date' : post.frontmatter.date,
         'title': post.frontmatter.title,
         'content' : post.frontmatter.content,
+        'img': post.frontmatter.image
       },
   }
 
@@ -112,6 +111,9 @@ query NewsPostByID($id: String!) {
       date(formatString: "MMMM DD, YYYY")
       title
       content
+      image {
+            publicURL
+          }
     }
   }
 }
