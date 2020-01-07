@@ -112,9 +112,7 @@ query TeamMemberByID($id: String!) {
     frontmatter {
       title
       content
-      image {
-        publicURL
-      }
+      
       rg
       gs
     }

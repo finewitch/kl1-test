@@ -111,9 +111,6 @@ query NewsPostByID($id: String!) {
       date(formatString: "MMMM DD, YYYY")
       title
       content
-      image {
-            publicURL
-          }
     }
   }
 }

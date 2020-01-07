@@ -206,9 +206,7 @@ query IndexPageTemplate {
           title
           date
           content
-          image {
-            publicURL
-          }
+
         }
       }
     }
@@ -251,9 +249,7 @@ query IndexPageTemplate {
         }
         frontmatter {
           title
-          image {
-            publicURL
-          }
+          
           rg
           gs
         }

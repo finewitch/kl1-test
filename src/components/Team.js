@@ -34,14 +34,14 @@ export default class Team extends React.Component {
                         
                         {this.props.data.map( ( el, index )=>{
                             let name = el.node.frontmatter.title
-                            let img = el.node.frontmatter.image.publicURL
+                            // let img = el.node.frontmatter.image.publicURL
                             let slug = el.node.fields.slug
                             let rg = el.node.frontmatter.rg
                             let gs = el.node.frontmatter.gs
                             return ( 
                                 <Link to={ slug }key={index} className="team__content-box">
 
-                                    <img alt="team member" src={img}/>
+                                    {/* <img alt="team member" src={img}/> */}
 
                                     <div className="team__content-box-data">
 

@@ -40,20 +40,20 @@ export default class News extends React.Component {
                             let date = new Date(el.node.frontmatter.date).getUTCDate() + '/' + new Date(el.node.frontmatter.date).getUTCMonth() + '/' + new Date(el.node.frontmatter.date).getFullYear();
                             // let content = el.node.frontmatter.content;
                             let slug = el.node.fields.slug;
-                            let imgData = el.node.frontmatter.image === null ? null : el.node.frontmatter.image.publicURL;
+                            // let imgData = el.node.frontmatter.image === null ? null : el.node.frontmatter.image.publicURL;
 
-                            let img = function renderImg(){
-                                if (imgData){
-                                    return <img className="img-pos" alt="news post" src={imgData}/>
-                                }else{
-                                    return null
-                                }
-                            }
+                            // let img = function renderImg(){
+                            //     if (imgData){
+                            //         return <img className="img-pos" alt="news post" src={imgData}/>
+                            //     }else{
+                            //         return null
+                            //     }
+                            // }
 
                             return (
                                 // <div className="slider__custom">
                                     <div className="slider__custom-inner" key={index}>
-                                        { img() }
+                                        {/* { img() } */}
                                         <div className="slider__custom-inner-content">
                                             <div className="date">{date}</div>        
                                             <div className="title">{title}</div>   
