@@ -2,7 +2,6 @@
 templateKey: news-post
 title: Konferencja w Warszawie
 date: 2019-09-12T12:35:00.131Z
-image: /img/c-narysowane-farbą.jpg
 content: >-
   W wyniku kumulujących się kryzysów integracja europejska znalazła się w ważnym
   i trudnym do jednoznacznego określenia momencie. W 2019 roku Unia Europejska
@@ -15,13 +14,17 @@ content: >-
   przejawami współczesnego terroryzmu, zdecydowanie nie wystarczają.
 
 
-
-
   W przestrzeni publicznej ścierają się zwolennicy postaw otwartej i zamkniętej,
   eurorealizmu i eurosceptycyzmu, nacjonaliści i federaliści, zwolennicy dalszej
   integracji i zacieśniania strefy euro oraz ci, dla których przyjęcie
   europejskiej waluty oznacza koniec ich świata. Zachodzi gruntowna dekompozycja
   europejskich wzorów w wieku dziedzinach – u ich podłoża są dokonujące się
   zmiany społeczne i kulturowe.
+
+
+  ![](/img/blog-index.jpg)
+
+
+  ![](/img/c-narysowane-farbą.jpg)
 ---
 
