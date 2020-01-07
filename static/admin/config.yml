@@ -82,7 +82,6 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "news-post"}
       - {label: "Title", name: "title", widget: "string", default: "News title"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Image", name: image, widget: image, required: false}
       - {label: "Content", name: "content", widget: "markdown"}
 
   - name: "resources"
