@@ -2,6 +2,9 @@
 templateKey: news-post
 title: Konferencja w Warszawie
 date: 2019-09-12T12:35:00.131Z
+images:
+  - /img/blog-index.jpg
+  - /img/c-narysowane-farbą.jpg
 content: >-
   W wyniku kumulujących się kryzysów integracja europejska znalazła się w ważnym
   i trudnym do jednoznacznego określenia momencie. W 2019 roku Unia Europejska
@@ -20,11 +23,5 @@ content: >-
   europejskiej waluty oznacza koniec ich świata. Zachodzi gruntowna dekompozycja
   europejskich wzorów w wieku dziedzinach – u ich podłoża są dokonujące się
   zmiany społeczne i kulturowe.
-
-
-  ![kawiarka](/img/blog-index.jpg "pierwszy")
-
-
-  ![](/img/c-narysowane-farbą.jpg)
 ---
 
