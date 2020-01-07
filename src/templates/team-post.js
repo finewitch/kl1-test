@@ -84,7 +84,7 @@ const TeamPost = ({ data }) => {
 
         content = {post.frontmatter.content}
 
-        image = {post.frontmatter.image.publicURL}
+        // image = {post.frontmatter.image.publicURL}
 
         rg = {post.frontmatter.rg}
 
