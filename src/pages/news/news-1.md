@@ -22,7 +22,7 @@ content: >-
   zmiany społeczne i kulturowe.
 
 
-  ![](/img/blog-index.jpg)
+  ![kawiarka](/img/blog-index.jpg "pierwszy")
 
 
   ![](/img/c-narysowane-farbą.jpg)
