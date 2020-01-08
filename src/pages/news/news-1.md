@@ -3,7 +3,7 @@ templateKey: news-post
 title: Konferencja w Warszawie
 date: 2019-09-12T12:35:00.131Z
 images:
-  - /img/blog-index.jpg
+  - /img/the-do-s-and-don-ts-of-logo-design-_-elle-company.jpg
   - /img/c-narysowane-farbą.jpg
 content: >-
   W wyniku kumulujących się kryzysów integracja europejska znalazła się w ważnym
