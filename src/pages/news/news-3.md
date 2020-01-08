@@ -2,7 +2,11 @@
 templateKey: news-post
 title: Nagroda dla Kamila
 date: 2019-05-28T11:30:21.375Z
-image: /img/products-grid2.jpg
+images:
+  - image: /img/jumbotron.jpg
+    title: tutaj Kamil odbiera nagrodę
+  - image: /img/pic1.jpeg
+    title: tutaj ludzie kochaja Kamila
 content: >-
   Laureatem przyznawanej przez Fundację Matematyków Wrocławskich nagrody imienia
   Kamila Duszenki za rok 2015, w dziedzinie geometrycznej teorii grup, został
