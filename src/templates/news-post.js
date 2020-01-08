@@ -12,7 +12,7 @@ export const NewsPostTemplate = ({
   contentComponent,
   helmet,
   data,
-  images
+  // images
 
 }) => {
   const PostContent = contentComponent || Content
@@ -68,7 +68,7 @@ const NewsPost = ({ data }) => {
         'date' : post.frontmatter.date,
         'title': post.frontmatter.title,
         'content' : post.frontmatter.content,
-        'images': post.frontmatter.images
+        // 'images': post.frontmatter.images
       },
   }
 
@@ -115,7 +115,6 @@ query NewsPostByID($id: String!) {
       date(formatString: "MMMM DD, YYYY")
       title
       content
-      images
     }
   }
 }
