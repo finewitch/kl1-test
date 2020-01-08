@@ -12,7 +12,7 @@ export const NewsPostTemplate = ({
   contentComponent,
   helmet,
   data,
-  // images
+  images
 
 }) => {
   const PostContent = contentComponent || Content
@@ -44,7 +44,6 @@ export const NewsPostTemplate = ({
             </div>
 
           </div>
-            {/* {data.content.img ? <img src={data.content.img.publicURL} /> : null} */}
           </div>
         </div>
       </div>
@@ -68,7 +67,7 @@ const NewsPost = ({ data }) => {
         'date' : post.frontmatter.date,
         'title': post.frontmatter.title,
         'content' : post.frontmatter.content,
-        // 'images': post.frontmatter.images
+        'images': post.frontmatter.images
       },
   }
 
@@ -115,6 +114,16 @@ query NewsPostByID($id: String!) {
       date(formatString: "MMMM DD, YYYY")
       title
       content
+      images {
+            image{
+              childImageSharp {
+                fluid(maxWidth: 700, maxHeight: 700) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            title
+          }
     }
   }
 }

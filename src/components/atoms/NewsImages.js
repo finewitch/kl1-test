@@ -1,13 +1,18 @@
 import React from 'react';
 
-const NewsImages = (images) => {
-    // console.log(images.images);
-    // return images.images.map( pic =>{
-    //             return <img src={pic} />
-    //         });
-            return (
-                <div>12</div>
-            )
+const NewsImages = ({images: images}) => {
+    if (!images){
+        return null
+    }else{
+    return images.map( image => {
+        return(
+        <div className="news-image">
+            <img src={image.image.childImageSharp.fluid.src} />
+        <span>{image.title}</span>
+        </div>
+        )
+    })
+}
 };
 
 export default NewsImages;
