@@ -87,10 +87,18 @@
         margin: 50px 0;
         color: white;
         line-height:1.6rem;
-    }
-    img{
-        // border: 5px solid yellow;
-        max-width: 100%;
+        &-images{
+            display: flex;
+            margin-top: 30px;
+            height: 400px;
+            img{
+                height: 100%;
+                max-width: 100%;
+                // border: 5px solid yellow;
+              border: 1px solid red;
+            //   flex-basis:33.33%; 
+            }
+        }
     }
     h1.title{
         color: white;

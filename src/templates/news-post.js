@@ -6,16 +6,17 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import ArrowIcon from '../components/atoms/ArrowIcon'
+import NewsImages from '../components/atoms/NewsImages'
 
 export const NewsPostTemplate = ({
   contentComponent,
   helmet,
-  data
+  data,
+  images
 
 }) => {
   const PostContent = contentComponent || Content
   console.log(data, 'data');
-  
 
 
   return (
@@ -38,9 +39,12 @@ export const NewsPostTemplate = ({
           <div className="section__wrapper-content-post">
 
             <PostContent content={data.content.content} />
+            <div className="section__wrapper-content-post-images">
+              <NewsImages images={data.content.images || null} />
+            </div>
 
           </div>
-            {data.content.img ? <img src={data.content.img.publicURL} /> : null}
+            {/* {data.content.img ? <img src={data.content.img.publicURL} /> : null} */}
           </div>
         </div>
       </div>
@@ -64,7 +68,7 @@ const NewsPost = ({ data }) => {
         'date' : post.frontmatter.date,
         'title': post.frontmatter.title,
         'content' : post.frontmatter.content,
-        'img': post.frontmatter.image
+        'images': post.frontmatter.images
       },
   }
 
@@ -111,6 +115,7 @@ query NewsPostByID($id: String!) {
       date(formatString: "MMMM DD, YYYY")
       title
       content
+      images
     }
   }
 }

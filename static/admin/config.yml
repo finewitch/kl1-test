@@ -82,7 +82,12 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "news-post"}
       - {label: "Title", name: "title", widget: "string", default: "News title"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Images" , name: "images", widget: "list", allow_add: true, field: {label: Image, name: image, widget: image},  default: ["images"]}
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        fields: 
+          - {label: Name, name: name, widget: string, default: "Emmet"}
+          - {label: Image, name: image, widget: image,  default: ["images"]}
       - {label: "Content", name: "content", widget: "markdown"}
 
   - name: "resources"
