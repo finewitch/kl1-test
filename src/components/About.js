@@ -5,76 +5,31 @@ export default class About extends React.Component {
         return(
             <div className="section-2 about hidden" id="about">
                 <div className="section__wrapper">
-
-                    <div className="about__column left">
-                        {/* <hr /> */}
-                        <div className="border-t-none">
-                            <p className="font-1 border-n-visible">
-                                <span className="n-visible">CSPACE</span>
-                                <span className="font-red">.</span>
-                            </p>
-                            <p className="font-gray font-2-light n-visible">short for </p>
-                            <p className="font-red">Clinical </p>
-                            <p className="font-red">Research</p>
-                            <p className="font-red">Space</p>
-
-                        </div>
-
-                        <div className="border-b-none">
-                            <p className="n-visible"> . . . is a cross-institutional clinical </p>
-                            <p className="n-visible">psychology & psychiatry research</p>
-                            <p>
-                                <span className="n-visible">team</span>
-                                <span className="font-gray n-visible"> based <small>(mostly)</small> in</span> 
-                                <span className="font-red"> Warsaw, Poland</span>
-                            </p>
-                        </div>
-
+                    <div class="main font-2-medium">
+                        <p className="main-title font-black">About</p>
+                        CSPACE<span className="font-red">:</span> Clinical Research Space, 
+                        is a group of people that aims to 
+                        advance scientific understanding 
+                        of human behavior <span className="font-black">&</span> its disorders. 
+                        Established in 2020, Cspace is 
+                        a cross-institutional clinical psy- 
+                        chology and psychiatry research 
+                        team, based <span className="font-gray">(mostly)</span> in Warsaw, PL.
                     </div>
 
-                    <div className="about__column right">
-                        <div className="border-b-none">
-                            
-                            <p className="font-gray">
-                                <span className="font-1">
-                                    <span className="n-visible">.</span>
-                                    <span className="font-red bigger">C</span>
-                                    <span className="n-visible">SPACE</span>
-                                </span> 
-                                <span className="n-visible"> is a group of people </span>
-                            </p>
-                            <p>
-                                <span className="font-gray n-visible">that aims to advance </span>
-                                <span className="bigger n-visible">scientific</span>
-                            </p>
-                            <p><span className="bigger n-visible">understanding of </span>
-                                <span className="font-gray n-visible">
-                                    <small className="font-2-light "> (human) </small>
-                                </span>
-                            </p>
-                            <p className="font-gray n-visible">behavior and its disorders </p>
+                    <div className="side font-2-black">
 
-                        </div>
+                        <p>Want to collaborate <span className="font-gray">with us?</span></p>
+                        <p>Join <span className="font-gray">us ?</span></p>
+                        <p><span className="font-gray">Have a</span> question<span className="font-gray">?</span></p>
 
-                        <div className="border-t-none">
-
-                            <p className="n-visible">Want to</p>
-                            <p className="n-visible">Collaborate </p>
-                            <p className="font-gray">with us</p>
-                            <p className="n-visible">Join 
-                                <span className="gray"> us</span>
-                            </p>
-                            <p className="n-visible">
-                                <span className="font-gray"> ? </span>
-                                <a href="#contact" className="button">contact</a>
-                            </p>
+                        <a href="#contact" className="button">contact</a>
 
                         </div>
                     </div>
 
                 </div>
 
-            </div>
         )}
 
 }

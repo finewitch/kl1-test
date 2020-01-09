@@ -46,41 +46,41 @@ export class IndexPageTemplate extends React.Component {
       });
 
 
-        window.onscroll = function() {
+        // window.onscroll = function() {
 
-          var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+        //   var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
-          menuLinks.forEach(el=>{
-            el.classList.remove('active');
-          })
+        //   menuLinks.forEach(el=>{
+        //     el.classList.remove('active');
+        //   })
       
-          for (i in sections) {
-            if (scrollPosition  >= sections['about']/1.2){
-              // console.log('here we go');
-              secondSec.querySelectorAll('.n-visible').forEach(el=>{
-                el.classList.add('is-visible')
-              })
-              secondSec.querySelectorAll('.border-t-none').forEach(el=>{
-                el.classList.add('border-t-visible')
-              })
-              secondSec.querySelectorAll('.border-b-none').forEach(el=>{
-                el.classList.add('border-b-visible')
-              })
+        //   for (i in sections) {
+        //     if (scrollPosition  >= sections['about']/1.2){
+        //       // console.log('here we go');
+        //       secondSec.querySelectorAll('.n-visible').forEach(el=>{
+        //         el.classList.add('is-visible')
+        //       })
+        //       secondSec.querySelectorAll('.border-t-none').forEach(el=>{
+        //         el.classList.add('border-t-visible')
+        //       })
+        //       secondSec.querySelectorAll('.border-b-none').forEach(el=>{
+        //         el.classList.add('border-b-visible')
+        //       })
 
-            }
+        //     }
 
-            // MAKE CHANGE IN PUBLICATIONS COMPONENT PROPS TO TRIGER THE TYPEIN PLUGIN
-            if (scrollPosition  >= ( sections['team']* 1.2) ){
-              window.myTypeItInstance.go()
-            }
+        //     // MAKE CHANGE IN PUBLICATIONS COMPONENT PROPS TO TRIGER THE TYPEIN PLUGIN
+        //     if (scrollPosition  >= ( sections['team']* 1.2) ){
+        //       window.myTypeItInstance.go()
+        //     }
 
-            if (sections[i] <= scrollPosition) {
+        //     if (sections[i] <= scrollPosition) {
 
-              menu.querySelector('.active').classList.remove('active')
-              menu.querySelector('.menu-' + i ).classList.add('active');
+        //       menu.querySelector('.active').classList.remove('active')
+        //       menu.querySelector('.menu-' + i ).classList.add('active');
 
-            }
-            }}
+        //     }
+        //     }}
           }
   }
   render(){
