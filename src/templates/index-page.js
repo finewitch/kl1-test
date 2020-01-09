@@ -249,7 +249,13 @@ query IndexPageTemplate {
         }
         frontmatter {
           title
-          
+          image{
+          childImageSharp {
+            fluid(maxWidth: 700, maxHeight: 700) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
           rg
           gs
         }

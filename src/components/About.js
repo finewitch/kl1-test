@@ -5,7 +5,7 @@ export default class About extends React.Component {
         return(
             <div className="section-2 about hidden" id="about">
                 <div className="section__wrapper">
-                    <div class="main font-2-medium">
+                    <div className="main font-2-medium">
                         <p className="main-title font-black">About</p>
                         CSPACE<span className="font-red">:</span> Clinical Research Space, 
                         is a group of people that aims to 

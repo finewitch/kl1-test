@@ -5,8 +5,8 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import ArrowIcon from '../components/atoms/ArrowIcon'
-import rgIconBl from '../img/social/rgblack.svg'
-import gsIconBl from '../img/social/gsblack.svg'
+import rgIconBl from '../img/social/rg.svg'
+import gsIconBl from '../img/social/gs.svg'
 
 export const TeamPostTemplate = ({
   content,
@@ -17,6 +17,7 @@ export const TeamPostTemplate = ({
   rg,
   gs
 }) => {
+  // console.log(image, 'image')
 
   return (
     <section className="section teammember__section">
@@ -24,7 +25,7 @@ export const TeamPostTemplate = ({
       <div className="container content team-member section__wrapper">
         
         <div className="columns image__column">
-            <img alt="team member" src={image}/>
+            <img alt="team member" src={image.childImageSharp.fluid.src}/>
         </div>
 
         <div className="columns text__content">
@@ -63,7 +64,7 @@ export const TeamPostTemplate = ({
 
 const TeamPost = ({ data }) => {
 
-  console.log(data)
+  console.log(data, '<-team')
   
   const { markdownRemark: post } = data
 
@@ -84,7 +85,7 @@ const TeamPost = ({ data }) => {
 
         content = {post.frontmatter.content}
 
-        // image = {post.frontmatter.image.publicURL}
+        image = {post.frontmatter.image}
 
         rg = {post.frontmatter.rg}
 
@@ -112,7 +113,13 @@ query TeamMemberByID($id: String!) {
     frontmatter {
       title
       content
-      
+      image{
+          childImageSharp {
+            fluid(maxWidth: 700, maxHeight: 700) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       rg
       gs
     }
