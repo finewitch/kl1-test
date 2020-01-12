@@ -29,14 +29,14 @@ export const BlogPostTemplate = ({
 
           <h4 className="date centered color-grey">{data.content.date}</h4>
                       
-          <h1 className="title centered">
+          <h1 className="title centered font-white">
             {data.content.title}
           </h1>
 
           <h2 className="title centered">
             {data.content.authors}
           </h2>
-          <div className="section__wrapper-content-post">
+          <div className="section__wrapper-content-post font-white">
 
             <PostContent content={data.content.abstrakt} />
 
@@ -71,7 +71,6 @@ BlogPostTemplate.propTypes = {
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
 
-  console.log(data)
 
   let props= {
       content:{
@@ -89,7 +88,6 @@ const BlogPost = ({ data }) => {
         'data' : post.frontmatter.data || null
       }
   }
-  console.log(props);
 
   return (
     <Layout>

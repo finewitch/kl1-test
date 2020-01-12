@@ -64,7 +64,6 @@ export const TeamPostTemplate = ({
 
 const TeamPost = ({ data }) => {
 
-  console.log(data, '<-team')
   
   const { markdownRemark: post } = data
 

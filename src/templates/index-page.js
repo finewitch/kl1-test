@@ -25,7 +25,7 @@ export class IndexPageTemplate extends React.Component {
 
   constructor(props) {
     super(props);
-    console.log(props, '<-------PROPS')
+    // console.log(props, '<-------PROPS')
     this.state = {
       page: styles.color1,
       pubsInViewport : false,
@@ -156,7 +156,6 @@ IndexPageTemplate.propTypes = {
 }
 
 const IndexPage = ({ data , location}) => {
-  console.log(data, 'data here>>>')
   const news = data.news.edges
   const publications = data.publications.edges
   const teamMembers = data.team.edges

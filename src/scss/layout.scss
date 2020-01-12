@@ -28,7 +28,7 @@ svg{
     svg{
         width:30px;
         transform: rotate(90deg);
-        fill: white;
+        fill: #824747;
         line{
             stroke: white;
         }
@@ -83,7 +83,7 @@ body{
 }
 .section-5{
     background: url('../img/bg/bg-pat0.png') top left repeat;
-    box-shadow: 2px -7px 14px -10px rgba(0,0,0,1);
+    // box-shadow: 2px -7px 14px -10px rgba(0,0,0,1);
     height: 100vh;
     padding-top: 170px;
 }

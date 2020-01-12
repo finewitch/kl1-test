@@ -149,7 +149,7 @@ export default class Publications extends React.Component {
 			activeTab : year.toString()
 		})
 
-		console.log(this.state.activeTab)
+		// console.log(this.state.activeTab)
 		// console.log('RESPONSE--->', this.initialState, 'CHOICE-->', year)
 
 		if(year === 0 ){
