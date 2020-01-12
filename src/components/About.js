@@ -5,16 +5,16 @@ export default class About extends React.Component {
         return(
             <div className="section-2 about hidden" id="about">
                 <div className="section__wrapper">
-                    <div className="main font-2-medium">
+                    <div className="main font-2-bold">
                         <p className="main-title font-black">About</p>
-                        CSPACE<span className="font-red">:</span> Clinical Research Space, 
-                        is a group of people that aims to 
-                        advance scientific understanding 
-                        of human behavior <span className="font-black">&</span> its disorders. 
-                        Established in 2020, Cspace is 
-                        a cross-institutional clinical psy- 
-                        chology and psychiatry research 
-                        team, based <span className="font-gray">(mostly)</span> in Warsaw, PL.
+                        <span className="paragraph">CSPACE<span className="font-red">:</span> Clinical Research Space, </span>
+                        <span className="paragraph">is a group of people that aims to </span>
+                        <span className="paragraph">advance scientific understanding </span>
+                        <span className="paragraph">of human behavior <span className="font-black">&</span> its disorders. </span>
+                        <span className="paragraph">Established in 2020, Cspace is </span>
+                        <span className="paragraph">a cross-institutional clinical psy- </span>
+                        <span className="paragraph">chology and psychiatry research </span>
+                        <span className="paragraph">team, based <span className="font-gray">(mostly)</span> in Warsaw, PL.</span>
                     </div>
 
                     <div className="side font-2-black">

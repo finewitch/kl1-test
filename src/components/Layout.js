@@ -43,7 +43,6 @@ const TemplateWrapper = ({ children }) => {
           color="#ff4400"
         />
         {/* FONTS */}
-        <link href="https://fonts.googleapis.com/css?family=Alegreya:400&display=swap" rel="stylesheet"/>
         <script src="https://kit.fontawesome.com/0a4ee8d3e4.js"></script>
 
         {/* PLUGINS */}

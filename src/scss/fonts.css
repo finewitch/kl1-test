@@ -36,4 +36,17 @@
     font-weight: normal;
     src: local('Colfax Black'), url('../fonts/Colfax-Black.woff') format('woff');
     }
+
+    @font-face {
+        font-family: "core-sans-g-55-medium";
+        src: url('../fonts/CoreSansG-Medium.ttf');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: "core-sans-g-55-light";
+        src: url('../fonts/CoreSansG-ExtraLight.ttf');
+        font-weight: normal;
+        font-style: normal;
+    }
     
