@@ -33,13 +33,13 @@ export class IndexPageTemplate extends React.Component {
     // this.inViewPort = false;
     this.updateStateWithPageLocation = function(){
 
-      const menu = document.querySelector('.menu');
-      const menuLinks = document.querySelectorAll('.menu-links');
-      const secondSec = document.querySelector('.about')
+      // const menu = document.querySelector('.menu');
+      // const menuLinks = document.querySelectorAll('.menu-links');
+      // const secondSec = document.querySelector('.about')
   
       var section = document.querySelectorAll(".hidden");
       var sections = {};
-      var i = 0;
+      // var i = 0;
     
       Array.prototype.forEach.call(section, function(e) {
         sections[e.id] = e.offsetTop;

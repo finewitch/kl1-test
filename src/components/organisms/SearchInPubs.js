@@ -36,7 +36,12 @@ export default class SearchInPubs extends React.Component {
       return(
         <div className="publications-search">
             <input onChange={(event)=>this.handleChange(event)} placeholder="Type title / authors / journal" value={this.state.value}></input>
-            <div onClick={()=> this.handleOnClick()}>
+            <div 
+            onClick={()=> this.handleOnClick()}
+            onKeyDown={()=> this.handleOnClick()}
+            role="button"
+            tabIndex="0"
+        >
                 {this.state.icon === 'delete' ? 
                  <svg version="1.1" id="Layer_1" viewBox="0 0 512 512">
                     <g>

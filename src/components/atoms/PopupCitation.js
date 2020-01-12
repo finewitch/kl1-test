@@ -14,7 +14,7 @@ export const PopupCitation = ({data, onClickClose}) => {
         return (
             <tr>
                 <td className="name">{type.toUpperCase()}</td>
-                <td className="content" tabindex="0">{data[type]}</td>
+                <td className="content">{data[type]}</td>
             </tr>
         )
     }
@@ -23,7 +23,11 @@ export const PopupCitation = ({data, onClickClose}) => {
   return (
     <div className="publications__popup">
         <div className="publications__popup-inner">
-            <div className="publications__popup-inner-close" onClick={onClickClose}>
+            <div className="publications__popup-inner-close" 
+            onKeyDown={onClickClose}
+            onClick={onClickClose}
+            role="button"
+            tabIndex="0">
 
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                     viewBox="0 0 371.23 371.23">
