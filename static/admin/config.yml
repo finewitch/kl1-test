@@ -102,12 +102,7 @@ collections:
         name: "Link-group"
         widget: "list"
         fields:
-          - {label: Link label, name: title, widget: string, default: "Resources title"}
-              - label: "Link-group"
-                name: "Link-group"
-                widget: "list"
-                fields:
-                    - {label: Title, name: title, widget: string, default: ""}
-                    - {label: Title, name: title, widget: string, default: ""}
+          - {label: "Content", name: "content", widget: "markdown"}
+
 
           
