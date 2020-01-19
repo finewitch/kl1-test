@@ -1,7 +1,6 @@
 import React from 'react'
 
 export const PopupCitation = ({data, onClickClose}) => {
-    // console.log(data, 'in ppup')
     let APA = Object.keys(data)[0];
     let Vancouver = Object.keys(data)[2];
     let Harvard = Object.keys(data)[1];
@@ -10,7 +9,6 @@ export const PopupCitation = ({data, onClickClose}) => {
 
     function generateRow(type){
 
-        // console.log('type--  ', type)
         return (
             <tr>
                 <td className="name">{type.toUpperCase()}</td>
