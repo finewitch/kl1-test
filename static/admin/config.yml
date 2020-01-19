@@ -103,7 +103,11 @@ collections:
         widget: "list"
         fields:
           - {label: Link label, name: title, widget: string, default: "Resources title"}
-          - {label: Link, name: link, widget: string, default: "Resources link"}
-          - {label: Link, name: link(download), widget: string, default: "Resources link to download"}
+              - label: "Link-group"
+                name: "Link-group"
+                widget: "list"
+                fields:
+                    - {label: Title, name: title, widget: string, default: ""}
+                    - {label: Title, name: title, widget: string, default: ""}
 
           
