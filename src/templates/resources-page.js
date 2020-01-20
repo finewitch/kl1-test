@@ -26,13 +26,13 @@ export const ResourcesPageTemplate = ({ resources }) => {
 
           <div className="section__wrapper-content-post">
             <ul>
-            {resources.map((el, i)=>{
+            {/* {resources.map((el, i)=>{
               return (
                 <li key={i}>
                   <a href={el.link} target="_blank" rel="noopener noreferrer">{el.link_label}</a>
                 </li>
               )
-            })}
+            })} */}
             </ul>
 
             {/* <PostContent content={data.content.content} /> */}
