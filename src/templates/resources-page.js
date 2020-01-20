@@ -78,10 +78,6 @@ export const ResourcesPageQuery = graphql`
   markdownRemark(id: {eq: $id}) {
     frontmatter {
       title
-      Link_group {
-        link
-        link_label
-      }
     }
   }
 }

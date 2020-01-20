@@ -102,7 +102,7 @@ collections:
         name: "Link-group"
         widget: "list"
         fields:
-          - {label: "Content", name: "content", widget: "markdown"}
+          - {label: "Content", name: "content", widget: "markdown", required: false}
 
 
           
