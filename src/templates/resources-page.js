@@ -6,6 +6,7 @@ import ArrowIcon from '../components/atoms/ArrowIcon'
 
 export const ResourcesPageTemplate = ({ resources }) => {
   // const PageContent = contentComponent || Content
+  console.log(resources, ':)))')
 
 
   return (
@@ -26,13 +27,13 @@ export const ResourcesPageTemplate = ({ resources }) => {
 
           <div className="section__wrapper-content-post">
             <ul>
-            {/* {resources.map((el, i)=>{
+            {resources.map((el, i)=>{
               return (
                 <li key={i}>
-                  <a href={el.link} target="_blank" rel="noopener noreferrer">{el.link_label}</a>
+                  <a href={el.link} target="_blank" rel="noopener noreferrer">{el.content}</a>
                 </li>
               )
-            })} */}
+            })}
             </ul>
 
             {/* <PostContent content={data.content.content} /> */}
@@ -56,12 +57,12 @@ export const ResourcesPageTemplate = ({ resources }) => {
 
 const ResourcesPage = ({ data }) => {
   // const { markdownRemark: post } = data
-// console.log(data, '<--')
-
+console.log(data.news.edges[0].node.frontmatter, '<--')
+// var data = data.news.edges[0].node.frontmatter.Link_group;
   return (
     <Layout>
       <ResourcesPageTemplate
-        resources={data.markdownRemark.frontmatter.Link_group}
+        resources={data.news.edges[0].node.frontmatter.Link_group}
       />
     </Layout>
   )
@@ -74,11 +75,18 @@ ResourcesPage.propTypes = {
 export default ResourcesPage
 
 export const ResourcesPageQuery = graphql`
- query ResourcesPage($id: String!) {
-  markdownRemark(id: {eq: $id}) {
-    frontmatter {
-      title
+query ResourcesPageQuery {
+  news: allMarkdownRemark(filter: {fields: {slug: {regex: "\\resources/resources-2/"}}}, sort: {fields: frontmatter___date, order: DESC}) {
+    edges {
+      node {
+        frontmatter {
+          Link_group {
+            content
+          }
+        }
+      }
     }
   }
 }
+
 `
