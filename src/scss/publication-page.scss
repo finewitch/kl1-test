@@ -105,6 +105,12 @@
 
             }
         }
+        a{
+            color: white;
+            &:hover{
+                color: #824747;
+            }
+        }
     }
     h1.title{
         color: white;

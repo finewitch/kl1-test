@@ -5,8 +5,8 @@ import Layout from '../components/Layout'
 import ArrowIcon from '../components/atoms/ArrowIcon'
 
 export const ResourcesPageTemplate = ({ resources }) => {
-  // const PageContent = contentComponent || Content
-  console.log(resources, ':)))')
+  const contentData = resources.markdownRemark.frontmatter.Link_group;
+  // console.log(contentData.Link_group, ':)))')
 
 
   return (
@@ -19,27 +19,20 @@ export const ResourcesPageTemplate = ({ resources }) => {
             <ArrowIcon/>
           </Link>
 
-          {/* <h4 className="date centered color-grey">{data.content.date}</h4> */}
-                      
           <h1 className="title centered">
             Resources
           </h1>
 
           <div className="section__wrapper-content-post">
             <ul>
-            {resources.map((el, i)=>{
+            {contentData.map((el, i)=>{
               return (
                 <li key={i}>
-                  <a href={el.link} target="_blank" rel="noopener noreferrer">{el.content}</a>
+                  <div dangerouslySetInnerHTML={{ __html: el.content }}></div>
                 </li>
               )
             })}
             </ul>
-
-            {/* <PostContent content={data.content.content} /> */}
-
-
-
           </div>
           
           </div>
@@ -56,13 +49,10 @@ export const ResourcesPageTemplate = ({ resources }) => {
 // }
 
 const ResourcesPage = ({ data }) => {
-  // const { markdownRemark: post } = data
-console.log(data.news.edges[0].node.frontmatter, '<--')
-// var data = data.news.edges[0].node.frontmatter.Link_group;
   return (
     <Layout>
       <ResourcesPageTemplate
-        resources={data.news.edges[0].node.frontmatter.Link_group}
+        resources={data}
       />
     </Layout>
   )
@@ -76,17 +66,19 @@ export default ResourcesPage
 
 export const ResourcesPageQuery = graphql`
 query ResourcesPageQuery {
-  news: allMarkdownRemark(filter: {fields: {slug: {regex: "\\resources/resources-2/"}}}, sort: {fields: frontmatter___date, order: DESC}) {
-    edges {
-      node {
-        frontmatter {
-          Link_group {
-            content
-          }
-        }
+  markdownRemark(fields: {slug: {regex: "\\resources/resources-2/"}}) {
+    html
+    frontmatter {
+      Link_group {
+        content
       }
+    }
+    fields {
+      slug
+    }
+    internal {
+      type
     }
   }
 }
-
 `
