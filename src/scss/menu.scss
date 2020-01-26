@@ -19,16 +19,15 @@ $menu-height: 75px;
     // justify-content: center;
     // align-items: center;
     font-weight: lighter;
-    &__main, &__side{
+    &__main{
         // border: 1px solid red;
         width:100%;
         height:$menu-height;
         // padding-bottom:15px;
         position: relative;
-        @media (max-width: $largest-desktop) {
-            height: 45px;
-            padding-bottom:10px;
-           }
+        @media (max-width: $small) {
+            height: 200px;
+        }
         &-wrapper{
             // border: 3px solid white;
             width: $largest-desktop;
@@ -67,6 +66,7 @@ $menu-height: 75px;
         display: flex;
         // align-items: center;
         justify-content: center;
+        @media (max-width: $small) { flex-wrap: wrap;}
         @media (max-width: $largest-desktop) {
             justify-content: space-between;
            }

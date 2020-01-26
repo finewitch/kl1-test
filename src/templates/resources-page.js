@@ -24,15 +24,11 @@ export const ResourcesPageTemplate = ({ resources }) => {
           </h1>
 
           <div className="section__wrapper-content-post">
-            <ul>
             {contentData.map((el, i)=>{
               return (
-                <li key={i}>
-                  <div dangerouslySetInnerHTML={{ __html: el.content }}></div>
-                </li>
+                  <p key={i}dangerouslySetInnerHTML={{ __html: el.content }}></p>
               )
             })}
-            </ul>
           </div>
           
           </div>

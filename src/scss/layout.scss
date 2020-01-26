@@ -15,6 +15,7 @@ $container-width: 1024px;
 $xl: 1540px;
 $largest-desktop: 1440px;
 $large: 1140px;
+$small: 600px;
 
 
 //LAYOUT
@@ -41,9 +42,9 @@ html,body{
     background-color: transparent;
     overscroll-behavior: none;
     font-size: 16px;
-    @media (max-width: $largest-desktop) {
-        font-size: 14px;
-       }
+    // @media (max-width: $largest-desktop) {
+    //     font-size: 14px;
+    //    }
 }
 
 body{
