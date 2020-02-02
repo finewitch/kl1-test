@@ -70,6 +70,7 @@
             position: relative;
             width:25%;
             height: 450px;
+            
             @media (max-width: $xl) {
                 height: 400px;
                 }
@@ -79,6 +80,7 @@
             @media (max-width: $large) {
             height: 250px;
             }
+            @media (max-width: $small) {width: 100%; height: auto;}
 
             img{
                 // width: 100%;
