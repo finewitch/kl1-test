@@ -17,6 +17,10 @@
             position: relative;
             max-height: 400px;
             p.main-title{
+                white-space: nowrap;
+                @media (max-width: $small) {
+                    font-size: 3rem;
+                }
                 text-align: center;
                 font-family: "core-sans-g-55-medium";
                 font-size: 8rem;

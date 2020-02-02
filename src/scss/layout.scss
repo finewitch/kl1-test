@@ -59,6 +59,9 @@ body{
 
 .root-wrapper{
     background: url('../img/bg/bg-pat0.png') top left repeat; 
+    @media (max-width: $small) {
+        padding: 0 25px;
+    }
 }
 .loading{
     background-color: black;
@@ -104,6 +107,8 @@ body{
 
 .section__wrapper{
     padding: 0 50px;
+    @media (max-width: $small) {padding-right: 0;
+        padding-left:25px;}
     height: 100%;
     max-width: $largest-desktop;
     margin: 0 auto;
