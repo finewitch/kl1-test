@@ -79,6 +79,9 @@ body{
 .section-3{
     background: url('../img/bg/bg-pat0.png') top left repeat;
     padding: 0 0 230px 0;
+    @media (max-width: $small) {
+        padding-bottom: 50px;
+    }
 }
 .section-4{
     background: url('../img/bg/bg-pat0.png') top left repeat;
@@ -89,6 +92,9 @@ body{
     // box-shadow: 2px -7px 14px -10px rgba(0,0,0,1);
     height: 100vh;
     padding-top: 170px;
+    @media (max-width: $small) {
+        padding-top: 50px;
+    }
 }
 .section-6{
     margin-top: 0px;

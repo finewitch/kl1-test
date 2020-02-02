@@ -1,5 +1,8 @@
 #news{
     padding-top: 250px;
+    @media (max-width: $small) {
+        padding-top: 50px;
+    }
 }
 .news{
     
@@ -8,6 +11,9 @@
         font-family: $colfaxBlack;
         color: white;
         margin-top: 150px;
+        @media (max-width: $small) {
+            display: none;
+        }
         h3{
             margin:0 auto;
         }
@@ -23,6 +29,19 @@
 
 .slick__custom{
     width: 1140px;
+    @media (max-width: $small) {
+        width: 100%;
+    }
+    .slik-next{
+        @media (max-width: $small) {
+            right: 0px;
+        }
+    }
+    .slik-prev{
+        @media (max-width: $small) {
+            left: 0px;
+        }
+    }
     // border: 1px solid red;
     // padding-bottom: 50px;
     .slider__custom-inner{
