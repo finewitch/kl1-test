@@ -5,3 +5,8 @@
 [build.environment]
   YARN_VERSION = "1.9.4"
   YARN_FLAGS = "--no-ignore-optional"
+[[redirects]]
+  from = "clinicalresearchspace.org"
+  to = "cspace.pl"
+  status = 301
+  force = false
