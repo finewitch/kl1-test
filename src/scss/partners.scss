@@ -3,10 +3,16 @@
     background: black;
     display: flex;
     height: 200px;
+    @media (max-width: $small) {
+      height: 350px;
+      flex-wrap:wrap;
+      padding-top: 20px;
+    }
     justify-content: space-around;
     align-items: center;
     img{
       max-height: 130px;
+      @media (max-width: $small) {max-height: 80px;}
     }
     svg{
         fill: white;

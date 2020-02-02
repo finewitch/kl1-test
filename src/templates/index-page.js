@@ -85,6 +85,7 @@ export class IndexPageTemplate extends React.Component {
   }
   render(){
     return(
+      <div>
       <div className="root-wrapper">
       
         <Landing scrollText={this.props.subheading}/>
@@ -95,9 +96,10 @@ export class IndexPageTemplate extends React.Component {
         <Publications data={this.props.publications} dataResources={this.props.resources} inViewport={this.state.pubsInViewport}/>
 
         <ContactNews onScroll={this.handleScroll}/>
-        <Partners/>
 
       </div>
+        <Partners/>
+        </div>
     
     )}
     componentWillUnmount() {

@@ -9,6 +9,11 @@
         h4{
             justify-content: flex-start;
         }
+        .section__wrapper{
+            @media (max-width: $small) {
+                padding:0;
+            }
+        }
         &-title{
             h3 span{
                 // width: 70px;
@@ -21,6 +26,7 @@
             font-family: 'Colfax Black';
             position: relative;
             &-hor{
+                @media (max-width: $small) {display: none}
                 // border: 1px solid yellowgreen;
                 color: black;
                 display: flex;
@@ -39,6 +45,10 @@
                 top: -77px;
                 left: 63px;
                 color:#F5F5F5;
+                @media (max-width: $small) {
+                    opacity: 0.3;
+                    left:0;
+                }
                 span{
                     display: flex!important;
                     flex-direction: row;
@@ -95,6 +105,9 @@
         &-contact-title{
             display: flex;
             justify-content: space-between;
+            @media (max-width: $small) {
+                display: block;
+            }
             // width:80%;
 
         }
